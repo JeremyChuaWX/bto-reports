@@ -24,13 +24,62 @@ function onemap(kind: 'Default' | 'Satellite' | 'Grey') {
 function baseMap(el: HTMLElement, centre: L.LatLngExpression, zoom: number, opts: L.MapOptions = {}) {
   const street = onemap('Default');
   const sat = onemap('Satellite');
-  const map = L.map(el, { center: centre, zoom, maxBounds: SG.pad(0.1), scrollWheelZoom: false, layers: [street], ...opts });
+  const map = L.map(el, { center: centre, zoom, maxBounds: SG.pad(0.1), scrollWheelZoom: false, zoomSnap: 0, layers: [street], ...opts });
   map.attributionControl.setPrefix('<a href="https://leafletjs.com" target="_blank" rel="noopener">Leaflet</a>');
   L.control.scale({ imperial: false }).addTo(map);
   // Only zoom with the scroll wheel once the map has been clicked, so the page still scrolls normally.
   map.on('click', () => map.scrollWheelZoom.enable());
   map.on('mouseout', () => map.scrollWheelZoom.disable());
+  trackpadPinch(el, map);
   return { map, bases: { 'OneMap street': street, 'OneMap satellite': sat } };
+}
+
+// Safari's trackpad pinch events (not in the TypeScript DOM types)
+interface GestureEvent extends UIEvent {
+  scale: number;
+  clientX: number;
+  clientY: number;
+}
+
+// A trackpad pinch over a map zooms the map, not the page. Chrome, Firefox and Edge send the pinch as
+// wheel events with ctrlKey set; Safari sends gesture events. Touchscreen pinches are left to Leaflet.
+function trackpadPinch(el: HTMLElement, map: L.Map) {
+  let zoom = map.getZoom();
+  let snap: number | undefined;
+  const zoomTo = (clientX: number, clientY: number, z: number) => {
+    const r = el.getBoundingClientRect();
+    zoom = Math.max(map.getMinZoom(), Math.min(map.getMaxZoom(), z));
+    map.setZoomAround(L.point(clientX - r.left, clientY - r.top), zoom, { animate: false });
+    // Settle on a whole zoom level when the pinch ends, so the tiles are sharp
+    clearTimeout(snap);
+    snap = window.setTimeout(() => map.setZoomAround(L.point(clientX - r.left, clientY - r.top), Math.round(zoom)), 250);
+  };
+  map.on('zoomend', () => (zoom = map.getZoom()));
+
+  // Listen on the parent in the capture phase, so this runs before Leaflet's own wheel handler
+  el.parentElement!.addEventListener(
+    'wheel',
+    (e) => {
+      if (!e.ctrlKey || !el.contains(e.target as Node)) return;
+      e.preventDefault();
+      e.stopPropagation();
+      zoomTo(e.clientX, e.clientY, zoom - e.deltaY / 100 / Math.LN2); // browsers send a pinch as deltaY = -100·ln(scale)
+    },
+    { capture: true, passive: false },
+  );
+
+  let touching = false;
+  el.addEventListener('touchstart', () => (touching = true), { passive: true });
+  el.addEventListener('touchend', (e) => (touching = e.touches.length > 0), { passive: true });
+  let start = zoom;
+  const gesture = (e: Event) => {
+    if (touching) return; // iPhone/iPad pinch: Leaflet handles it
+    const g = e as GestureEvent;
+    e.preventDefault();
+    if (e.type === 'gesturestart') start = zoom;
+    else zoomTo(g.clientX, g.clientY, start + Math.log2(g.scale));
+  };
+  for (const t of ['gesturestart', 'gesturechange', 'gestureend']) el.addEventListener(t, gesture, { passive: false });
 }
 
 interface AmenityCfg {
@@ -147,7 +196,7 @@ interface OverviewCfg {
 
 function overviewMap(el: HTMLElement) {
   const cfg: OverviewCfg = JSON.parse(el.dataset.config!);
-  const { map, bases } = baseMap(el, [1.355, 103.82], 11, { zoomSnap: 0.25 });
+  const { map, bases } = baseMap(el, [1.355, 103.82], 11);
   L.control.layers(bases, {}, { collapsed: true }).addTo(map);
   const pts = cfg.projects.map((p) => {
     const m = L.circleMarker([p.lat, p.lng], { radius: 9, color: '#fff', weight: 2, fillColor: p.colour, fillOpacity: 1 })
