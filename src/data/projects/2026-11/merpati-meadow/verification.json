@@ -1,0 +1,296 @@
+[
+ {
+  "item": "Subsidy recovery",
+  "old": "8% [Secondary]",
+  "new": "8% [Official]",
+  "status": "verified",
+  "source": "official.json"
+ },
+ {
+  "item": "Total units and split",
+  "old": "438; pre-launch ~170 2RF / ~270 4-room",
+  "new": "438: 33 2RF T1 + 134 2RF T2 + 271 4-room; per-block split from site plan",
+  "status": "verified",
+  "source": "official.json"
+ },
+ {
+  "item": "4-room floor area",
+  "old": "89 sqm (box only)",
+  "new": "89 sqm gross (86 internal)",
+  "status": "verified",
+  "source": "official.json"
+ },
+ {
+  "item": "Prices",
+  "old": "Body estimates 4-room ~$540k-690k, 2RF ~$190k-350k; official box separate",
+  "new": "Official prices folded into body: 2RF T1 $253k-300k, T2 $306k-378k, 4-room $545k-726k, plus short-lease prices",
+  "status": "corrected",
+  "source": "official.json"
+ },
+ {
+  "item": "Blocks",
+  "old": "3 blocks up to 18 storeys [Unverified]",
+  "new": "3 blocks (137A, 137B, 138A), all 18 storeys",
+  "status": "verified",
+  "source": "official.json"
+ },
+ {
+  "item": "Application closing time",
+  "old": "Two closing times given, 3:59pm and 11:59pm",
+  "new": "11:59pm SGT, 11 Nov 2026 (3:59pm was UTC)",
+  "status": "corrected",
+  "source": "https://homes.hdb.gov.sg/home/bto/details/2026-11_BTO_R0xfTjFDNTFfMTc5MDgzNTMwMTM1Mw"
+ },
+ {
+  "item": "Completion date",
+  "old": "BTOHQ ~1 Sep 2030 [Unverified]",
+  "new": "ECD 3Q 2030, waiting time 39 months, delivery possession date 31 Mar 2032 [Official]",
+  "status": "verified",
+  "source": "official.json"
+ },
+ {
+  "item": "Site features",
+  "old": "Preschool, roof garden, pavilion etc. [Secondary]",
+  "new": "Same list confirmed, plus space reserved for future community use [Official]",
+  "status": "verified",
+  "source": "official.json"
+ },
+ {
+  "item": "Canossa Catholic Primary within 1 km",
+  "old": "~230 m; confirm which blocks",
+  "new": "All 3 blocks ~190-290 m straight-line (137A ~197 m, 137B ~248 m, 138A ~254 m)",
+  "status": "verified",
+  "source": "https://www.onemap.gov.sg/api/common/elastic/search"
+ },
+ {
+  "item": "Maris Stella (Primary) holding site",
+  "old": "~420 m, OSM tag, probably holding [Unverified]",
+  "new": "Holding site at former MacPherson Primary, 2 Mattar Rd, 384 m (walk 540 m), per HDB town map",
+  "status": "corrected",
+  "source": "official.json"
+ },
+ {
+  "item": "Cedar Primary",
+  "old": "~1.0 km borderline",
+  "new": "~973 m (Blk 138A edge) to 1,056 m; borderline only for 138A",
+  "status": "verified",
+  "source": "https://www.onemap.gov.sg/api/common/elastic/search"
+ },
+ {
+  "item": "Mattar walk",
+  "old": "Exit A ~280 m, ~4-6 min",
+  "new": "Exit A 197 m straight / 221 m walk (~3 min); ~5-6 min from Blk 138A",
+  "status": "corrected",
+  "source": "https://routing.openstreetmap.de/routed-foot/"
+ },
+ {
+  "item": "MacPherson walk",
+  "old": "~0.9-1.1 km, ~12-16 min",
+  "new": "DT26 1,373 m walk (~17 min); CC10 1,534 m walk (~19 min)",
+  "status": "corrected",
+  "source": "https://routing.openstreetmap.de/routed-foot/"
+ },
+ {
+  "item": "Circle Line stations",
+  "old": "Tai Seng ~1.1 km; Paya Lebar ~1.8 km",
+  "new": "Tai Seng 1,144 m / 1,554 m walk; Paya Lebar 1,688 m / 2,354 m walk",
+  "status": "verified",
+  "source": "https://www.onemap.gov.sg/api/common/elastic/search"
+ },
+ {
+  "item": "Circle Line Stage 6",
+  "old": "Slated ~2026 [Unverified], improves MacPherson access",
+  "new": "Opened 12 Jul 2026; little direct benefit at MacPherson",
+  "status": "corrected",
+  "source": "https://www.lta.gov.sg/content/ltagov/en/newsroom/2026/5/news-releases/circle-line-stage-6-to-open-for-public-preview-on-4-july-2026.html"
+ },
+ {
+  "item": "Bus services",
+  "old": "40, 61, 62, 63, 64, 65, 100, 135, 154, 155, 158",
+  "new": "Stop 70151 (35 m): 40, 61, 63, 65, 135, 154, 155, 158; Aljunied Rd stops add 62, 64, 100",
+  "status": "verified",
+  "source": "https://busrouter.sg/"
+ },
+ {
+  "item": "Sheng Yuan Food Street ~150 m",
+  "old": "Listed as nearest food",
+  "new": "Removed; not found on OneMap or OSM",
+  "status": "removed",
+  "source": "https://www.onemap.gov.sg/api/common/elastic/search"
+ },
+ {
+  "item": "Circuit Road Hawker Centre",
+  "old": "~0.5 km",
+  "new": "463 m straight / 673 m walk",
+  "status": "verified",
+  "source": "https://www.onemap.gov.sg/api/common/elastic/search"
+ },
+ {
+  "item": "Mount Alvernia Hospital distance",
+  "old": "~3 km",
+  "new": "~5.1 km",
+  "status": "corrected",
+  "source": "https://www.onemap.gov.sg/api/common/elastic/search"
+ },
+ {
+  "item": "Tan Tock Seng distance",
+  "old": "~5-6 km",
+  "new": "~4.0 km [Estimate]",
+  "status": "corrected",
+  "source": "https://www.onemap.gov.sg/api/common/elastic/search"
+ },
+ {
+  "item": "Paya Lebar Air Base distance",
+  "old": "~4-5 km",
+  "new": "~2.75 km to base address point",
+  "status": "corrected",
+  "source": "https://www.onemap.gov.sg/api/common/elastic/search"
+ },
+ {
+  "item": "Maha Bodhi distance",
+  "old": "~2.0 km",
+  "new": "2,281 m (outside 2 km)",
+  "status": "corrected",
+  "source": "https://www.onemap.gov.sg/api/common/elastic/search"
+ },
+ {
+  "item": "St Andrew's Junior within 2 km",
+  "old": "Not listed",
+  "new": "1,822 m",
+  "status": "new",
+  "source": "https://www.onemap.gov.sg/api/common/elastic/search"
+ },
+ {
+  "item": "Planned developments near site",
+  "old": "Merpati Alcove only",
+  "new": "Added future high-rise residential site east of Jalan Anggerek, new park near Canossa, proposed health/civic sites, future bus stop/bay",
+  "status": "new",
+  "source": "official.json"
+ },
+ {
+  "item": "Nearby resale $920k-1.1M",
+  "old": "$920k-1.1M (Annex box, ~92 yrs left)",
+  "new": "HDB official figure; recomputed Circuit Rd 2016+2020 4-room n=42, median $1.01M, range $828k-1.11M, P10-P90 $919k-1.085M, 89-93 yrs left",
+  "status": "verified",
+  "source": "https://data.gov.sg/api/action/datastore_search?resource_id=d_8b84c4ee58e3cfc0ece0d773c8ca6abc"
+ },
+ {
+  "item": "Circuit Rd 2020 resale counts",
+  "old": "4-room n=21; 3-room n=13, ~$720k-813k",
+  "new": "Dec 2025-Nov 2026: 4-room n=19 median $1.06M; 3-room n=12 median $808,444 (range $680k-872k)",
+  "status": "corrected",
+  "source": "https://data.gov.sg/api/action/datastore_search?resource_id=d_8b84c4ee58e3cfc0ece0d773c8ca6abc"
+ },
+ {
+  "item": "Old Circuit Rd 2-room/3-room",
+  "old": "2-room n=15 $283k (1967-71); 3-room ~$340k",
+  "new": "2-room n=12 median $280k (1969-71); 3-room n=79 median $330k",
+  "status": "corrected",
+  "source": "https://data.gov.sg/api/action/datastore_search?resource_id=d_8b84c4ee58e3cfc0ece0d773c8ca6abc"
+ },
+ {
+  "item": "Ubi Ave 1 lease years",
+  "old": "1985-2000, n=44",
+  "new": "Mostly 1985-86 leases (also 1989, 2000), n=42, median $560k",
+  "status": "corrected",
+  "source": "https://data.gov.sg/api/action/datastore_search?resource_id=d_8b84c4ee58e3cfc0ece0d773c8ca6abc"
+ },
+ {
+  "item": "Young 2-room comparables",
+  "old": "Dawson $650k, Commonwealth/Kim Tian ~$520-530k, Alkaff $450k",
+  "new": "Confirmed with n and ranges",
+  "status": "verified",
+  "source": "https://data.gov.sg/api/action/datastore_search?resource_id=d_8b84c4ee58e3cfc0ece0d773c8ca6abc"
+ },
+ {
+  "item": "Gap to young resale",
+  "old": "~$400k below",
+  "new": "~$285k-465k below the ~$1.01M median",
+  "status": "corrected",
+  "source": "official.json"
+ },
+ {
+  "item": "MOP value estimate",
+  "old": "Gross $820k-960k; net $750k-880k; gain $100k-300k",
+  "new": "Gross $820k-945k (incl. size adjustment); net $755k-870k; gain ~$140k-230k [Estimate]",
+  "status": "corrected",
+  "source": "https://data.gov.sg/api/action/datastore_search?resource_id=d_8b84c4ee58e3cfc0ece0d773c8ca6abc"
+ },
+ {
+  "item": "Plus resale buyer income ceiling",
+  "old": "$14k, maybe $16k [Unverified]",
+  "new": "$16k for families and for singles buying resale Plus without grant, HFE from 24 Aug 2026",
+  "status": "corrected",
+  "source": "https://www.hdb.gov.sg/-/media/hdb-pulse/news/2026/increase-in-income-ceilings-and-greater-support-for-families-with-children/Annex-A.pdf"
+ },
+ {
+  "item": "Resale buyer eligibility",
+  "old": "SC households only; rules unclear",
+  "new": "Must meet eligibility conditions for buying from HDB (GC 11.10)",
+  "status": "verified",
+  "source": "https://services-homes.hdb.gov.sg/sales/files/general_conditions_for_purchase.pdf"
+ },
+ {
+  "item": "Resale buyer 30-month wait-out",
+  "old": "[Secondary, Unverified]",
+  "new": "Inferred from GC 11.10 [Estimate]",
+  "status": "unverifiable",
+  "source": "https://services-homes.hdb.gov.sg/sales/files/general_conditions_for_purchase.pdf"
+ },
+ {
+  "item": "Clawback paid once by original owner only",
+  "old": "[Secondary, Unverified]",
+  "new": "Still unverified; HDB conditions page unreachable",
+  "status": "unverifiable",
+  "source": "https://services-homes.hdb.gov.sg/sales/files/general_conditions_for_purchase.pdf"
+ },
+ {
+  "item": "Resale buyers' MOP",
+  "old": "Not confirmed",
+  "new": "Still not confirmed",
+  "status": "unverifiable",
+  "source": "https://services-homes.hdb.gov.sg/sales/files/general_conditions_for_purchase.pdf"
+ },
+ {
+  "item": "Grant example",
+  "old": "~$560k minus full $120k = ~$440k",
+  "new": "HDB illustration: 4-room $545k -> $490k with $55k EHG; 2RF $253k -> $133k with $120k EHG",
+  "status": "corrected",
+  "source": "https://www.hdb.gov.sg/hdb-pulse/news/2026/hdb-launches-7964-flats-across-seven-projects-in-nov-2026-bto-sales-exercise"
+ },
+ {
+  "item": "Ballot odds",
+  "old": "'Likely heavy oversubscription'",
+  "new": "HDB past rates for Plus/Prime projects tabulated; estimate 4-room FT 1.5-4x, ST 10-20x, 2RF singles 4-10x",
+  "status": "new",
+  "source": "https://homes.hdb.gov.sg/home/bto/details/2026-11_BTO_R0xfTjFDNTFfMTc5MDgzNTMwMTM1Mw"
+ },
+ {
+  "item": "Merpati Alcove application rate 2.2x",
+  "old": "[BTOHQ, Unverified]",
+  "new": "Still unverified",
+  "status": "unverifiable",
+  "source": "https://www.btohq.com/bto-project-spec/merpati-meadow"
+ },
+ {
+  "item": "Flat Portal URL",
+  "old": "https://homes.hdb.gov.sg/home/bto/details/2026-06_UPB_WVNfTjhDMjNfMTc4MDk4NjM2NzkyMQ",
+  "new": "https://homes.hdb.gov.sg/home/bto/details/2026-11_BTO_R0xfTjFDNTFfMTc5MDgzNTMwMTM1Mw",
+  "status": "corrected",
+  "source": "https://homes.hdb.gov.sg/home/bto/details/2026-11_BTO_R0xfTjFDNTFfMTc5MDgzNTMwMTM1Mw"
+ },
+ {
+  "item": "Caveat that official prices were not retrieved",
+  "old": "Official prices not in report",
+  "new": "Removed; official figures used throughout",
+  "status": "removed",
+  "source": "official.json"
+ },
+ {
+  "item": "Construction status",
+  "old": "OSM construction, BTOHQ 0%, blocks 12-14 slated for demolition 2023",
+  "new": "OSM landuse=construction (2 Aug 2026); demolition began Sep 2023; roads U/C per site plan; no tender found",
+  "status": "verified",
+  "source": "https://www.openstreetmap.org/way/1532713281"
+ }
+]

@@ -1,0 +1,422 @@
+[
+ {
+  "item": "Unit split",
+  "old": "160 2RF / 50 3-room / 250 4-room / 200 5-room / 50 3Gen (media)",
+  "new": "42 + 136 2RF / 84 3-room / 168 4-room / 252 5-room / 28 3Gen = 710 sale units, plus 102 rental (812 total)",
+  "status": "corrected",
+  "source": "official.json"
+ },
+ {
+  "item": "Blocks and storeys",
+  "old": "5 blocks (media); highest storey not found",
+  "new": "5 blocks (140A, 140B, 141A, 141B, 141C), all 15 storeys",
+  "status": "corrected",
+  "source": "official.json / HDB XML"
+ },
+ {
+  "item": "Unit mix by block",
+  "old": "not given",
+  "new": "5-room and 3Gen concentrated in 140B and 141C (112 5-room + 14 3Gen each), 28 5-room in 141B",
+  "status": "new",
+  "source": "HDB site plan (assets/hdb)"
+ },
+ {
+  "item": "Completion",
+  "old": "around Jan 2030 / Q1 2030; realistic mid to late 2030",
+  "new": "ECD 3Q 2030; DPD 31 Mar 2032",
+  "status": "corrected",
+  "source": "official.json"
+ },
+ {
+  "item": "Waiting time",
+  "old": "3 years 2 months",
+  "new": "38 months",
+  "status": "verified",
+  "source": "official.json"
+ },
+ {
+  "item": "MOP end",
+  "old": "~2035",
+  "new": "~2035-36 (5 years from key collection)",
+  "status": "corrected",
+  "source": "https://www.mynicehome.gov.sg/hdb-how-to/buy-your-flat/what-are-standard-prime-and-plus-hdb-flats/"
+ },
+ {
+  "item": "Prices",
+  "old": "Only 2RF from $131k confirmed; others were pre-launch estimates",
+  "new": "Official ranges: 2RF $131k-$207k, 3-room $266k-$317k, 4-room $339k-$445k, 5-room $494k-$626k, 3Gen $551k-$637k",
+  "status": "corrected",
+  "source": "official.json"
+ },
+ {
+  "item": "Prices after grants",
+  "old": "4-room from $232k after grants (actually a Sembawang example)",
+  "new": "2RF from $11k, 3-room $161k, 4-room $259k, 5-room $439k, 3Gen $496k",
+  "status": "corrected",
+  "source": "https://www.hdb.gov.sg/hdb-pulse/news/2026/hdb-launches-7964-flats-across-seven-projects-in-nov-2026-bto-sales-exercise"
+ },
+ {
+  "item": "Short-lease 2RF prices",
+  "old": "not given",
+  "new": "Type 1 $44k-$99k, Type 2 $53k-$124k (15-45 year leases)",
+  "status": "new",
+  "source": "official.json"
+ },
+ {
+  "item": "White flat discount",
+  "old": "$6k-$9k less (media)",
+  "new": "$6,000 / $8,600 / $9,000 off for 3-, 4- and 5-room",
+  "status": "verified",
+  "source": "HDB XML"
+ },
+ {
+  "item": "First BTO with 5-room White flats",
+  "old": "Stated as fact (media)",
+  "new": "HDB confirms White flats for 3-, 4- and 5-room but does not say 'first'; earlier pilots were up to 4-room only; likely but unverified",
+  "status": "unverifiable",
+  "source": "https://sg.finance.yahoo.com/news/hdb-pilots-open-concept-white-134014693.html"
+ },
+ {
+  "item": "Only 3Gen project in exercise",
+  "old": "Only project with 3Gen",
+  "new": "Confirmed",
+  "status": "verified",
+  "source": "https://www.hdb.gov.sg/hdb-pulse/news/2026/hdb-launches-7964-flats-across-seven-projects-in-nov-2026-bto-sales-exercise"
+ },
+ {
+  "item": "Centralised cooling",
+  "old": "Unverified whether present",
+  "new": "Optional centralised cooling by Keppel (Energy-as-a-Service)",
+  "status": "corrected",
+  "source": "official.json / portal-page.txt"
+ },
+ {
+  "item": "Kidney dialysis centre",
+  "old": "not mentioned",
+  "new": "Dialysis centre on 2nd storey of the MSCP; roof garden with community gardening",
+  "status": "new",
+  "source": "official.json"
+ },
+ {
+  "item": "In-project amenities",
+  "old": "Eating house, minimart, shops, preschool (media)",
+  "new": "Confirmed; preschool is 2-storey",
+  "status": "verified",
+  "source": "official.json"
+ },
+ {
+  "item": "Rental flats",
+  "old": "Includes public rental (media)",
+  "new": "102 rental flats",
+  "status": "verified",
+  "source": "HDB site plan"
+ },
+ {
+  "item": "Site position",
+  "old": "~1.352 N, 103.733 E triangulated; beside PIE",
+  "new": "Official 1.35277, 103.73246; waterbody reserve between plot and PIE; park reserve to south",
+  "status": "corrected",
+  "source": "official.json / site plan"
+ },
+ {
+  "item": "JE2 Tengah Park distance",
+  "old": "~600-650 m, 8-11 min",
+  "new": "478 m straight, 966 m walk (~12 min)",
+  "status": "corrected",
+  "source": "OneMap + OSRM"
+ },
+ {
+  "item": "JE1 Tengah Plantation distance",
+  "old": "~570 m, 8-10 min",
+  "new": "519 m straight, 951 m walk (~12 min)",
+  "status": "corrected",
+  "source": "OneMap + OSRM"
+ },
+ {
+  "item": "JRL Stage 2 opening",
+  "old": "2028",
+  "new": "Originally 2028; LTA to update after Stage 1 delay; no new date",
+  "status": "verified",
+  "source": "https://blog.sgtrains.com/2026/03/jrl-opening-delayed-by-6-months-to-mid-2028-new-station-to-be-added-in-tengah/"
+ },
+ {
+  "item": "JRL Stage 1 opening",
+  "old": "mid-2028, shuttle buses from end-2027",
+  "new": "Confirmed mid-2028; LTA project page still shows 2027 (outdated)",
+  "status": "verified",
+  "source": "https://theonlinecitizen.com/2026/03/04/jurong-region-line-stage-1-opening-delayed-to-mid-2028"
+ },
+ {
+  "item": "Hong Kah JS4",
+  "old": "not mentioned",
+  "new": "919 m straight, 1,092 m walk; Stage 1, mid-2028",
+  "status": "new",
+  "source": "OneMap + OSRM"
+ },
+ {
+  "item": "Chinese Garden EW25",
+  "old": "1.1 km, 15-20 min",
+  "new": "1,159 m straight, 2,724 m walk (~34 min) across PIE",
+  "status": "corrected",
+  "source": "OneMap + OSRM"
+ },
+ {
+  "item": "Lakeside EW26",
+  "old": "1.6 km",
+  "new": "1,592 m straight, 4,093 m walk",
+  "status": "verified",
+  "source": "OneMap + OSRM"
+ },
+ {
+  "item": "Bukit Batok NS2",
+  "old": "1.9 km",
+  "new": "1,947 m straight, 2,929 m walk",
+  "status": "verified",
+  "source": "OneMap + OSRM"
+ },
+ {
+  "item": "Pioneer Primary",
+  "old": "~260 m",
+  "new": "187 m straight, 540 m walk; 80 Tengah Garden Ave",
+  "status": "corrected",
+  "source": "https://www.moe.gov.sg/schoolfinder/schooldetail/pioneer-primary-school"
+ },
+ {
+  "item": "Jurong Primary",
+  "old": "~410 m",
+  "new": "488 m straight, 2,405 m walk across PIE",
+  "status": "corrected",
+  "source": "OneMap + OSRM"
+ },
+ {
+  "item": "Princess Elizabeth Primary",
+  "old": "~950 m",
+  "new": "1,031 m straight (within 2 km, not 1 km)",
+  "status": "corrected",
+  "source": "OneMap"
+ },
+ {
+  "item": "Jurongville Secondary",
+  "old": "~450 m",
+  "new": "428 m straight, 3,154 m walk",
+  "status": "corrected",
+  "source": "OneMap + OSRM"
+ },
+ {
+  "item": "Kranji Primary / ACS(P)",
+  "old": "Likely within 1-2 km, unverified",
+  "new": "Kranji 2028 (~0.87 km, estimate); ACS(P) 2030 (~1.4 km, estimate)",
+  "status": "corrected",
+  "source": "https://www.edgeprop.sg/property-news/acs-primary-relocate-tengah-and-turn-co-ed-2030"
+ },
+ {
+  "item": "Bukit View Primary new campus",
+  "old": "not mentioned",
+  "new": "101 Bukit Batok West Ave 8, 2027; 1,193 m straight",
+  "status": "new",
+  "source": "https://www.moe.gov.sg/news/parliamentary-replies/20230222-impact-of-relocating-bukit-view-primary-school"
+ },
+ {
+  "item": "Second new Tengah primary school 2028",
+  "old": "listed separately",
+  "new": "Folded into Kranji Primary (2028)",
+  "status": "removed",
+  "source": "https://moe.gov.sg/news/press-releases/20230209-new-schools-to-meet-demand-in-the-west-and-north-east-of-singapore"
+ },
+ {
+  "item": "Tengah Polyclinic",
+  "old": "opened 28 Feb 2026, ~1.15 km",
+  "new": "Confirmed; 1,138 m straight, 1,710 m walk",
+  "status": "verified",
+  "source": "https://www.moh.gov.sg/newsroom/speech-by-dr-koh-poh-koon--senior-minister-of-state--ministry-of-health-and-ministry-of-manpower--at-the-official-opening-of-tengah-polyclinic--28-febuary-2026/"
+ },
+ {
+  "item": "Tengah General & Community Hospital",
+  "old": "Early 2030s",
+  "new": "NUHS early 2030s; Ssangyong ~$2.15B contract (Sep 2026, 63 months) implies ~end-2031 to 2032; along Tengah Garden Ave; exact site unverified",
+  "status": "corrected",
+  "source": "https://constructionreviewonline.com/2-15b-tengah-hospital-ssangyong-ec-wins-design-build-contract-in-singapore/"
+ },
+ {
+  "item": "Health reserve site",
+  "old": "not mentioned",
+  "new": "Site reserved for health & medical care adjacent NW",
+  "status": "new",
+  "source": "HDB site plan"
+ },
+ {
+  "item": "Jurong Polyclinic",
+  "old": "at Jurong East",
+  "new": "391 m straight but 2,777 m walk; being redeveloped on adjacent site",
+  "status": "corrected",
+  "source": "OneMap + OSRM"
+ },
+ {
+  "item": "Plantation Plaza",
+  "old": "~0.8 km",
+  "new": "777 m straight, 1,175 m walk",
+  "status": "verified",
+  "source": "OneMap + OSRM"
+ },
+ {
+  "item": "Tengah CC",
+  "old": "~0.55 km",
+  "new": "497 m straight, 941 m walk",
+  "status": "corrected",
+  "source": "OneMap + OSRM"
+ },
+ {
+  "item": "Bukit Batok West Hawker Centre",
+  "old": "~1.1 km, opened Mar 2025",
+  "new": "1,069 m straight, 1,724 m walk; opened 19 Mar 2025",
+  "status": "verified",
+  "source": "https://eatbook.sg/bukit-batok-west-hawker-centre/"
+ },
+ {
+  "item": "Yuhua Market & Hawker",
+  "old": "~1-1.5 km across PIE",
+  "new": "822 m straight, 2,596 m walk",
+  "status": "corrected",
+  "source": "OneMap + OSRM"
+ },
+ {
+  "item": "Jurong Lake Gardens",
+  "old": "~2 km",
+  "new": "1,598 m straight, 3,779 m walk",
+  "status": "corrected",
+  "source": "OneMap + OSRM"
+ },
+ {
+  "item": "Young-flat resale 4-room",
+  "old": "$670k (n=113), $571k-$738k",
+  "new": "$675k (n=246), $560k-$805k, $676 psf; nearest precinct $668k (n=91)",
+  "status": "corrected",
+  "source": "data.gov.sg d_8b84c4ee58e3cfc0ece0d773c8ca6abc"
+ },
+ {
+  "item": "Young-flat resale 5-room",
+  "old": "$819k (n=98), $710k-$870k",
+  "new": "$820k (n=168), $710k-$980k, $674 psf; nearest precinct $809k (n=80)",
+  "status": "corrected",
+  "source": "data.gov.sg d_8b84c4ee58e3cfc0ece0d773c8ca6abc"
+ },
+ {
+  "item": "Young-flat resale 3-room",
+  "old": "$521k (n=41)",
+  "new": "$523k (n=78), $470k-$560k",
+  "status": "corrected",
+  "source": "data.gov.sg d_8b84c4ee58e3cfc0ece0d773c8ca6abc"
+ },
+ {
+  "item": "Young-flat resale 2-room",
+  "old": "$380k median",
+  "new": "$380k (n=87), $320k-$435k",
+  "status": "verified",
+  "source": "data.gov.sg d_8b84c4ee58e3cfc0ece0d773c8ca6abc"
+ },
+ {
+  "item": "Comparator location",
+  "old": "next to the site",
+  "new": "West Ridges / Edge / Terra / Plains, 0.67-1.33 km east; leases 2017-21",
+  "status": "corrected",
+  "source": "OneMap"
+ },
+ {
+  "item": "Resale trend 2026",
+  "old": "broadly flat (unverified)",
+  "new": "Flat; quarterly medians 4-room $674k-$677k, 5-room $818k-$828k",
+  "status": "verified",
+  "source": "data.gov.sg d_8b84c4ee58e3cfc0ece0d773c8ca6abc"
+ },
+ {
+  "item": "HDB nearby resale comparables",
+  "old": "in correction box",
+  "new": "2RF $322.5k-$388k; 3-room $475k-$532k; 4-room $570,888-$705,888; 5-room $729,888-$858k",
+  "status": "verified",
+  "source": "https://www.hdb.gov.sg/hdb-pulse/news/2026/hdb-launches-7964-flats-across-seven-projects-in-nov-2026-bto-sales-exercise"
+ },
+ {
+  "item": "Annex C town medians",
+  "old": "BB $425k/$645.9k/$800k etc.",
+  "new": "Confirmed",
+  "status": "verified",
+  "source": "https://www.hdb.gov.sg/-/media/hdb-pulse/news/2026/20260724-2nd-quarter-2026-public-housing-data-and-upcoming-flat-supply/Annex-C.pdf"
+ },
+ {
+  "item": "Tengah resale records",
+  "old": "0",
+  "new": "0",
+  "status": "verified",
+  "source": "data.gov.sg d_8b84c4ee58e3cfc0ece0d773c8ca6abc"
+ },
+ {
+  "item": "Resale at MOP estimates",
+  "old": "4-room $620k-$800k; 5-room $760k-$950k; 3-room $470k-$580k",
+  "new": "4-room $610k-$810k; 5-room $740k-$970k; 3-room $480k-$620k; 2RF $370k-$490k (estimate)",
+  "status": "corrected",
+  "source": "own calculation from data.gov.sg"
+ },
+ {
+  "item": "Ballot odds verdict",
+  "old": "Tight odds for 5-room (~200) and 3Gen (~50)",
+  "new": "5-room is the largest supply (252); 3Gen tightest (28); HDB past rates unavailable",
+  "status": "corrected",
+  "source": "official.json"
+ },
+ {
+  "item": "Standard rules",
+  "old": "5-year MOP, no clawback, rental after MOP, room rental during MOP",
+  "new": "Confirmed",
+  "status": "verified",
+  "source": "https://www.mynicehome.gov.sg/hdb-how-to/buy-your-flat/what-are-standard-prime-and-plus-hdb-flats/"
+ },
+ {
+  "item": "Plus/Prime resale income ceiling",
+  "old": "not addressed",
+  "new": "Not settled from official pages; not relevant to Standard",
+  "status": "unverifiable",
+  "source": "https://www.mynicehome.gov.sg/hdb-how-to/buy-your-flat/what-are-standard-prime-and-plus-hdb-flats/"
+ },
+ {
+  "item": "Income ceilings",
+  "old": "$16k families / $8k singles (media)",
+  "new": "Confirmed as first exercise under new ceilings",
+  "status": "verified",
+  "source": "https://www.hdb.gov.sg/hdb-pulse/news/2026/hdb-launches-7964-flats-across-seven-projects-in-nov-2026-bto-sales-exercise"
+ },
+ {
+  "item": "Booking period",
+  "old": "not given",
+  "new": "Mar 2027 to Jun 2027",
+  "status": "new",
+  "source": "portal-page.txt"
+ },
+ {
+  "item": "Feb 2027 Tengah supply",
+  "old": "not mentioned",
+  "new": "Feb 2027 exercise includes Tengah",
+  "status": "new",
+  "source": "https://www.hdb.gov.sg/hdb-pulse/news/2026/hdb-launches-7964-flats-across-seven-projects-in-nov-2026-bto-sales-exercise"
+ },
+ {
+  "item": "Construction stage",
+  "old": "Likely site preparation (unverified)",
+  "new": "No tender/award news found; adjacent public housing under construction; plot status unverified",
+  "status": "unverifiable",
+  "source": "HDB site plan"
+ },
+ {
+  "item": "Constituency",
+  "old": "Chua Chu Kang GRC (Liddat)",
+  "new": "Chua Chu Kang GRC per media summary of the GE2025 boundaries report",
+  "status": "unverifiable",
+  "source": "https://mothership.sg/2025/03/ebrc-ge2025-report/"
+ },
+ {
+  "item": "Data gaps note",
+  "old": "Portal 503; release unavailable",
+  "new": "Portal and release retrieved",
+  "status": "removed",
+  "source": "https://homes.hdb.gov.sg/home/bto/details/2026-11_BTO_VEdfRDFDN18xNzkwODM1MjU3Nzkz"
+ }
+]

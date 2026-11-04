@@ -1,0 +1,202 @@
+---
+import { Image } from 'astro:assets';
+import { getEntry } from 'astro:content';
+import Layout from '../layouts/Layout.astro';
+import MapStyles from '../components/MapStyles.astro';
+import { getProjects, nearest, url } from '../lib/data';
+import { CLS_COLOUR, metres, money, tagify } from '../lib/format';
+
+const projects = await getProjects();
+const summary = await getEntry('pages', 'summary');
+const summaryHtml = tagify((summary?.rendered?.html ?? '').replace(/^\s*<h1[^>]*>[\s\S]*?<\/h1>/, ''));
+
+const rows = projects.map((p) => {
+  const o = p.official;
+  const type = o.classification ?? 'TBA';
+  const mrt = nearest(p, 'mrt');
+  const fut = nearest(p, 'mrt_future');
+  const months = Number((o.est_waiting_time ?? '').match(/\d+/)?.[0]) || null;
+  const claw = o.clawback_rate && !o.clawback_rate.startsWith('Not') ? o.clawback_rate.replace(/\.00%$/, '%') : p.upcoming ? 'TBA' : 'None';
+  return { p, o, type, mrt, fut, months, claw };
+});
+
+const overview = JSON.stringify({
+  projects: rows.map(({ p, o, type }) => ({
+    name: p.name, lat: o.lat, lng: o.lng, href: url(`projects/${p.id}/`), colour: CLS_COLOUR[type] ?? '#5d6873',
+    type: type === 'TBA' ? 'type not yet announced' : type, exercise: p.exercise, town: o.town,
+  })),
+});
+const shortName = (s: string) => s.replace(/ (MRT|LRT) Station$/i, '').replace(/ (MRT|LRT) station$/i, '');
+---
+
+<Layout title="BTO projects: Nov 2026 and Feb 2027">
+  <MapStyles />
+  <header class="hero">
+    <h1>BTO projects: Nov 2026 and Feb 2027</h1>
+    <div class="sub">
+      An independent look at all 12 projects in HDB's November 2026 sales exercise and the upcoming February 2027 exercise: amenities and planned developments, resale benchmarks, Standard/Plus/Prime rules, and construction stage. Official figures come from HDB's Flat Portal project data; amenities from government datasets; each report was checked by a separate research pass.
+    </div>
+  </header>
+
+  <section class="card">
+    <h2>Where they are</h2>
+    <div class="omap" data-config={overview}></div>
+    <p class="sub">
+      <span class="dot" style={`background:${CLS_COLOUR.Standard}`}></span>Standard
+      <span class="dot" style={`background:${CLS_COLOUR.Plus}; margin-left:12px`}></span>Plus
+      <span class="dot" style={`background:${CLS_COLOUR.Prime}; margin-left:12px`}></span>Prime
+      <span class="dot" style="background:#5d6873; margin-left:12px"></span>Feb 2027, type not yet announced
+    </p>
+  </section>
+
+  <section class="card" id="compare">
+    <h2>Compare projects</h2>
+    <div class="filters">
+      <div role="group" aria-label="Exercise">
+        <button data-f="month" data-v="" class="on">All</button>
+        <button data-f="month" data-v="2026-11">Nov 2026</button>
+        <button data-f="month" data-v="2027-02">Feb 2027</button>
+      </div>
+      <div role="group" aria-label="Type">
+        <button data-f="type" data-v="" class="on">Any type</button>
+        <button data-f="type" data-v="Standard">Standard</button>
+        <button data-f="type" data-v="Plus">Plus</button>
+        <button data-f="type" data-v="Prime">Prime</button>
+        <button data-f="type" data-v="TBA">Not announced</button>
+      </div>
+    </div>
+    <div class="tablewrap">
+      <table id="cmp">
+        <thead>
+          <tr>
+            <th></th>
+            <th data-sort="text">Project</th>
+            <th data-sort="num" title="Sorted by clawback rate">Type</th>
+            <th data-sort="num">Wait</th>
+            <th data-sort="num">Units</th>
+            <th data-sort="num">4-room price</th>
+            <th data-sort="num">Nearest MRT now</th>
+            <th data-sort="num">Nearest future MRT</th>
+            <th data-sort="num" title="Primary schools within 1 km / 2 km (straight line)">Primary<br />≤1 / 2 km</th>
+            <th data-sort="num" title="Hawker centres within 1 km">Hawkers<br />≤1 km</th>
+            <th data-sort="num" title="Supermarkets within 1 km">Super-<br />markets ≤1 km</th>
+          </tr>
+        </thead>
+        <tbody>
+          {
+            rows.map(({ p, o, type, mrt, fut, months, claw }) => (
+              <tr data-month={p.month} data-type={type}>
+                <td>
+                  {p.images['plot-satellite.jpg'] && (
+                    <a href={url(`projects/${p.id}/`)} tabindex="-1">
+                      <Image src={p.images['plot-satellite.jpg']} alt="" width={160} class="thumb" />
+                    </a>
+                  )}
+                </td>
+                <td data-v={p.name}>
+                  <a href={url(`projects/${p.id}/`)}><b>{p.name}</b></a>
+                  <br />
+                  <span class="sub">{o.town} · {p.exercise}</span>
+                </td>
+                <td data-v={parseFloat(claw) || (claw === 'None' ? 0 : 999)} class="nw">
+                  <span class="badge" style={`background:${CLS_COLOUR[type] ?? '#7f8c8d'}`}>{type}</span>
+                  <br />
+                  <span class="sub">{claw === 'None' ? 'No clawback' : claw === 'TBA' ? '' : `${claw} clawback`}</span>
+                </td>
+                <td data-v={months ?? 999} class="nw">{months ? `${months} mo` : 'TBA'}</td>
+                <td data-v={p.totalUnits ?? 0} class="nw">{p.totalUnits?.toLocaleString('en-US') ?? '–'}</td>
+                <td data-v={Number(p.fourRoom?.price_low) || 1e9} class="nw">
+                  {p.fourRoom ? `${money(p.fourRoom.price_low)} – ${money(p.fourRoom.price_high)}` : 'TBA'}
+                </td>
+                <td data-v={mrt?.straight_m ?? 1e9}>
+                  {mrt ? (
+                    <>
+                      {shortName(mrt.name)}
+                      <br />
+                      <span class="sub">{metres(mrt.straight_m)}{mrt.walk_min ? ` · ${Math.round(mrt.walk_min)} min walk` : ''}</span>
+                    </>
+                  ) : '–'}
+                </td>
+                <td data-v={fut?.straight_m ?? 1e9}>
+                  {fut ? (
+                    <>
+                      {shortName(fut.name)}
+                      <br />
+                      <span class="sub">{metres(fut.straight_m)}</span>
+                    </>
+                  ) : <span class="sub">None within 2.5 km</span>}
+                </td>
+                <td data-v={p.stats?.primary_1km ?? 0}>{p.stats ? `${p.stats.primary_1km} / ${p.stats.primary_2km}` : '–'}</td>
+                <td data-v={p.stats?.hawker_1km ?? 0}>{p.stats?.hawker_1km ?? '–'}</td>
+                <td data-v={p.stats?.supermarkets_1km ?? 0}>{p.stats?.supermarkets_1km ?? '–'}</td>
+              </tr>
+            ))
+          }
+        </tbody>
+      </table>
+    </div>
+    <p class="sub">
+      Click a column heading to sort. Distances are straight lines from HDB's site coordinate (to the nearest exit for MRT stations); walking times are route estimates. Feb 2027 type, prices and waiting times are announced at launch; the reports give estimates.
+    </p>
+  </section>
+
+  <section class="card prose" set:html={summaryHtml} />
+
+  <section class="card" id="about">
+    <h2>About the data</h2>
+    <ul>
+      <li><b>Project facts</b> (classification, clawback, prices, waiting time, completion dates, unit supply, site coordinates) come from HDB's own project data on the <a href="https://homes.hdb.gov.sg/" target="_blank" rel="noopener">HDB Flat Portal</a>, retrieved 4 Nov 2026.</li>
+      <li><b>Maps</b> use <a href="https://www.onemap.gov.sg/" target="_blank" rel="noopener">OneMap</a> street and satellite tiles from the Singapore Land Authority. Rail lines come from URA Master Plan 2025 (amended Sep 2026); blocks under construction come from HDB's 'Under Construction Buildings' dataset.</li>
+      <li><b>Amenities</b> come from agency datasets on <a href="https://data.gov.sg/" target="_blank" rel="noopener">data.gov.sg</a>: LTA (MRT exits, bus stops), MOE (schools), NEA (hawker centres, supermarket licences), MOH (CHAS clinics, eldercare), ECDA (preschools), NParks (parks), PA (community clubs), NLB (libraries) and SportSG. Polyclinics and hospitals, and addresses without coordinates, are located with OneMap search.</li>
+      <li><b>Resale benchmarks</b> are computed from HDB resale transactions on data.gov.sg (last 12 months).</li>
+      <li><b>Analysis</b> (planned developments, malls, walking-route estimates, Feb 2027 estimates and verdicts) was researched by AI agents and then re-checked against official sources. Every fact in the reports is tagged <span class="tag" style="background:#1e7e34">Official</span>, <span class="tag" style="background:#2471a3">Verified</span>, <span class="tag" style="background:#b9770e">Estimate</span> or <span class="tag" style="background:#922b21">Unverified</span>.</li>
+    </ul>
+  </section>
+</Layout>
+
+<script>
+  import '../scripts/maps';
+
+  // Sorting and filtering for the comparison table
+  const table = document.getElementById('cmp') as HTMLTableElement;
+  const tbody = table.tBodies[0];
+  const filters: Record<string, string> = { month: '', type: '' };
+  document.querySelectorAll<HTMLButtonElement>('.filters button').forEach((b) =>
+    b.addEventListener('click', () => {
+      filters[b.dataset.f!] = b.dataset.v!;
+      b.parentElement!.querySelectorAll('button').forEach((x) => x.classList.toggle('on', x === b));
+      for (const r of tbody.rows) r.hidden = Object.entries(filters).some(([k, v]) => v && r.dataset[k] !== v);
+    }),
+  );
+  table.querySelectorAll<HTMLTableCellElement>('th[data-sort]').forEach((th) =>
+    th.addEventListener('click', () => {
+      const col = th.cellIndex;
+      const num = th.dataset.sort === 'num';
+      const dir = th.dataset.dir === 'asc' ? -1 : 1;
+      table.querySelectorAll('th').forEach((x) => delete x.dataset.dir);
+      th.dataset.dir = dir === 1 ? 'asc' : 'desc';
+      const key = (r: HTMLTableRowElement) => r.cells[col].dataset.v ?? '';
+      [...tbody.rows]
+        .sort((a, b) => dir * (num ? Number(key(a)) - Number(key(b)) : key(a).localeCompare(key(b))))
+        .forEach((r) => tbody.appendChild(r));
+    }),
+  );
+</script>
+
+<style>
+  .filters { display: flex; flex-wrap: wrap; gap: 12px; margin-bottom: 8px; }
+  .filters div { display: flex; flex-wrap: wrap; border: 1px solid var(--bd); border-radius: 8px; overflow: hidden; }
+  .filters button { border: 0; background: #fff; padding: 6px 12px; font: inherit; font-size: 13px; cursor: pointer; border-right: 1px solid var(--bd); }
+  .filters button:last-child { border-right: 0; }
+  .filters button.on { background: #1d2329; color: #fff; }
+  #cmp { font-size: 13.5px; }
+  #cmp th[data-sort] { cursor: pointer; user-select: none; }
+  #cmp th[data-sort]::after { content: ' ↕'; color: #aab; font-size: 11px; }
+  #cmp th[data-dir='asc']::after { content: ' ↑'; color: var(--fg); }
+  #cmp th[data-dir='desc']::after { content: ' ↓'; color: var(--fg); }
+  #cmp td { vertical-align: middle; }
+  #cmp .nw { white-space: nowrap; }
+  #cmp th { vertical-align: bottom; }
+  .thumb { width: 76px; height: auto; border-radius: 6px; display: block; }
+  @media (max-width: 700px) { .thumb { width: 56px; } }
+</style>

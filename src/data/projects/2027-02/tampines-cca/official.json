@@ -1,0 +1,19 @@
+{
+ "project_name": null,
+ "classification": null,
+ "town": "Tampines",
+ "lat": 1.3463672,
+ "lng": 103.948828,
+ "clawback_rate": null,
+ "est_waiting_time": null,
+ "total_units": "330",
+ "waiting_time_note": null,
+ "ecd": null,
+ "dpd": null,
+ "booking_period": null,
+ "flat_types": [
+  "Community Care Apartment",
+  "4-room"
+ ],
+ "units": []
+}

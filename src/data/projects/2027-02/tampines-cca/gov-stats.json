@@ -1,0 +1,11 @@
+{
+ "primary_1km": 4,
+ "primary_2km": 11,
+ "clinics_500": 10,
+ "clinics_1km": 31,
+ "preschools_500": 12,
+ "bus_400": 8,
+ "hawker_1km": 1,
+ "supermarkets_1km": 9,
+ "hdb_uc_300m": []
+}

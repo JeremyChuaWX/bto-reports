@@ -1,0 +1,275 @@
+[
+ {
+  "item": "Reference point for all distances",
+  "old": "Straight-line from HomeTeamNS Khatib (2 Yishun Walk)",
+  "new": "Measured from HDB site coordinate 1.41353,103.82998, plus OSRM foot routing; most nearby distances were understated by 0.1-0.2 km",
+  "status": "corrected",
+  "source": "official.json; https://routing.openstreetmap.de/routed-foot/"
+ },
+ {
+  "item": "Walk to Khatib MRT (NS14)",
+  "old": "~363 m straight-line; 5-10 min walk (RecordBTO 0.4 km / 5 min)",
+  "new": "0.50-0.56 km straight-line; OSRM 0.47 km/6 min (NE block 992B) to 0.65-0.71 km/9-9.5 min (SW block 997C); ~7 min from site centre",
+  "status": "corrected",
+  "source": "https://routing.openstreetmap.de/routed-foot/"
+ },
+ {
+  "item": "Peiying Primary within 1 km",
+  "old": "~0.29 km, within 1 km",
+  "new": "0.41 km from site centre, ~0.48 km from furthest block; within 1 km for all blocks (walk 0.84 km on current paths)",
+  "status": "verified",
+  "source": "https://www.onemap.gov.sg/"
+ },
+ {
+  "item": "Naval Base Primary distance",
+  "old": "~0.87 km, borderline",
+  "new": "1.03 km from site centre, ~0.9 km from eastern blocks; borderline, check by block address",
+  "status": "corrected",
+  "source": "https://www.onemap.gov.sg/"
+ },
+ {
+  "item": "Nearby resale 4-room $548k-660k",
+  "old": "$548k-660k (HDB Annex A)",
+  "new": "Consistent: nearby 2018-lease blocks Nov 2025-Oct 2026 median $620k, range $550k-670k, 58 sales; 52 of 58 within HDB range",
+  "status": "verified",
+  "source": "https://data.gov.sg/datasets/d_8b84c4ee58e3cfc0ece0d773c8ca6abc/view"
+ },
+ {
+  "item": "5-room nearby resale",
+  "old": "$660k-775k (HDB)",
+  "new": "HDB range kept; actual nearby 2018-lease median $765k (32 sales, $675k-818k), so HDB upper end is low",
+  "status": "corrected",
+  "source": "https://data.gov.sg/datasets/d_8b84c4ee58e3cfc0ece0d773c8ca6abc/view"
+ },
+ {
+  "item": "Waiting time / completion by block group",
+  "old": "39/41 months; completion ~Jun-Aug 2030 (estimate)",
+  "new": "Blocks 996A-C,997A-C: 39 months, ECD 3Q 2030, DPD 31 Mar 2032. Blocks 992A-C,995A-C: 41 months, ECD 4Q 2030, DPD 30 Jun 2032",
+  "status": "corrected",
+  "source": "official.json"
+ },
+ {
+  "item": "Booking period",
+  "old": "Mar 2027 (tentative)",
+  "new": "Portal lists 'Mar 2027 and Jun 2027'; Annex B says booking from Mar 2027",
+  "status": "new",
+  "source": "official.json"
+ },
+ {
+  "item": "Rental flats",
+  "old": "Not mentioned",
+  "new": "308 rental flats: block 996B wholly rental (210); 992A, 992B, 996C 28 each; 996A 14; 1,890 homes in total",
+  "status": "new",
+  "source": "official.json"
+ },
+ {
+  "item": "3-room location",
+  "old": "Not mentioned",
+  "new": "All 84 three-room flats are in the 41-month group (992A-C, 995A-C)",
+  "status": "new",
+  "source": "https://homes.hdb.gov.sg/home/bto/details/2026-11_BTO_WVNfTjhDMjNfMTc5MDgzNTI2OTY2NA"
+ },
+ {
+  "item": "Block heights and count",
+  "old": "Not confirmed",
+  "new": "12 blocks, all 15 storeys",
+  "status": "new",
+  "source": "official.json"
+ },
+ {
+  "item": "Finishes",
+  "old": "HDB does not say finishes are included [unverified]",
+  "new": "Not included; Optional Component Scheme: 4-room flooring $5,210 + doors/sanitary $3,240; 5-room $6,360 + $3,240; 3-room $3,510 + $2,810; 2-room Flexi flooring $2,440-2,710 + sanitary $630",
+  "status": "corrected",
+  "source": "official.json"
+ },
+ {
+  "item": "Preschools",
+  "old": "2 preschools on site [unverified, Ohmyhome]",
+  "new": "2 preschools, one on the first storey of each MSCP",
+  "status": "verified",
+  "source": "official.json"
+ },
+ {
+  "item": "Elevated MRT line next to site",
+  "old": "Not mentioned",
+  "new": "NSL viaduct runs along east edge next to Yishun Ave 2; noise for eastern blocks",
+  "status": "new",
+  "source": "https://resource.homes.hdb.gov.sg/2026-11/bto/ys_n8c23/"
+ },
+ {
+  "item": "Orchid Country Club adjacency",
+  "old": "Site backs onto Orchid Country Club (Ohmyhome)",
+  "new": "1.6 km away; not adjacent",
+  "status": "corrected",
+  "source": "https://www.onemap.gov.sg/"
+ },
+ {
+  "item": "Nearest hawker centre",
+  "old": "Chong Pang ~1.81 km",
+  "new": "Chong Pang Hawker Centre 1.95 km straight-line, 2.64 km walk",
+  "status": "corrected",
+  "source": "https://www.onemap.gov.sg/"
+ },
+ {
+  "item": "Khatib Polyclinic distance",
+  "old": "~0.54 km",
+  "new": "0.72 km straight-line, 0.78 km walk",
+  "status": "corrected",
+  "source": "https://www.onemap.gov.sg/"
+ },
+ {
+  "item": "Khatib Central distance",
+  "old": "~0.46 km",
+  "new": "0.63-0.66 km straight-line, 0.86 km walk",
+  "status": "corrected",
+  "source": "https://www.onemap.gov.sg/"
+ },
+ {
+  "item": "Nee Soon South CC distance",
+  "old": "~0.41 km",
+  "new": "0.56 km straight-line, 0.93 km walk",
+  "status": "corrected",
+  "source": "https://www.onemap.gov.sg/"
+ },
+ {
+  "item": "Lower Seletar Reservoir Park distance",
+  "old": "~0.56 km",
+  "new": "0.45 km straight-line, 0.87 km walk",
+  "status": "corrected",
+  "source": "https://www.onemap.gov.sg/"
+ },
+ {
+  "item": "KTPH / Wisteria Mall / Yishun Polyclinic distances",
+  "old": "1.33 / 1.19 / 1.97 km",
+  "new": "1.51 / 1.35 / 2.14 km",
+  "status": "corrected",
+  "source": "https://www.onemap.gov.sg/"
+ },
+ {
+  "item": "Yishun MRT distance",
+  "old": "~1.7 km",
+  "new": "1.86 km straight-line, 2.05 km walk",
+  "status": "corrected",
+  "source": "https://www.onemap.gov.sg/"
+ },
+ {
+  "item": "Secondary schools",
+  "old": "Naval Base Sec ~0.52 km, Orchid Park ~0.75 km, Chung Cheng distance not verified",
+  "new": "Naval Base Sec 0.66 km, Orchid Park 0.90 km, Chung Cheng High (Yishun) 1.04 km",
+  "status": "corrected",
+  "source": "https://www.onemap.gov.sg/"
+ },
+ {
+  "item": "Supermarket",
+  "old": "Brands and locations unverified",
+  "new": "HDB states a supermarket and eateries at Khatib MRT; brand unverified",
+  "status": "new",
+  "source": "official.json"
+ },
+ {
+  "item": "2018-19 lease resale comparables",
+  "old": "4-room median $616k (100 sales), 5-room $750k (43)",
+  "new": "Nearby 2018-lease estates: 4-room $620k (58), 5-room $765k (32); town 2016-19 leases: 4-room $610k (146), 5-room $750k (70)",
+  "status": "corrected",
+  "source": "https://data.gov.sg/datasets/d_8b84c4ee58e3cfc0ece0d773c8ca6abc/view"
+ },
+ {
+  "item": "Khatib older-block resale",
+  "old": "4-room median $530k (111 sales), 1984-1999 leases",
+  "new": "Yishun St 81 / Ring Rd 8xx (1987-88 leases): 4-room $575.5k (48), 3-room $465k (23), 5-room $737.5k (12)",
+  "status": "corrected",
+  "source": "https://data.gov.sg/datasets/d_8b84c4ee58e3cfc0ece0d773c8ca6abc/view"
+ },
+ {
+  "item": "Town-wide medians 2024-2026",
+  "old": "4-room $538k/$570k/$550k; 5-room $670k/$718k/$689k",
+  "new": "Same",
+  "status": "verified",
+  "source": "https://data.gov.sg/datasets/d_8b84c4ee58e3cfc0ece0d773c8ca6abc/view"
+ },
+ {
+  "item": "Town-wide medians 2022-2023 and young-flat psf 2022H2/2023H2",
+  "old": "2022 $466.5k/$627k; 2023 $498k/$645k; psf rows",
+  "new": "Removed; outside retrieved data window (from Dec 2023)",
+  "status": "removed",
+  "source": "https://data.gov.sg/datasets/d_8b84c4ee58e3cfc0ece0d773c8ca6abc/view"
+ },
+ {
+  "item": "Young-flat psf 2026 H2",
+  "old": "4-room $588, 5-room $607",
+  "new": "Jul-Oct 2026: 4-room $590, 5-room $601",
+  "status": "corrected",
+  "source": "https://data.gov.sg/datasets/d_8b84c4ee58e3cfc0ece0d773c8ca6abc/view"
+ },
+ {
+  "item": "Post-grant price table (EHG illustration)",
+  "old": "2-room $31k, 3-room $192k, 4-room $273k, 5-room $429k after EHG [HDB]",
+  "new": "Removed; EHG up to $120k depends on income, bands may have changed Aug 2026",
+  "status": "removed",
+  "source": "https://www.hdb.gov.sg/-/media/hdb-pulse/news/2026/hdb-launches-7964-flats-across-seven-projects-in-nov-2026-bto-sales-exercise/Annex-B---Nov-2026-BTO---Final.pdf"
+ },
+ {
+  "item": "HFE priority deadline 25 Sep 2026",
+  "old": "Applications by 25 Sep 2026 prioritised [HDB]",
+  "new": "Not in Annex B; sources conflict (25 vs 15 Sep)",
+  "status": "unverifiable",
+  "source": "https://www.hdb.gov.sg/-/media/hdb-pulse/news/2026/hdb-launches-7964-flats-across-seven-projects-in-nov-2026-bto-sales-exercise/Annex-B---Nov-2026-BTO---Final.pdf"
+ },
+ {
+  "item": "Plus/Prime resale buyer income ceiling",
+  "old": "$14k reported, possibly revised [unverified]",
+  "new": "Unsettled: no official page states it; HDB loan page reportedly ties Prime resale to prevailing BTO criteria ($16k family / $8k single). Not applicable to this Standard project",
+  "status": "unverifiable",
+  "source": "https://www.mynicehome.gov.sg/get-started/"
+ },
+ {
+  "item": "Ballot odds / application rates",
+  "old": "Chencharu Grove 3-room 2.1, 4-room 1.8, 5-room 3.7 (propkaki)",
+  "new": "HDB official rates cover only Feb/Jun 2026 (no Yishun); Woodgrove Acres 4-room 4.1, 5-room 2.5; Grove figures secondary, 4-room/5-room appear combined with Yishun Glade; estimate 4-room 1.5-3, 5-room 2-4",
+  "status": "unverifiable",
+  "source": "https://homes.hdb.gov.sg"
+ },
+ {
+  "item": "North-South Corridor timing",
+  "old": "Sources disagree: 2027/2029 vs 2029/2031",
+  "new": "Viaduct from 2029, tunnel from 2031 (LTA 17 Sep 2026; confirmed in Parliament 6 Oct 2026)",
+  "status": "verified",
+  "source": "https://mothership.sg/2026/10/jeffrey-siow-on-north-south-corridor-delay/"
+ },
+ {
+  "item": "Chencharu Close integrated development award",
+  "old": "Evia MCS, Gamuda, H108, ~$1.01bn",
+  "new": "Confirmed: letter of award 26 Sep 2025, $1.01bn; up to 875 homes, ~12,600 sqm commercial, bus interchange, hawker centre; site plan shows 'sold'",
+  "status": "verified",
+  "source": "https://www.hdb.gov.sg/-/media/business-partners/land-developers-and-land-users/buying-land-land-sales/sites-sold-by-hdb/Mix-Residential-Site-Sold-14-Jan-2026.pdf"
+ },
+ {
+  "item": "Agri-Food Innovation Park / Woodlands Regional Centre",
+  "old": "Listed as planned developments",
+  "new": "Removed as not material to this site",
+  "status": "removed",
+  "source": "official.json"
+ },
+ {
+  "item": "Short-lease 2-room Flexi prices",
+  "old": "15 and 45-year rows only",
+  "new": "Full 15-45 year table",
+  "status": "new",
+  "source": "official.json"
+ },
+ {
+  "item": "Construction stage",
+  "old": "Could not verify; no reports of site clearing",
+  "new": "Still unverified; no published N8C23 award found; site plan shows bounding Yishun St 82 and surrounding roads under construction",
+  "status": "unverifiable",
+  "source": "https://resource.homes.hdb.gov.sg/2026-11/bto/ys_n8c23/"
+ },
+ {
+  "item": "Town map planned items",
+  "old": "Not mentioned",
+  "new": "Proposed nursing home and place of worship near Bah Soon Pah Rd; Chong Pang City hub u/c; proposed funeral services and columbarium complex (under study) near Mandai Ave",
+  "status": "new",
+  "source": "https://resource.homes.hdb.gov.sg/2026-11/bto/ys_n8c23/"
+ }
+]

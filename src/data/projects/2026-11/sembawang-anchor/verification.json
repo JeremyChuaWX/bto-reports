@@ -1,0 +1,282 @@
+[
+ {
+  "item": "Flat prices",
+  "old": "Estimates from neighbouring launches: 2RF ~$140k-$235k, 3-room ~$250k-$350k, 4-room ~$305k-$440k, 5-room ~$420k-$590k",
+  "new": "Official: 2RF T1 $156k-$203k, 2RF T2 $178k-$245k, 3-room $274k-$348k, 4-room $312k-$428k, 5-room $479k-$614k",
+  "status": "corrected",
+  "source": "official.json; HDB Annex A Nov 2026; HDB Flat Portal"
+ },
+ {
+  "item": "Unit mix",
+  "old": "2RF 330, 3-room 100, 4-room 460, 5-room 420 (HomeAndDecor)",
+  "new": "2RF 333 (92 T1 + 241 T2), 3-room 96, 4-room 464, 5-room 417; total 1,310",
+  "status": "corrected",
+  "source": "official.json; HDB Annex A"
+ },
+ {
+  "item": "Rental flats and block heights",
+  "old": "1 integrated block; heights unverified",
+  "new": "6 blocks of 22-26 storeys; 50 rental flats in Blk 432A (1,360 units on site plan)",
+  "status": "new",
+  "source": "HDB Flat Portal site plan and project details"
+ },
+ {
+  "item": "Application deadline",
+  "old": "11 Nov 2026, 3:59pm or 11:59pm (discrepancy)",
+  "new": "11 Nov 2026, 11:59pm",
+  "status": "corrected",
+  "source": "HDB Flat Portal API (launchEndDate 2026-11-11T15:59Z); HDB press release"
+ },
+ {
+  "item": "HFE priority document date",
+  "old": "25 Sep 2026 (sources disagree)",
+  "new": "15 Sep 2026",
+  "status": "corrected",
+  "source": "mynicehome.gov.sg"
+ },
+ {
+  "item": "Key collection",
+  "old": "~Q3 2029 (estimate)",
+  "new": "Estimated completion 1Q 2030; delivery possession date 30 Sep 2031",
+  "status": "corrected",
+  "source": "HDB Flat Portal / official.json"
+ },
+ {
+  "item": "MOP",
+  "old": "~Q3 2034",
+  "new": "Earliest ~1Q 2035 (5 years from keys); later if keys slip toward the DPD",
+  "status": "corrected",
+  "source": "Own computation from official ECD"
+ },
+ {
+  "item": "Waiting time",
+  "old": "2 years 10 months",
+  "new": "34 months (2 years 10 months), SWT",
+  "status": "verified",
+  "source": "official.json; HDB press release"
+ },
+ {
+  "item": "After-grant prices",
+  "old": "4-room from $232,000 after grants (exercise-wide)",
+  "new": "Anchor's own floor prices less assumed EHG: 2RF from $36k, 3-room from $169k, 4-room from $232k, 5-room from $424k",
+  "status": "corrected",
+  "source": "HDB Nov 2026 press release"
+ },
+ {
+  "item": "Prices without optional components",
+  "old": "4-room $304k-$419k, 5-room $469k-$605k",
+  "new": "Also 2RF T1 $153k-$200k, T2 $175k-$242k, 3-room $268k-$341k",
+  "status": "verified",
+  "source": "HDB Annex A"
+ },
+ {
+  "item": "Short-lease 2RF prices",
+  "old": "Not given",
+  "new": "T1 $54k-$70k (15 yrs) to $95k-$123k (45 yrs); T2 $62k-$84k to $108k-$148k",
+  "status": "new",
+  "source": "HDB Flat Portal"
+ },
+ {
+  "item": "HDB nearby resale comparables",
+  "old": "Box only: 4-room $589k-$635k etc.",
+  "new": "2-room $370k-$400k, 3-room $500k-$528,888, 4-room $588,888-$635,000, 5-room $760k-$823k (about 93 yrs lease left)",
+  "status": "verified",
+  "source": "HDB Annex A"
+ },
+ {
+  "item": "Walkable MRT",
+  "old": "Sembawang ~1.1 km, 15-20+ min walk",
+  "new": "Only Sembawang NS11 is walkable: 1.02-1.24 km straight per block, 1.37-1.54 km walk, about 17-19 min; no station within 1 km; Canberra 2.3 km and Admiralty 2.5 km straight need a bus",
+  "status": "corrected",
+  "source": "Own computation: OneMap coordinates + OSRM foot routing from official coordinates"
+ },
+ {
+  "item": "MRT opening dates",
+  "old": "Not given",
+  "new": "NS10/NS11 10 Feb 1996; NS12 2 Nov 2019; TE1/TE2 31 Jan 2020",
+  "status": "new",
+  "source": "LTA; landtransportguru"
+ },
+ {
+  "item": "Recent Sembawang launches undersubscribed",
+  "old": "Undersubscribed for 3-room and larger; Voyage 3-room 1.4",
+  "new": "Only first-timer 4-room/5-room (0.4-0.6) and Jun 2026 3-room (0.7) were below 1; Feb 2026 3-room was 1.4 (Sembawang Deck, not Voyage); second-timers 3.4-8.9x; 2RF singles 4.0-4.7x",
+  "status": "corrected",
+  "source": "HDB getSalesPastApplicationRate (Flat Portal) for Feb 2026 and Jun 2026"
+ },
+ {
+  "item": "Plus/Prime resale income ceiling",
+  "old": "$16,000 [Reported]",
+  "new": "$16,000 for Plus; $16,000 families / $8,000 singles for Prime",
+  "status": "verified",
+  "source": "MND BTO classification page"
+ },
+ {
+  "item": "Prime resale buyer citizenship",
+  "old": "SC buyers only",
+  "new": "At least one Singapore citizen buyer (same as Plus)",
+  "status": "corrected",
+  "source": "MND BTO classification page"
+ },
+ {
+  "item": "30-month wait-out for ex-private owners (Plus/Prime resale)",
+  "old": "Commonly cited [Unverified]",
+  "new": "Confirmed",
+  "status": "verified",
+  "source": "MND BTO classification page"
+ },
+ {
+  "item": "Room rental during MOP",
+  "old": "Allowed for all flat types",
+  "new": "Spare-room rental only for 3-room or larger; short-lease 2RF cannot be rented or sold",
+  "status": "corrected",
+  "source": "HDB Standard, Plus and Prime framework page"
+ },
+ {
+  "item": "Nov 2026 clawback rates",
+  "old": "8-11% depending on project [Reported]",
+  "new": "Merpati Meadow (Plus) 8%; Toa Payoh Hillside (Prime) 11%; Standard none",
+  "status": "verified",
+  "source": "HDB Nov 2026 press release"
+ },
+ {
+  "item": "Sembawang resale medians",
+  "old": "Nov 2025-Nov 2026 incl. partial month (896 deals)",
+  "new": "Nov 2025-Oct 2026, 888 deals: 4-room $600k (393), 5-room $639,444 (244)",
+  "status": "corrected",
+  "source": "data.gov.sg resale dataset, own computation"
+ },
+ {
+  "item": "Sembawang Mart distance",
+  "old": "~0.6 km",
+  "new": "650 m straight, 850 m walk",
+  "status": "verified",
+  "source": "OneMap + OSRM"
+ },
+ {
+  "item": "Wellington Primary 1 km",
+  "old": "Borderline at ~1.0 km",
+  "new": "913 m (Blk 429B) to 1,148 m (Blk 432A) straight; borderline, check per block",
+  "status": "verified",
+  "source": "OneMap, own computation"
+ },
+ {
+  "item": "Sembawang CC",
+  "old": "Sembawang CC area (Montreal Dr) ~1.2 km",
+  "new": "Being rebuilt at 2125 Sembawang Road, 1.6 km; temporary office 117B Canberra Crescent",
+  "status": "corrected",
+  "source": "OneMap search (Sembawang Community Club (U/C) entry)"
+ },
+ {
+  "item": "Sembawang Park distance",
+  "old": "~2-3 km [Unverified]",
+  "new": "About 2.2 km straight, 3.3 km walk",
+  "status": "corrected",
+  "source": "Own computation from town-map coordinate"
+ },
+ {
+  "item": "Sembawang Hot Spring Park",
+  "old": "~2.7 km",
+  "new": "2.76 km straight, 3.6 km walk",
+  "status": "verified",
+  "source": "OneMap + OSRM"
+ },
+ {
+  "item": "Surroundings on site plan",
+  "old": "Not retrieved",
+  "new": "Nursing home site (up to ~19 storeys) east; NC site; 1-ha park U/C; Rainbow Centre Admiral Hill SE; future bus shelters on Sembawang Drive",
+  "status": "new",
+  "source": "HDB Flat Portal site plan"
+ },
+ {
+  "item": "Townsville Primary relocation",
+  "old": "Not mentioned",
+  "new": "Relocating to East Canberra, tentatively 2029",
+  "status": "new",
+  "source": "MOE SchoolFinder; Mothership"
+ },
+ {
+  "item": "Sembawang Polyclinic opening",
+  "old": "Opened 2023",
+  "new": "Officially opened 25 Nov 2023",
+  "status": "verified",
+  "source": "MOH speech"
+ },
+ {
+  "item": "RTS Link",
+  "old": "Targeted Feb 2027",
+  "new": "Passenger service targeted Feb 2027",
+  "status": "verified",
+  "source": "Bernama; Business Today; Mothership (Oct 2026)"
+ },
+ {
+  "item": "North-South Corridor",
+  "old": "Viaduct from 2029, tunnels from 2031",
+  "new": "Same",
+  "status": "verified",
+  "source": "LTA via several outlets"
+ },
+ {
+  "item": "Seletar Line",
+  "old": "No timeline",
+  "new": "No timeline (MOT); feasibility tender May 2026 reported",
+  "status": "verified",
+  "source": "MOT written reply 4 Aug 2026; landtransportguru"
+ },
+ {
+  "item": "Shipyard size 3x AMK Town Centre",
+  "old": "PM Wong quote [Reported]",
+  "new": "Single source only",
+  "status": "unverifiable",
+  "source": "EdgeProp"
+ },
+ {
+  "item": "Sembawang Road EC land bid",
+  "old": "$692 psf ppr",
+  "new": "$692 psf ppr, ~265 units, Oriental Pacific, tender closed 11 Sep 2025",
+  "status": "verified",
+  "source": "EdgeProp; cos.sg"
+ },
+ {
+  "item": "Canberra Drive EC",
+  "old": "~$825 psf ppr [Unverified]",
+  "new": "~$825 psf ppr",
+  "status": "verified",
+  "source": "EdgeProp; PropertyNet"
+ },
+ {
+  "item": "Parc Life EC resale psf",
+  "old": "~$1,230-$1,425 psf",
+  "new": "Not confirmed",
+  "status": "unverifiable",
+  "source": "Single blog source"
+ },
+ {
+  "item": "Construction stage",
+  "old": "Unverified",
+  "new": "Still unverified; no tender or award notice found",
+  "status": "unverifiable",
+  "source": "Web searches, Nov 2026"
+ },
+ {
+  "item": "HDB loan LTV 75%",
+  "old": "[Reported]",
+  "new": "Not checked against HDB",
+  "status": "unverifiable",
+  "source": "None"
+ },
+ {
+  "item": "PropertyNet YoY change and national medians",
+  "old": "4-room -4.5% YoY, 5-room -5.4%; national ~$630k/$745k",
+  "new": "Removed; replaced by own half-year trend",
+  "status": "removed",
+  "source": "data.gov.sg own computation"
+ },
+ {
+  "item": "Raffles Place train time",
+  "old": "~40-45 min (Rome2Rio)",
+  "new": "About 40 min train, 60-65 min door to door, as an estimate",
+  "status": "unverifiable",
+  "source": "Single secondary source"
+ }
+]

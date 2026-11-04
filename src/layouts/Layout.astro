@@ -1,0 +1,107 @@
+---
+import { url } from '../lib/data';
+
+interface Props {
+  title: string;
+  description?: string;
+}
+const { title, description = 'Independent analysis of HDB BTO projects in the Nov 2026 and Feb 2027 sales exercises.' } = Astro.props;
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="icon" type="image/svg+xml" href={url('favicon.svg')} />
+    <meta name="description" content={description} />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta name="generator" content={Astro.generator} />
+    <title>{title}</title>
+  </head>
+  <body>
+    <nav class="top">
+      <div class="wrap">
+        <a href={url()} class="brand">BTO projects<span class="brand-long"> · Nov 2026 &amp; Feb 2027</span></a>
+        <a href={url() + '#compare'}>Compare</a>
+        <a href={url() + '#about'}>About the data</a>
+      </div>
+    </nav>
+    <main class="wrap">
+      <slot />
+    </main>
+    <footer class="wrap sub">
+      Not financial advice. Check the <a href="https://homes.hdb.gov.sg/" target="_blank" rel="noopener">HDB Flat Portal</a> before applying.
+      Maps © <a href="https://www.onemap.gov.sg/" target="_blank" rel="noopener">OneMap</a> / Singapore Land Authority. Amenity data from{' '}
+      <a href="https://data.gov.sg/" target="_blank" rel="noopener">data.gov.sg</a>. Site plans, town maps and artist's impressions © HDB.
+    </footer>
+    <div id="lb" hidden><img alt="" /></div>
+    <script>
+      // Click-to-enlarge for figure images
+      const lb = document.getElementById('lb')!;
+      const big = lb.querySelector('img')!;
+      document.querySelectorAll<HTMLAnchorElement>('a.zoom').forEach((a) =>
+        a.addEventListener('click', (e) => {
+          e.preventDefault();
+          big.src = a.href;
+          big.alt = a.querySelector('img')?.alt ?? '';
+          lb.hidden = false;
+        }),
+      );
+      lb.addEventListener('click', () => (lb.hidden = true));
+      document.addEventListener('keydown', (e) => e.key === 'Escape' && (lb.hidden = true));
+    </script>
+  </body>
+</html>
+
+<style is:global>
+  :root {
+    --fg: #1d2329;
+    --mut: #5d6873;
+    --bd: #dfe3e8;
+    --bg: #f6f7f9;
+    --card: #fff;
+    --link: #1f5fa8;
+  }
+  * { box-sizing: border-box; }
+  body { margin: 0; font: 15px/1.6 -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif; color: var(--fg); background: var(--bg); }
+  .wrap { max-width: 1180px; margin: 0 auto; padding: 0 20px; }
+  main.wrap { padding-top: 20px; padding-bottom: 10px; }
+  a { color: var(--link); }
+  nav.top { background: #1d2329; }
+  nav.top .wrap { display: flex; gap: 18px; align-items: center; height: 46px; overflow-x: auto; white-space: nowrap; }
+  nav.top a { color: #e6e9ec; text-decoration: none; font-size: 14px; }
+  nav.top a.brand { font-weight: 700; color: #fff; margin-right: auto; }
+  @media (max-width: 520px) { nav.top .brand-long { display: none; } nav.top .wrap { gap: 14px; } }
+  .prose a, .prose code, td a { overflow-wrap: anywhere; }
+  footer { font-size: 13px; padding-bottom: 30px; }
+  .sub { color: var(--mut); }
+  header.hero, section.card { background: var(--card); border: 1px solid var(--bd); border-radius: 12px; padding: 20px 24px; margin-bottom: 20px; }
+  header.hero h1 { margin: 0 0 4px; font-size: 28px; line-height: 1.25; }
+  h2 { border-bottom: 2px solid var(--bd); padding-bottom: 6px; margin-top: 30px; }
+  section.card > h2:first-child { margin-top: 0; }
+  .badge { display: inline-block; padding: 2px 9px; border-radius: 999px; font-size: 12px; font-weight: 700; color: #fff; vertical-align: middle; background: #7f8c8d; }
+  .facts { display: grid; grid-template-columns: repeat(auto-fit, minmax(170px, 1fr)); gap: 10px; margin: 16px 0; }
+  .fact { background: var(--bg); border-radius: 8px; padding: 10px 12px; }
+  .fact b { display: block; font-size: 12px; color: var(--mut); font-weight: 600; text-transform: uppercase; letter-spacing: 0.03em; }
+  .fact span { font-size: 17px; font-weight: 650; }
+  .tablewrap { overflow-x: auto; margin: 12px 0; }
+  table { border-collapse: collapse; width: 100%; font-size: 14px; }
+  .prose table { display: block; overflow-x: auto; }
+  th, td { border: 1px solid var(--bd); padding: 6px 9px; text-align: left; vertical-align: top; }
+  th { background: #eef1f4; }
+  tr:nth-child(even) td { background: #fafbfc; }
+  blockquote { margin: 12px 0; padding: 10px 16px; background: #fff8e6; border-left: 4px solid #f0b429; border-radius: 4px; }
+  .tag { display: inline-block; font-size: 11px; font-weight: 700; color: #fff; border-radius: 4px; padding: 0 5px; margin: 0 2px; vertical-align: 1px; line-height: 1.6; }
+  .st { font-weight: 700; font-size: 12px; padding: 1px 7px; border-radius: 4px; color: #fff; white-space: nowrap; background: #7f8c8d; }
+  .st-verified { background: #2471a3; } .st-corrected { background: #c0392b; } .st-new { background: #1e7e34; } .st-removed { background: #6c3483; }
+  .dot { display: inline-block; width: 11px; height: 11px; border-radius: 50%; margin-right: 6px; vertical-align: -1px; }
+  details summary { cursor: pointer; font-weight: 600; }
+  figure { margin: 0; }
+  figure img { width: 100%; height: auto; border-radius: 8px; border: 1px solid var(--bd); display: block; cursor: zoom-in; }
+  figcaption { font-size: 13px; color: var(--mut); margin-top: 5px; }
+  #lb { position: fixed; inset: 0; background: rgba(0, 0, 0, 0.88); display: flex; align-items: center; justify-content: center; z-index: 2000; cursor: zoom-out; }
+  #lb[hidden] { display: none; }
+  #lb img { max-width: 96vw; max-height: 94vh; }
+</style>

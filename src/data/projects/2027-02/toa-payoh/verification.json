@@ -1,0 +1,226 @@
+[
+ {
+  "item": "Site location",
+  "old": "Lorong 4 Toa Payoh SWT site (former carpark, Blks 62B-66), centre ~1.33567, 103.85185",
+  "new": "Mount Pleasant: Mount Pleasant Ave / Old Police Academy Rd, 1.3293722, 103.8353169, next to future Mount Pleasant MRT (TE10)",
+  "status": "corrected",
+  "source": "official.json"
+ },
+ {
+  "item": "HDB project code",
+  "old": "TP_N0C29",
+  "new": "TP_N10C5 (TP_N0C29 is Toa Payoh Hillside, Nov 2026)",
+  "status": "corrected",
+  "source": "https://homes.hdb.gov.sg/home/bto/details/2026-11_UPB_VFBfTjEwQzVfMTc5MjYzNTgxNjg1Ng"
+ },
+ {
+  "item": "Unit count and mix",
+  "old": "About 193 units (one 40-storey block)",
+  "new": "1,140 units: 450 2-room Flexi, 90 3-room, 600 4-room; two integrated sold-and-rental blocks",
+  "status": "corrected",
+  "source": "official.json"
+ },
+ {
+  "item": "Project facilities",
+  "old": "MSCP with roof garden, precinct pavilion (Lor 4)",
+  "new": "Eating house, preschool, Residents' Network Centre, fire post, Active Ageing Centre",
+  "status": "corrected",
+  "source": "official.json"
+ },
+ {
+  "item": "Inclusion in Feb 2027 exercise",
+  "old": "Listed via cached snippet; site uncertain",
+  "new": "Confirmed: HDB says ~4,300 flats in Bishan, Tampines, Tengah, Toa Payoh; TP_N10C5 is the only Toa Payoh upcoming listing",
+  "status": "verified",
+  "source": "https://www.hdb.gov.sg/hdb-pulse/news/2026/hdb-launches-7964-flats-across-seven-projects-in-nov-2026-bto-sales-exercise"
+ },
+ {
+  "item": "Nearest MRT",
+  "old": "Toa Payoh NS19 590 m (11 min walk)",
+  "new": "Mount Pleasant TE10 91 m (future); Caldecott 1.03 km; Novena 1.37 km; Toa Payoh 1.40 km",
+  "status": "corrected",
+  "source": "https://www.onemap.gov.sg/"
+ },
+ {
+  "item": "TE10 opening",
+  "old": "Not addressed (correction box: 'check the date')",
+  "new": "Not open; MOT: opens in tandem with completion of housing; no date; ~2030 [Estimate]; town map Nov 2026 still 'FUTURE'",
+  "status": "new",
+  "source": "https://www.mot.gov.sg/news-resources/newsroom/written-reply-by-minister-for-transport-s-iswaran-to-parliamentary-question-on-additional-costs-incurred-for-mount-pleasant-and-marina-south-mrt-stations-to-be-opened-in-stage-three/"
+ },
+ {
+  "item": "Hawker centres",
+  "old": "Two hawker centres within 3 min walk (Lor 4/5)",
+  "new": "No hawker centre within ~1.4 km; nearest Toa Payoh West Market 1.43 km",
+  "status": "corrected",
+  "source": "https://www.onemap.gov.sg/"
+ },
+ {
+  "item": "Balestier Hill shops 0.93 km (correction box)",
+  "old": "0.93 km",
+  "new": "Not located; removed",
+  "status": "removed",
+  "source": "https://www.onemap.gov.sg/"
+ },
+ {
+  "item": "TTSH distance (correction box)",
+  "old": "about 1.77 km",
+  "new": "1.46 km straight line",
+  "status": "corrected",
+  "source": "https://www.onemap.gov.sg/"
+ },
+ {
+  "item": "Velocity @ Novena Square distance (correction box)",
+  "old": "1.49 km",
+  "new": "1.44 km",
+  "status": "corrected",
+  "source": "https://www.onemap.gov.sg/"
+ },
+ {
+  "item": "Primary schools",
+  "old": "Pei Chun 456 m, Kheng Cheng 555 m, First Toa Payoh 660 m",
+  "new": "CHIJ Primary 0.82 km; ACS(P) 1.22; SCGS(P) 1.27; Marymount 1.33; Kheng Cheng 1.59; SJI Junior 1.73; Pei Chun 2.42",
+  "status": "corrected",
+  "source": "https://www.onemap.gov.sg/"
+ },
+ {
+  "item": "Secondary schools",
+  "old": "Beatty ~680 m, CHIJ Sec ~1.0 km, RGS ~1.2 km, RI ~1.35 km",
+  "new": "CHIJ Sec 0.95 km, ACS (Barker) 1.09, SCGS 1.26, RGS 1.67, RI ~2.1, Beatty 2.34",
+  "status": "corrected",
+  "source": "https://www.onemap.gov.sg/"
+ },
+ {
+  "item": "Healthcare",
+  "old": "Toa Payoh Polyclinic 801 m",
+  "new": "Thomson Medical Centre 0.81 km, TTSH 1.46 km, Mount Alvernia 1.41 km, polyclinic 2.69 km; proposed Health & Medical Care plot adjacent",
+  "status": "corrected",
+  "source": "https://www.onemap.gov.sg/"
+ },
+ {
+  "item": "Walking distances",
+  "old": "OSRM from Lor 4 site",
+  "new": "OSRM from Mount Pleasant Rd (site has no public network): 1.8-2.4x straight line today",
+  "status": "corrected",
+  "source": "https://routing.openstreetmap.de/"
+ },
+ {
+  "item": "Mount Pleasant Crest classification and subsidy recovery",
+  "old": "Listed under Prime (rate not stated)",
+  "new": "Prime, 12% subsidy recovery",
+  "status": "verified",
+  "source": "https://www.hdb.gov.sg/hdb-pulse/news/2025/october-2025-bto-sales-exercise"
+ },
+ {
+  "item": "Mount Pleasant Crest waiting time and prices",
+  "old": "59 months; 2RF $209k-$373k, 3R $411k-$552k, 4R $558k-$787k",
+  "new": "Confirmed: 59 months; 2RF T1 $209k-$297k, T2 $250k-$373k, 3R $411k-$552k, 4R $558k-$787k; 1,348 units",
+  "status": "verified",
+  "source": "https://www.hdb.gov.sg/-/media/hdb-pulse/news/2025/october-2025-bto-sales-exercise/Annex-ABTO-sales-exercise-Oct-2025.pdf"
+ },
+ {
+  "item": "Mount Pleasant Crest application rates",
+  "old": "Not given",
+  "new": "~3.5x overall; 4-room first-timer ~3.1x (secondary sources conflict)",
+  "status": "unverifiable",
+  "source": "https://www.99.co/singapore/insider/october-bto-application-rates/"
+ },
+ {
+  "item": "Likely classification",
+  "old": "Prime more likely than Plus (based on Lor 4 context)",
+  "new": "Prime likely, based on adjacent Mount Pleasant Crest (Prime 12%); recovery ~11-13% [Estimate]",
+  "status": "corrected",
+  "source": "https://www.hdb.gov.sg/-/media/hdb-pulse/news/2025/october-2025-bto-sales-exercise/Annex-ABTO-sales-exercise-Oct-2025.pdf"
+ },
+ {
+  "item": "Price estimate",
+  "old": "If Prime: 2RF $240k-$400k, 3R $410k-$530k, 4R $560k-$800k",
+  "new": "2RF ~$215k-$390k, 3R ~$420k-$570k, 4R ~$570k-$820k [Estimate]",
+  "status": "corrected",
+  "source": "https://www.hdb.gov.sg/-/media/hdb-pulse/news/2025/october-2025-bto-sales-exercise/Annex-ABTO-sales-exercise-Oct-2025.pdf"
+ },
+ {
+  "item": "Waiting time",
+  "old": "About 39-41 months (site under construction)",
+  "new": "About 50-58 months [Estimate]; keys ~mid/late 2031",
+  "status": "corrected",
+  "source": "https://www.hdb.gov.sg/-/media/hdb-pulse/news/2025/october-2025-bto-sales-exercise/Annex-ABTO-sales-exercise-Oct-2025.pdf"
+ },
+ {
+  "item": "Construction stage",
+  "old": "Under construction, completion mid-2030",
+  "new": "Upcoming launch; no main contract found; C5-C6 checking-services tender awarded 2 Mar 2026 (design stage)",
+  "status": "corrected",
+  "source": "https://www.sgpbusiness.com/government/statutory-boards/Housing-And-Development-Board/procurement"
+ },
+ {
+  "item": "Mount Pleasant estate plan",
+  "old": "Not covered",
+  "new": "33 ha, ~6,000 flats in four projects (up from 5,000); car-lite; green spine; bus interchange in neighbourhood centre",
+  "status": "new",
+  "source": "https://www.hdb.gov.sg/hdb-pulse/news/2025/hdb-unveils-masterplan-for-mount-pleasant"
+ },
+ {
+  "item": "Old Police Academy heritage",
+  "old": "Not covered",
+  "new": "URA Mount Pleasant Conservation Area: Blocks 1, 2, 13, 27, 28 (1926-30) + 153 Mount Pleasant Rd (1931); Block 1 to become NPP and SPF Heritage Gallery; part of parade square kept",
+  "status": "new",
+  "source": "https://www.ura.gov.sg/conservation/find-a-building/conservation-portal/opa/"
+ },
+ {
+  "item": "Nearby resale comparables",
+  "old": "Lor 4 / Central Horizon / Peak @ Toa Payoh / Alkaff / Bidadari",
+  "new": "Toa Payoh West <=1.6 km: 2018 lease 3R n=11 median $852k ($720k-$890k); 4R n=22 median $1.13M ($820k-$1.2M); 1995-2012 4R n=59 median $944k",
+  "status": "corrected",
+  "source": "https://data.gov.sg/datasets/d_8b84c4ee58e3cfc0ece0d773c8ca6abc/view"
+ },
+ {
+  "item": "Town-wide resale medians and 4-room psf trend",
+  "old": "2R $280k, 3R $380k, 4R $1.005M, 5R $1.05M; psf 2022 $908 to 2026 $1,078",
+  "new": "Same figures reproduced from data.gov.sg",
+  "status": "verified",
+  "source": "https://data.gov.sg/datasets/d_8b84c4ee58e3cfc0ece0d773c8ca6abc/view"
+ },
+ {
+  "item": "Resale Plus/Prime buyer income ceiling",
+  "old": "$14k per EdgeProp; $16k unverified",
+  "new": "$16,000 for families (from 24 Aug 2026); $24,000 extended families; singles 2-room Prime $8,000",
+  "status": "corrected",
+  "source": "https://www.hdb.gov.sg/-/media/hdb-pulse/news/2026/increase-in-income-ceilings-and-greater-support-for-families-with-children/Annex-A.pdf"
+ },
+ {
+  "item": "Plus/Prime rental and MOP rules",
+  "old": "10-year MOP, no whole-flat rental; private property after MOP unverified",
+  "new": "Confirmed from HDB framework page; private property purchase allowed after 10-year MOP",
+  "status": "verified",
+  "source": "https://www.hdb.gov.sg/buying-a-flat/bto-sbf-and-open-booking-of-flats/finding-a-new-flat/standard-plus-and-prime-housing-framework"
+ },
+ {
+  "item": "Ballot odds",
+  "old": "Very poor (~193 units; Ascent ~8.3x)",
+  "new": "Kim Keat Crest (HDB): first-timer 4R 0.9, 3R 0.6; expect first-timer 4R ~2-4x here [Estimate]",
+  "status": "corrected",
+  "source": "official.json"
+ },
+ {
+  "item": "Toa Payoh Hillside comparison",
+  "old": "Hillside vs Lor 4",
+  "new": "Hillside (Prime 11%, 45 months, 1.13 km NE) vs Mount Pleasant",
+  "status": "corrected",
+  "source": "https://www.hdb.gov.sg/-/media/hdb-pulse/news/2026/hdb-launches-7964-flats-across-seven-projects-in-nov-2026-bto-sales-exercise/Annex-A---Nov-2026-BTO---Final.pdf"
+ },
+ {
+  "item": "Lor 4 SWT content, Pei Chun/Lor 4 food, TPID 0.6-1 km",
+  "old": "Lor 4 site analysis; TPID 0.6-1 km away",
+  "new": "Removed; TPID about 2 km away",
+  "status": "removed",
+  "source": "official.json"
+ },
+ {
+  "item": "Correction box",
+  "old": "Correction box at top",
+  "new": "Folded into body",
+  "status": "removed",
+  "source": "official.json"
+ }
+]

@@ -1,0 +1,296 @@
+[
+ {
+  "item": "Site location",
+  "old": "Candidate A: Lakeview/Shunfu pocket near MacRitchie (unconfirmed)",
+  "new": "Sin Ming Street, off Sin Ming Rd / Marymount Rd, centroid 1.3565749, 103.8402253",
+  "status": "corrected",
+  "source": "official.json"
+ },
+ {
+  "item": "Unit count and mix",
+  "old": "150-420 units estimated; mix unknown",
+  "new": "1,070 units: 520 2-room Flexi, 80 3-room, 470 4-room; no 5-room",
+  "status": "corrected",
+  "source": "official.json"
+ },
+ {
+  "item": "On-site facilities",
+  "old": "Not stated",
+  "new": "Supermarket and preschool (HDB town map)",
+  "status": "new",
+  "source": "official.json"
+ },
+ {
+  "item": "Feb 2027 exercise",
+  "old": "Feb 2027 exercise, HFE by 15 Dec 2026",
+  "new": "Confirmed: about 4,300 BTO flats in Feb 2027, SBF of about 5,000, HFE deadline 15 Dec 2026; Bishan listed as upcoming",
+  "status": "verified",
+  "source": "https://homes.hdb.gov.sg/home/landing"
+ },
+ {
+  "item": "Shorter Waiting Time status",
+  "old": "No SWT indication for Bishan; unlikely",
+  "new": "Almost certainly the ST Aug 2026 Sin Ming SWT project (1,076 units, Sin Ming Street, supermarket and childcare, mid-2030 completion); HDB SWT label not yet confirmed",
+  "status": "corrected",
+  "source": "https://sg.news.yahoo.com/flats-shorter-waiting-times-being-210000836.html"
+ },
+ {
+  "item": "SWT programme context",
+  "old": "Not mentioned",
+  "new": "4,690 SWT flats (2025) + 4,661 (2026) = 9,351 against a 12,000 target for 2025-2027",
+  "status": "new",
+  "source": "https://www.hdb.gov.sg/hdb-pulse/news/2026/1310-shorter-waiting-time-flats-to-be-offered-in-november-2026-bto-exercise"
+ },
+ {
+  "item": "Construction stage",
+  "old": "Unknown; possibly next to Lakeview Cascadia's construction",
+  "new": "Cleared brownfield (former rental block and industrial buildings), under construction; Sin Ming Street marked U/C on HDB town map",
+  "status": "corrected",
+  "source": "https://www.asiaone.com/singapore/flats-shorter-waiting-times-being-built-sin-ming-and-toa-payoh"
+ },
+ {
+  "item": "Waiting time and keys",
+  "old": "About 42-50 months; keys Q4 2030 to Q2 2031",
+  "new": "About 2 yr 10 mo to 3 yr 3 mo; keys around mid-2030 (Q2-Q3 2030), estimate",
+  "status": "corrected",
+  "source": "https://sg.news.yahoo.com/flats-shorter-waiting-times-being-210000836.html"
+ },
+ {
+  "item": "Classification",
+  "old": "Prime, about 80-85% likely",
+  "new": "Plus about 50-55%, Standard 25-30%, Prime 15-20% (estimate); analysts in ST split between Plus and Standard",
+  "status": "corrected",
+  "source": "https://www.mnd.gov.sg/our-work/housing-a-nation/bto-classification"
+ },
+ {
+  "item": "4-room price estimate",
+  "old": "$540k-770k",
+  "new": "About $500k-720k if Plus (comparables: Kebun Baru Plus $543-746k, Lakeview Prime $534-742k)",
+  "status": "corrected",
+  "source": "https://www.hdb.gov.sg/-/media/hdb-pulse/news/2026/20260617-HDB-Launches-6952-Flats-Across-7-Projects-in-June-2026-BTO-Sales-Exercise/Annex-A.pdf"
+ },
+ {
+  "item": "3-room and 2-room Flexi price estimates",
+  "old": "3-room $410-540k; 2-room Flexi $220-305k / $265-380k",
+  "new": "If Plus: 3-room $360-480k; 2-room Flexi 38 sqm $180-270k, 48 sqm $240-340k",
+  "status": "corrected",
+  "source": "https://www.hdb.gov.sg/-/media/hdb-pulse/news/2026/20260617-HDB-Launches-6952-Flats-Across-7-Projects-in-June-2026-BTO-Sales-Exercise/Annex-A.pdf"
+ },
+ {
+  "item": "Plus/Prime resale buyer income ceiling",
+  "old": "[CONFLICT] $14k vs $16k/$8k",
+  "new": "$16,000 for Plus; $16,000 for families and $8,000 for singles for Prime (MND page updated 17 Sep 2026; HDB Annex A raised it from $14k)",
+  "status": "corrected",
+  "source": "https://www.mnd.gov.sg/our-work/housing-a-nation/bto-classification"
+ },
+ {
+  "item": "MOP, rental and resale buyer rules",
+  "old": "10-year MOP; no whole-flat rental; at least 1 SC; 30-month wait for ex-private owners",
+  "new": "Confirmed for Plus/Prime; Standard has a 5-year MOP and whole-flat rental with HDB approval",
+  "status": "verified",
+  "source": "https://www.mnd.gov.sg/our-work/housing-a-nation/bto-classification"
+ },
+ {
+  "item": "MOP for subsequent resale buyers of Plus/Prime",
+  "old": "10 years from resale (Propwise) [UNVERIFIED]",
+  "new": "Still unconfirmed from an official page",
+  "status": "unverifiable",
+  "source": "https://www.propwise.sg/hdb-minimum-occupation-period-mop/"
+ },
+ {
+  "item": "Bishan Prime clawback precedent",
+  "old": "10%",
+  "new": "Not in HDB Annex A; secondary sources only",
+  "status": "unverifiable",
+  "source": "https://www.homeanddecor.com.sg/property/hdb/bishan-terraces"
+ },
+ {
+  "item": "Blk 22 Sin Ming Rd",
+  "old": "Market & food centre at 0.12 km (body said 1.5-2 km)",
+  "new": "Coffee shop, not an NEA hawker centre; 121 m straight, ~250 m walk",
+  "status": "corrected",
+  "source": "https://www.nea.gov.sg/docs/default-source/hawker-centres-documents/list-of-hcs_-10-july-2026.pdf"
+ },
+ {
+  "item": "Nearest hawker centre",
+  "old": "Shunfu Mart 0.3-0.8 km",
+  "new": "Shunfu Mart, 619 m straight, ~840 m walk; Bishan has no NEA hawker centre",
+  "status": "corrected",
+  "source": "https://www.nea.gov.sg/docs/default-source/hawker-centres-documents/list-of-hcs_-10-july-2026.pdf"
+ },
+ {
+  "item": "Marymount MRT distance",
+  "old": "~0.6 km",
+  "new": "879 m straight; ~795 m walk to Exit A (~10 min); opened 2009",
+  "status": "corrected",
+  "source": "OneMap + OSRM"
+ },
+ {
+  "item": "Upper Thomson MRT distance",
+  "old": "Close to the Lakeview site",
+  "new": "849 m straight; ~843 m walk to Exit 3 (~11 min); opened 28 Aug 2021",
+  "status": "corrected",
+  "source": "OneMap + OSRM"
+ },
+ {
+  "item": "Bishan MRT distance",
+  "old": "1.26 km (correction box)",
+  "new": "1.09 km straight; ~1.37 km walk",
+  "status": "corrected",
+  "source": "OneMap + OSRM"
+ },
+ {
+  "item": "Teck Ghee CRL station (CR12)",
+  "old": "Not mentioned",
+  "new": "1.06 km straight, ~1.36 km walk; CRL Phase 1 by 2030",
+  "status": "new",
+  "source": "https://www.lta.gov.sg/content/ltagov/en/upcoming_projects/rail_expansion/cross_island_line.html"
+ },
+ {
+  "item": "Bright Hill CRL interchange",
+  "old": "CR13 by 2030",
+  "new": "Confirmed: CRL Phase 1 by 2030, Phase 2 by 2032; 1.10 km straight",
+  "status": "verified",
+  "source": "https://www.lta.gov.sg/content/ltagov/en/upcoming_projects/rail_expansion/cross_island_line.html"
+ },
+ {
+  "item": "Circle Line 6 opening",
+  "old": "Opened 12 Jul 2026",
+  "new": "Opened 12 Jul 2026",
+  "status": "verified",
+  "source": "https://www.lta.gov.sg/content/ltagov/en/upcoming_projects/rail_expansion/circle_line_6.html"
+ },
+ {
+  "item": "Catholic High School distance",
+  "old": "~2 km",
+  "new": "567 m straight, ~930 m walk; likely within 1 km for P1",
+  "status": "corrected",
+  "source": "OneMap + OSRM"
+ },
+ {
+  "item": "Ai Tong School distance",
+  "old": "1-2 km",
+  "new": "916 m straight; borderline within 1 km depending on block",
+  "status": "corrected",
+  "source": "OneMap"
+ },
+ {
+  "item": "Marymount Convent distance",
+  "old": "Within 1 km",
+  "new": "1.80 km straight (1-2 km band)",
+  "status": "corrected",
+  "source": "OneMap"
+ },
+ {
+  "item": "Other primary schools within 2 km",
+  "old": "Not listed",
+  "new": "AMK Pri 1.42 km, Teck Ghee Pri 1.56 km, Townsville 1.56 km, Kuo Chuan 1.76 km, CHIJ St Nicholas 1.99 km",
+  "status": "new",
+  "source": "OneMap"
+ },
+ {
+  "item": "Polyclinic",
+  "old": "Toa Payoh/AMK 3-4 km",
+  "new": "AMK Polyclinic 2.06 km straight, ~2.57 km walk; Toa Payoh 3.22 km",
+  "status": "corrected",
+  "source": "OneMap + OSRM"
+ },
+ {
+  "item": "Bishan Sub-Regional Centre",
+  "old": "Office space, polyclinic, hawker centre; no dates (EdgeProp)",
+  "new": "Confirmed by MND speech: under study, no dates",
+  "status": "verified",
+  "source": "https://www.mnd.gov.sg/newsroom/speeches/view/speech-by-minister-chee-hong-tat-at-the-draft-masterplan-2025-exhibition-launch"
+ },
+ {
+  "item": "Industrial neighbours",
+  "old": "Not mentioned (correction box only)",
+  "new": "Existing and proposed industries, heavy-vehicle parks, car workshops and temples immediately north; HDB notes industries within 500 m",
+  "status": "new",
+  "source": "official.json"
+ },
+ {
+  "item": "North-South Corridor works",
+  "old": "Not mentioned",
+  "new": "Under construction along Marymount Rd (HDB town map); completion date unverified",
+  "status": "new",
+  "source": "official.json"
+ },
+ {
+  "item": "Lakeview Cascadia as neighbour / MacRitchie setting",
+  "old": "Next-door development and nature setting",
+  "new": "Not applicable to this site; MacRitchie is 1.83 km away",
+  "status": "removed",
+  "source": "official.json"
+ },
+ {
+  "item": "Construction risks",
+  "old": "Reservoir-edge earthworks; Lakeview Estate and Taman Permata neighbours; up to 40 storeys",
+  "new": "Industrial traffic and noise, NSC works, Sin Ming Street works",
+  "status": "corrected",
+  "source": "official.json"
+ },
+ {
+  "item": "Lakeview Cascadia demand",
+  "old": "4.7-5.0x overall; 4-room 3.6-3.9x first-timers, 16.6-16.9x second-timers",
+  "new": "6,143 applicants / 1,221 units (~5.0x); 4-room 3.9x first-timers, 18.5x second-timers; 2-room Flexi singles 7.9x",
+  "status": "corrected",
+  "source": "official.json"
+ },
+ {
+  "item": "Lakeview Cascadia wait",
+  "old": "51 months",
+  "new": "51 months",
+  "status": "verified",
+  "source": "https://www.hdb.gov.sg/-/media/hdb-pulse/news/2026/20260617-HDB-Launches-6952-Flats-Across-7-Projects-in-June-2026-BTO-Sales-Exercise/Annex-A.pdf"
+ },
+ {
+  "item": "Sin Ming Residences",
+  "old": "Dec 2023, former Guangyang Primary site",
+  "new": "Dec 2023; 732 flats for sale (105 3-room, 627 4-room); 32-month wait; directly across Sin Ming Street; former-site claim not confirmed",
+  "status": "corrected",
+  "source": "https://mustsharenews.com/december-2023-bto-bishan/"
+ },
+ {
+  "item": "Bishan town resale medians (12 months)",
+  "old": "3-room $530k, 4-room $788k, 5-room $970k",
+  "new": "Same (n=64/201/124)",
+  "status": "verified",
+  "source": "https://data.gov.sg/api/action/datastore_search?resource_id=d_8b84c4ee58e3cfc0ece0d773c8ca6abc"
+ },
+ {
+  "item": "Resale near the site",
+  "old": "Lakeview/Shunfu-focused comparables",
+  "new": "Sin Ming Rd Blk 22-25: 3-room $367k (1973 lease), 4-room $487.5k (1974); Bishan St 24: 4-room $820k (1992/98); Bishan St 22: 4-room $838k",
+  "status": "new",
+  "source": "https://data.gov.sg/api/action/datastore_search?resource_id=d_8b84c4ee58e3cfc0ece0d773c8ca6abc"
+ },
+ {
+  "item": "Bishan million-dollar resale counts",
+  "old": "Not stated",
+  "new": "2025: 98 of 376 sales at $1M+; Jan-Jul 2026: 46 of 229 (matches ST)",
+  "status": "new",
+  "source": "https://data.gov.sg/api/action/datastore_search?resource_id=d_8b84c4ee58e3cfc0ece0d773c8ca6abc"
+ },
+ {
+  "item": "Estimated resale at MOP (4-room)",
+  "old": "$0.88M-1.12M",
+  "new": "$0.75M-0.95M if Plus; net $0.69M-0.87M after an 8% clawback",
+  "status": "corrected",
+  "source": "https://data.gov.sg/api/action/datastore_search?resource_id=d_8b84c4ee58e3cfc0ece0d773c8ca6abc"
+ },
+ {
+  "item": "Thomson Plaza sale",
+  "old": "S$250M, Apr 2026",
+  "new": "Single secondary source",
+  "status": "unverifiable",
+  "source": "https://stackedhomes.com/swing-by-thomson-plaza-sold-250-million/"
+ },
+ {
+  "item": "Nearest supermarket",
+  "old": "Not specific",
+  "new": "FairPrice Bishan North (Blk 279 Bishan St 24), 402 m straight, ~620 m walk; plus on-site supermarket",
+  "status": "new",
+  "source": "OneMap + OSRM"
+ }
+]

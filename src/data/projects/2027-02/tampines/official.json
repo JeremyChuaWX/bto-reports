@@ -1,0 +1,21 @@
+{
+ "project_name": null,
+ "classification": null,
+ "town": "Tampines",
+ "lat": 1.3394756,
+ "lng": 103.9598894,
+ "clawback_rate": null,
+ "est_waiting_time": null,
+ "total_units": "460",
+ "waiting_time_note": null,
+ "ecd": null,
+ "dpd": null,
+ "booking_period": null,
+ "flat_types": [
+  "2-room Flexi",
+  "3-room",
+  "4-room",
+  "5-room"
+ ],
+ "units": []
+}

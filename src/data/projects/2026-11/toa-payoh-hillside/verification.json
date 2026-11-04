@@ -1,0 +1,352 @@
+[
+ {
+  "item": "Subsidy recovery (clawback)",
+  "old": "11% (Red Hot/ST, FlatmateSG)",
+  "new": "11.00% [Official]",
+  "status": "verified",
+  "source": "official.json"
+ },
+ {
+  "item": "Units for sale",
+  "old": "1,432 (master plan said ~1,430)",
+  "new": "1,432: 156 2RF T1, 436 2RF T2, 428 4R, 156 4R balcony, 256 CCA",
+  "status": "verified",
+  "source": "official.json"
+ },
+ {
+  "item": "Unit mix master-plan column",
+  "old": "590/580/260 (240) master-plan figures in table",
+  "new": "Removed; official counts used",
+  "status": "removed",
+  "source": "official.json"
+ },
+ {
+  "item": "Rental flats",
+  "old": "about 230 rental flats",
+  "new": "Blk 409A, 31 storeys, 232 rental flats (174 1-room + 58 2-room)",
+  "status": "corrected",
+  "source": "official.json"
+ },
+ {
+  "item": "4-room sizes",
+  "old": "Both 4-room variants 90-93 m2",
+  "new": "4-room 90 m2 (428 units) S$558k-796k; 4-room with balcony 93 m2 (156 units) S$619k-832k",
+  "status": "corrected",
+  "source": "https://www.hdb.gov.sg/-/media/hdb-pulse/news/2026/hdb-launches-7964-flats-across-seven-projects-in-nov-2026-bto-sales-exercise/Annex-A---Nov-2026-BTO---Final.pdf"
+ },
+ {
+  "item": "Launch prices status",
+  "old": "Single source, unverified (BTO Kaki copy; portal HTTP 503)",
+  "new": "All prices confirmed from official.json and HDB Annex A",
+  "status": "verified",
+  "source": "official.json"
+ },
+ {
+  "item": "CCA prices",
+  "old": "S$88k (15 yr) - S$201k (45 yr)",
+  "new": "Full table 15-45 yr, S$88k-112k to S$158k-201k; excludes BSP",
+  "status": "verified",
+  "source": "official.json"
+ },
+ {
+  "item": "Short-lease 2-room Flexi prices",
+  "old": "T1 S$81k-193k; T2 S$101k-239k",
+  "new": "Confirmed, full per-lease table added",
+  "status": "verified",
+  "source": "official.json"
+ },
+ {
+  "item": "Estimated completion / keys",
+  "old": "Keys around Aug-Sep 2030 / Q3 2030 [EST], 45 months from launch",
+  "new": "ECD 1Q 2031; DPD 30 Sep 2032; 45 months counted from median booking month",
+  "status": "corrected",
+  "source": "official.json"
+ },
+ {
+  "item": "Flat selection timing",
+  "old": "Around Q1-Q2 2027 [EST]",
+  "new": "Mar 2027 and Jun 2027 [Official]",
+  "status": "corrected",
+  "source": "official.json"
+ },
+ {
+  "item": "Earliest resale (end of MOP)",
+  "old": "Around 2040",
+  "new": "Around 2041 (10 years from ~1Q 2031 keys)",
+  "status": "corrected",
+  "source": "official.json"
+ },
+ {
+  "item": "Caldecott MRT distance",
+  "old": "About 120 m, 2-4 min",
+  "new": "214 m walk to CC17, 253 m to TE9 entrance; ~3 min (OSRM). TEL exits 2-4 adjoin site",
+  "status": "corrected",
+  "source": "OSRM routing.openstreetmap.de / OneMap"
+ },
+ {
+  "item": "Braddell MRT distance",
+  "old": "About 660 m, 9-11 min",
+  "new": "677 m straight, 759-819 m walk, 9-10 min",
+  "status": "corrected",
+  "source": "OSRM routing.openstreetmap.de / OneMap"
+ },
+ {
+  "item": "Toa Payoh MRT distance",
+  "old": "About 730 m, 10-12 min",
+  "new": "895 m straight, 1,353 m walk, 17 min",
+  "status": "corrected",
+  "source": "OSRM routing.openstreetmap.de / OneMap"
+ },
+ {
+  "item": "Mount Pleasant MRT distance",
+  "old": "About 1.2 km",
+  "new": "1,214 m straight, 2,510 m walk; not open, no date",
+  "status": "corrected",
+  "source": "OSRM routing.openstreetmap.de / OneMap"
+ },
+ {
+  "item": "Primary school distances",
+  "old": "Measured from Caldecott MRT: Marymount 0.3, CHIJ 0.6, Kheng Cheng 0.8, Pei Chun 1.8, First TP 1.8, Catholic High 2.0 km",
+  "new": "From site: Marymount 361 m, CHIJ Primary 527 m, Kheng Cheng 628 m, Pei Chun 1,566 m, First TP 1,592 m, Catholic High 1,933 m, Kuo Chuan 1,993 m (straight line)",
+  "status": "corrected",
+  "source": "OneMap"
+ },
+ {
+  "item": "Secondary school distances",
+  "old": "Distances unverified",
+  "new": "RGS(S) 553 m, CHIJ Sec 592 m, RI 1,084 m, Beatty 1,291 m (straight line)",
+  "status": "new",
+  "source": "OneMap"
+ },
+ {
+  "item": "Toa Payoh West Market & Food Centre distance",
+  "old": "About 300-500 m [EST]",
+  "new": "366 m straight, 555 m walk, 7 min",
+  "status": "corrected",
+  "source": "OSRM routing.openstreetmap.de / OneMap"
+ },
+ {
+  "item": "Mount Alvernia / TTSH distances",
+  "old": "About 1 km / about 3 km [EST]",
+  "new": "Mount Alvernia 649 m straight / 1,311 m walk; TTSH 1,851 m straight / 2,662 m walk",
+  "status": "corrected",
+  "source": "OSRM routing.openstreetmap.de / OneMap"
+ },
+ {
+  "item": "Toa Payoh Integrated Development distance",
+  "old": "About 1.5-2 km",
+  "new": "About 1.2 km straight line; target 2030, construction started",
+  "status": "corrected",
+  "source": "https://nlb.gov.sg/main/about-us/press-room-and-publications/media-releases/2024/Toa-Payoh-Integrated-Development-will-be-a-Sporting-and-Lifestyle-Destination"
+ },
+ {
+  "item": "CCA minimum age",
+  "old": "55+ from this exercise",
+  "new": "55+, all applicants/spouses at HFE application; from Nov 2026 exercise",
+  "status": "verified",
+  "source": "https://services-homes.hdb.gov.sg/sales/files/general_conditions_for_purchase.pdf"
+ },
+ {
+  "item": "CCA lease options",
+  "old": "15-45 years in 5-yr steps, cover to age 95 [UNVERIFIED]",
+  "new": "15-45 years in 5-yr steps; lease must last until all owners reach at least 95; chosen at booking",
+  "status": "verified",
+  "source": "https://services-homes.hdb.gov.sg/sales/files/general_conditions_for_purchase.pdf"
+ },
+ {
+  "item": "CCA resale/rental and refund",
+  "old": "No open-market resale or rental; refund of remaining lease [UNVERIFIED]",
+  "new": "Cannot be resold or rented out; HDB refunds value of remaining lease on return",
+  "status": "verified",
+  "source": "https://services-homes.hdb.gov.sg/sales/files/general_conditions_for_purchase.pdf"
+ },
+ {
+  "item": "CCA other property rule",
+  "old": "Generally can't own any other property",
+  "new": "Open to private property owners, but private property must be disposed of within 6 months of key collection",
+  "status": "corrected",
+  "source": "https://services-homes.hdb.gov.sg/sales/files/general_conditions_for_purchase.pdf"
+ },
+ {
+  "item": "Basic Service Package fees",
+  "old": "Ongoing fees, cheaper from 2026, MOH subsidy (no figures)",
+  "new": "Compulsory; Vanguard Healthcare; refundable 1-yr deposit, S$61-71/month before GST and subsidy; est. totals S$16k (15 yr) to S$84k (45 yr); MOH subsidy from Q2 2027 for those needing ADL help",
+  "status": "new",
+  "source": "https://www.vanguardhealthcare.com.sg/our-services/assisted-living/basic-service-package"
+ },
+ {
+  "item": "CCA units",
+  "old": "256 to 260 units",
+  "new": "256 units in Blk 410C, 34 storeys",
+  "status": "corrected",
+  "source": "official.json"
+ },
+ {
+  "item": "Resale Plus/Prime income ceiling",
+  "old": "S$16k vs S$14k conflict [UNVERIFIED]",
+  "new": "S$16,000 for families (resale Plus/Prime without grant), S$8,000 singles for resale 2-room Prime, for HFE from 24 Aug 2026",
+  "status": "verified",
+  "source": "https://www.hdb.gov.sg/-/media/hdb-pulse/news/2026/increase-in-income-ceilings-and-greater-support-for-families-with-children/Annex-A.pdf"
+ },
+ {
+  "item": "Enhanced CPF Housing Grant",
+  "old": "Up to S$120k couples, S$60k singles; band change unverified",
+  "new": "Up to S$120k / S$60k confirmed; band change still unverified (not in 23 Aug release)",
+  "status": "verified",
+  "source": "https://www.mynicehome.gov.sg/get-started/hdb-bto-sales-launch/"
+ },
+ {
+  "item": "Ballot chances",
+  "old": "Not stated",
+  "new": "FT (Parents & Married Couples) 3, other FT 2, ST 1; extra per-child chance only from Feb 2027",
+  "status": "new",
+  "source": "https://www.hdb.gov.sg/-/media/hdb-pulse/news/2026/increase-in-income-ceilings-and-greater-support-for-families-with-children/Annex-A.pdf"
+ },
+ {
+  "item": "Past application rates",
+  "old": "'Ballot odds will be poor' (no data)",
+  "new": "Toa Payoh Ascent 8.3 overall (4R FT 6.4); Mount Pleasant Crest 3.7; Kim Keat Crest 1.6-1.7",
+  "status": "new",
+  "source": "https://www.edgeprop.sg/property-news/tampines-bto-projects-most-popular-february-2026-sales-exercise"
+ },
+ {
+  "item": "Toa Payoh Ascent comparison prices",
+  "old": "4R S$583k-777k; 2RF 38 m2 S$212k-272k",
+  "new": "Confirmed (4R 89 m2)",
+  "status": "verified",
+  "source": "https://www.hdb.gov.sg/-/media/hdb-pulse/news/2025/hdb-launches-10209-flats-in-the-july-2025-bto-and-sbf-sales-exercises/Annex-A-20250723.pdf"
+ },
+ {
+  "item": "Mount Pleasant Crest comparison",
+  "old": "Prime, 12% clawback, 4R from S$558k",
+  "new": "4R 89 m2 S$558k-787k, 59-month wait confirmed; clawback 12% vs 14% conflict, unverified",
+  "status": "corrected",
+  "source": "https://www.hdb.gov.sg/-/media/hdb-pulse/news/2025/october-2025-bto-sales-exercise/Annex-ABTO-sales-exercise-Oct-2025.pdf"
+ },
+ {
+  "item": "Kim Keat Crest comparison",
+  "old": "Plus, 6% clawback, 4R from S$455k",
+  "new": "Plus confirmed; price and clawback could not be verified, removed",
+  "status": "removed",
+  "source": "https://www.edgeprop.sg/property-news/tampines-bto-projects-most-popular-february-2026-sales-exercise"
+ },
+ {
+  "item": "Resale statistics window",
+  "old": "May-Nov 2026 (6 months); 4R town median S$1,027,500 n=236",
+  "new": "Nov 2025-Oct 2026: 4R town median S$1,000,888 n=428; 2012+ lease 4R median S$1,090,000 n=241",
+  "status": "corrected",
+  "source": "https://data.gov.sg/api/action/datastore_search?resource_id=d_8b84c4ee58e3cfc0ece0d773c8ca6abc"
+ },
+ {
+  "item": "Nearest-block resale",
+  "old": "Blk 130A/B 4R S$945k-1.2M; 138C/139B S$1.14M-1.215M",
+  "new": "Blk 130A-131B 4R n=22 median S$1.13M, S$820k-1.2M; Blk 138A-139B n=11 median S$1.125M, S$1.05M-1.215M",
+  "status": "corrected",
+  "source": "https://data.gov.sg/api/action/datastore_search?resource_id=d_8b84c4ee58e3cfc0ece0d773c8ca6abc"
+ },
+ {
+  "item": "HDB resale comparables",
+  "old": "4R S$820k-1.2M (correction box)",
+  "new": "4R S$820k-1.2M, 93 m2, ~91 yrs left; no comparable 2-room",
+  "status": "verified",
+  "source": "https://www.hdb.gov.sg/-/media/hdb-pulse/news/2026/hdb-launches-7964-flats-across-seven-projects-in-nov-2026-bto-sales-exercise/Annex-A---Nov-2026-BTO---Final.pdf"
+ },
+ {
+  "item": "Newer 2-room in other central towns",
+  "old": "Queenstown S$535k, AMK S$518k etc.",
+  "new": "Removed (not recomputed for the 12-month window)",
+  "status": "removed",
+  "source": "https://data.gov.sg/api/action/datastore_search?resource_id=d_8b84c4ee58e3cfc0ece0d773c8ca6abc"
+ },
+ {
+  "item": "Toa Payoh West master plan scope",
+  "old": "6,000+ homes over about 10 years",
+  "new": "6,000+ homes, mostly public, progressively over the coming decade; 'Hillside Gardens' concept",
+  "status": "verified",
+  "source": "https://mothership.sg/2026/10/over-6000-new-homes-tao-payoh-west/"
+ },
+ {
+  "item": "Caldecott mixed-use / mall",
+  "old": "No date; guess early-mid 2030s",
+  "new": "Confirmed planned with plaza; still no date",
+  "status": "verified",
+  "source": "https://mothership.sg/2026/10/over-6000-new-homes-tao-payoh-west/"
+ },
+ {
+  "item": "1.2 ha wellness park, Central Green Valley, 15 m car-free corridor, school",
+  "old": "Listed, no dates",
+  "new": "Confirmed; no dates; school only 'being studied'",
+  "status": "verified",
+  "source": "https://mothership.sg/2026/10/over-6000-new-homes-tao-payoh-west/"
+ },
+ {
+  "item": "Future high-rise reserve sites around project",
+  "old": "Not mentioned",
+  "new": "Site plan shows reserve sites to the S (with 1st-storey commercial), SW and NW",
+  "status": "new",
+  "source": "official.json"
+ },
+ {
+  "item": "North-South Corridor",
+  "old": "Viaduct ~2027, tunnel ~2029; further 2-yr delay unconfirmed",
+  "new": "LTA (17 Sep 2026): completion moved from 2027 to 2029; section dates unverified",
+  "status": "corrected",
+  "source": "https://mothership.sg/2026/10/jeffrey-siow-on-north-south-corridor-delay/"
+ },
+ {
+  "item": "Mount Pleasant MRT opening",
+  "old": "Around 2030 [EST]",
+  "new": "No date; to open with Mount Pleasant estate",
+  "status": "corrected",
+  "source": "https://www.mot.gov.sg/news-resources/newsroom/written-reply-by-minister-for-transport-s-iswaran-to-parliamentary-question-on-additional-costs-incurred-for-mount-pleasant-and-marina-south-mrt-stations-to-be-opened-in-stage-three/"
+ },
+ {
+  "item": "Toa Payoh Integrated Development timing",
+  "old": "By 2030, ground broken",
+  "new": "Target 2030, construction started",
+  "status": "verified",
+  "source": "https://www.sportsingapore.gov.sg/toa-payoh-integrated-development-will-be-a-sporting-and-lifestyle-destination/"
+ },
+ {
+  "item": "Site announcement date",
+  "old": "4 Mar 2026 (COS)",
+  "new": "Mar 2026 COS confirmed by media; exact day unverified",
+  "status": "unverifiable",
+  "source": "https://www.edgeprop.sg/property-news/october-bto-exercise-sees-9144-flats-launched-sale-including-first-projects-mount-pleasant-and"
+ },
+ {
+  "item": "Construction tender / site status",
+  "old": "No sign of construction [UNVERIFIED]",
+  "new": "No tender/award news found; site clearance unconfirmed",
+  "status": "unverifiable",
+  "source": "official.json"
+ },
+ {
+  "item": "HFE document deadline",
+  "old": "15 Sep vs 25 Sep conflict",
+  "new": "MyNiceHome says 15 Sep; HDB 23 Aug release says 25 Sep; conflict remains",
+  "status": "unverifiable",
+  "source": "https://www.mynicehome.gov.sg/get-started/hdb-bto-sales-launch/"
+ },
+ {
+  "item": "Prime MOP and rental rules",
+  "old": "10-yr MOP, no whole-flat rental ever",
+  "new": "Confirmed; also no private property purchase or new BTO during MOP; room rental allowed",
+  "status": "verified",
+  "source": "https://www.mynicehome.gov.sg/get-started/hdb-flat-types-classification-guide/"
+ },
+ {
+  "item": "Portal HTTP 503 note",
+  "old": "HDB portal returned HTTP 503 throughout",
+  "new": "Removed; portal and assets accessed",
+  "status": "removed",
+  "source": "https://homes.hdb.gov.sg/home/bto/details/2026-11_BTO_VFBfTjBDMjlfMTc5MDgzNTIzMTYzOQ"
+ },
+ {
+  "item": "Estimated 4-room net gain at MOP",
+  "old": "About S$0-460k at ~2040",
+  "new": "About -S$30k to +S$460k at ~2041 [Estimate]",
+  "status": "corrected",
+  "source": "https://data.gov.sg/api/action/datastore_search?resource_id=d_8b84c4ee58e3cfc0ece0d773c8ca6abc"
+ }
+]

@@ -1,0 +1,270 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import Figure from '../../components/Figure.astro';
+import MapStyles from '../../components/MapStyles.astro';
+import { getProjects, url, type Project } from '../../lib/data';
+import { cat, CLS_COLOUR, metres, money, tagify, walk } from '../../lib/format';
+
+export async function getStaticPaths() {
+  const projects = await getProjects();
+  return projects.map((p, i) => ({
+    params: { id: p.id },
+    props: { p, prev: projects[i - 1], next: projects[i + 1] },
+  }));
+}
+
+interface Props {
+  p: Project;
+  prev?: Project;
+  next?: Project;
+}
+const { p, prev, next } = Astro.props;
+const o = p.official;
+
+// Report body: drop the title line (shown in the header) and style the status tags
+const body = tagify((p.entry.rendered?.html ?? '').replace(/^\s*<h1[^>]*>[\s\S]*?<\/h1>/, ''));
+const headings = (p.entry.rendered?.metadata?.headings ?? []).filter((h) => h.depth === 2 || h.depth === 3);
+
+const clawback = o.clawback_rate?.startsWith('Not applicable') ? 'None' : o.clawback_rate || (p.upcoming ? 'TBA' : 'None');
+const facts: [string, string][] = [
+  ['Exercise', p.month === '2026-11' ? 'Nov 2026 (applications close 11 Nov)' : 'Feb 2027 (upcoming)'],
+  ['Town', o.town],
+  ['Total units', p.totalUnits ? p.totalUnits.toLocaleString('en-US') : '–'],
+  ['Clawback', clawback],
+  ['Est. waiting time', o.est_waiting_time || 'Not announced'],
+  ['Est. completion (ECD)', o.ecd || 'Not announced'],
+  ['Delivery date (DPD)', o.dpd || 'Not announced'],
+];
+
+const img = p.images;
+const perspectives = Object.keys(img).filter((k) => k.includes('perspective')).sort();
+
+const amenities = p.amenities.map((a, i) => {
+  const [colour, label] = cat(a.category);
+  return { n: i + 1, a, colour, label, straight: metres(a.straight_m), walk: walk(a) };
+});
+const legend = [...new Map(amenities.map(({ colour, label }) => [label, colour])).entries()].map(([label, colour]) => [colour, label]);
+const mapConfig = JSON.stringify({
+  name: p.name,
+  lat: o.lat,
+  lng: o.lng,
+  geo: url(`geo/${p.id}.json`),
+  amenities: amenities.map(({ n, a, colour, label, straight, walk }) => ({
+    n, colour, label, straight, walk, name: a.name, cat: a.category, lat: a.lat, lng: a.lng, note: a.note ?? '', source: a.source ?? '',
+  })),
+});
+
+const s = p.stats;
+const uc = s?.hdb_uc_300m ?? [];
+const statFacts: [string, string | number][] = s
+  ? [
+      ['Primary schools within 1 km / 2 km', `${s.primary_1km} / ${s.primary_2km}`],
+      ['Hawker centres within 1 km', s.hawker_1km],
+      ['Supermarkets within 1 km', s.supermarkets_1km],
+      ['CHAS GP clinics within 500 m / 1 km', `${s.clinics_500} / ${s.clinics_1km}`],
+      ['Preschools within 500 m', s.preschools_500],
+      ['Bus stops within 400 m', s.bus_400],
+      ["Site itself in HDB's under-construction list", uc.some((u) => u.dist_m < 40) ? 'Yes' : 'No'],
+      [
+        'Other HDB blocks under construction within 300 m',
+        uc.length ? `${new Set(uc.map((u) => u.blk)).size} blocks, nearest ${Math.min(...uc.map((u) => u.dist_m))} m` : 'None listed',
+      ],
+    ]
+  : [];
+
+const counts: Record<string, number> = {};
+for (const v of p.verification) counts[v.status] = (counts[v.status] ?? 0) + 1;
+const links = (src?: string) =>
+  String(src ?? '')
+    .split(/(https?:\/\/[^\s,;)]+)/)
+    .map((part, i) => ({ part, isUrl: i % 2 === 1 }));
+---
+
+<Layout title={`${p.name}: BTO analysis`} description={`${p.name} (${o.town}, ${p.exercise} BTO): amenities, resale benchmarks, ${o.classification ?? 'likely classification'} rules and waiting time.`}>
+  <MapStyles />
+  <div class="crumb"><a href={url()}>← All projects</a> · {p.month === '2026-11' ? 'November 2026 BTO' : 'February 2027 BTO (upcoming)'}</div>
+
+  <header class="hero">
+    <h1>
+      {p.name}{' '}
+      {o.classification ? <span class="badge" style={`background:${CLS_COLOUR[o.classification]}`}>{o.classification}</span> : <span class="badge">Classification not yet announced</span>}
+    </h1>
+    {p.title && p.title !== p.name && <div class="sub">{p.title}</div>}
+    <div class="facts">{facts.map(([k, v]) => <div class="fact"><b>{k}</b><span>{v}</span></div>)}</div>
+    {
+      o.units?.length ? (
+        <>
+          <h3>Official unit supply and indicative prices (before grants)</h3>
+          <div class="tablewrap">
+            <table>
+              <tr><th>Flat type</th><th>Units</th><th>Floor area (m²)</th><th>Price range</th></tr>
+              {o.units.map((u) => (
+                <tr>
+                  <td>{u.flat_type}</td>
+                  <td>{u.supply ?? '–'}</td>
+                  <td>{u.floor_area_sqm ?? '–'}</td>
+                  <td>{money(u.price_low)} – {money(u.price_high)}</td>
+                </tr>
+              ))}
+            </table>
+          </div>
+          <p class="sub">2-room Flexi lower bounds include short-lease (15–45 year) options for seniors. Source: HDB project data on the Flat Portal.</p>
+        </>
+      ) : (
+        <p class="sub">
+          Official so far: flat types {(o.flat_types ?? []).join(', ')}; {p.totalUnits?.toLocaleString('en-US')} units. Prices, classification and waiting time are announced at launch.
+        </p>
+      )
+    }
+    {
+      o.waiting_time_note && (
+        <details>
+          <summary>HDB's completion and delivery note</summary>
+          <p>{o.waiting_time_note}</p>
+        </details>
+      )
+    }
+  </header>
+
+  <section class="card">
+    <h2>The plot</h2>
+    <div class="gallery">
+      <Figure
+        wide
+        src={img['plot-satellite.jpg']}
+        caption="The plot: OneMap satellite view (© OneMap / Singapore Land Authority). Rings at 100 m and 250 m from HDB's site coordinate. Orange outlines are blocks HDB lists as under construction (data.gov.sg). The imagery date is not published and may not show current works."
+      />
+      <Figure wide src={img['siteplan.jpg']} caption="HDB site plan (official)" />
+      <Figure src={img['townmap-crop.jpg']} caption="HDB town map, cropped around the site (official)" />
+      <Figure src={img['area-satellite.jpg']} caption="Surroundings: OneMap satellite view, with rings at 500 m and 1 km" />
+      {perspectives.map((k, i) => <Figure src={img[k]} caption={`Artist's impression ${i + 1} (HDB)`} />)}
+    </div>
+  </section>
+
+  <section class="card">
+    <h2>Neighbourhood</h2>
+    <div class="amap" data-config={mapConfig}></div>
+    <p class="legend">
+      <span><span class="lg site"></span>BTO site</span>
+      {legend.map(([colour, label]) => <span><span class="lg" style={`background:${colour}`}></span>{label}</span>)}
+      <span><span class="lg line"></span>Rail line (incl. planned)</span>
+      <span><span class="lg uc"></span>HDB blocks under construction</span>
+      <span><span class="lg ring"></span>500 m / 1 km / 2 km</span>
+    </p>
+    <p class="sub">
+      Live OneMap map. Use the layer button (top right) to switch to satellite, or to show and hide amenity types, rail lines and HDB works. Numbers match the table below; click a row to find it on the map. Rings are at 500 m, 1 km and 2 km. Purple dashed lines are rail alignments from URA Master Plan 2025, including planned lines.
+    </p>
+    {
+      s && (
+        <>
+          <div class="facts">{statFacts.map(([k, v]) => <div class="fact"><b>{k}</b><span>{v}</span></div>)}</div>
+          <p class="sub">
+            Counts are straight-line distances from HDB's site coordinate, computed from government datasets on data.gov.sg. School counts use the school's address point; HDB's primary-school priority uses the school boundary, so check individual blocks on OneMap. The under-construction list comes from HDB's 'Under Construction Buildings' dataset (data.gov.sg, updated 15 Oct 2026). It shows blocks already under contract, usually earlier BTO projects nearby. A site that hasn't been launched normally isn't listed yet.
+          </p>
+        </>
+      )
+    }
+    <div class="tablewrap">
+      <table class="amen">
+        <tr><th>#</th><th>Type</th><th>Place</th><th>Straight line</th><th>Walk (route estimate)</th><th>Note</th><th>Source</th></tr>
+        {
+          amenities.map(({ n, a, colour, label, straight, walk }) => (
+            <tr data-amenity={n} title="Show on map">
+              <td>{n}</td>
+              <td style="white-space:nowrap"><span class="dot" style={`background:${colour}`} />{label}</td>
+              <td>{a.name}</td>
+              <td style="white-space:nowrap">{straight}</td>
+              <td style="white-space:nowrap">{walk}</td>
+              <td>{a.note}</td>
+              <td class="sub">{a.source}</td>
+            </tr>
+          ))
+        }
+      </table>
+    </div>
+    <p class="sub">
+      Places and coordinates come from government datasets on data.gov.sg (NEA, LTA, MOE, MOH, ECDA, NParks, PA, NLB, SportSG, URA). Where a dataset gives only an address, the place is located with OneMap search; polyclinics and hospitals come from OneMap search. Straight-line distances are measured from HDB's site coordinate; for MRT stations, to the nearest exit. Walking distances are OpenStreetMap route estimates made by the research agents, shown only where they match the same place. Planned developments and malls come from the research agents, because there is no government dataset for them.
+    </p>
+  </section>
+
+  {
+    headings.length > 0 && (
+      <section class="card toc">
+        <b>Contents</b>
+        <ul>
+          {headings.map((h) => (
+            <li class={`d${h.depth}`}>
+              <a href={`#${h.slug}`}>{h.text}</a>
+            </li>
+          ))}
+        </ul>
+      </section>
+    )
+  }
+
+  <section class="card prose" set:html={body} />
+
+  <section class="card">
+    <h2>Verification log</h2>
+    {
+      p.verification.length ? (
+        <>
+          <p>
+            {Object.entries(counts)
+              .sort()
+              .map(([k, n]) => (
+                <>
+                  <span class={`st st-${k}`}>{k}</span> {n}{' '}
+                </>
+              ))}
+          </p>
+          <details>
+            <summary>Show all changes against the earlier report</summary>
+            <div class="tablewrap">
+              <table>
+                <tr><th>Status</th><th>Item</th><th>Earlier report</th><th>Now</th><th>Source</th></tr>
+                {p.verification.map((v) => (
+                  <tr>
+                    <td><span class={`st st-${v.status}`}>{v.status}</span></td>
+                    <td>{v.item}</td>
+                    <td>{v.old}</td>
+                    <td>{v.new}</td>
+                    <td>{links(v.source).map(({ part, isUrl }) => (isUrl ? <a href={part} target="_blank" rel="noopener">link</a> : part))}</td>
+                  </tr>
+                ))}
+              </table>
+            </div>
+          </details>
+        </>
+      ) : (
+        <p class="sub">No verification log.</p>
+      )
+    }
+    <p class="sub">
+      Tags: <span class="tag" style="background:#1e7e34">Official</span> HDB or another government source · <span class="tag" style="background:#2471a3">Verified</span> two or more good sources, or computed from official data · <span class="tag" style="background:#b9770e">Estimate</span> · <span class="tag" style="background:#922b21">Unverified</span>
+    </p>
+  </section>
+
+  <nav class="pager">
+    {prev ? <a href={url(`projects/${prev.id}/`)}>← {prev.name}</a> : <span />}
+    {next ? <a href={url(`projects/${next.id}/`)}>{next.name} →</a> : <span />}
+  </nav>
+</Layout>
+
+<script>
+  import '../../scripts/maps';
+</script>
+
+<style>
+  .legend { display: flex; flex-wrap: wrap; gap: 4px 14px; font-size: 13px; margin: 8px 0 0; }
+  .legend > span { white-space: nowrap; }
+  .crumb { font-size: 14px; margin-bottom: 10px; }
+  .gallery { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+  @media (max-width: 800px) { .gallery { grid-template-columns: 1fr; } }
+  .toc ul { margin: 4px 0; padding-left: 18px; columns: 2; font-size: 14px; }
+  .toc li.d3 { margin-left: 16px; }
+  @media (max-width: 700px) { .toc ul { columns: 1; } }
+  .amen tr[data-amenity] { cursor: pointer; }
+  .amen tr[data-amenity]:hover td { background: #eef5ff; }
+  .pager { display: flex; justify-content: space-between; margin: 0 0 20px; font-weight: 600; }
+</style>

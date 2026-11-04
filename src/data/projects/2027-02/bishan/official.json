@@ -1,0 +1,20 @@
+{
+ "project_name": null,
+ "classification": null,
+ "town": "Bishan",
+ "lat": 1.3565749,
+ "lng": 103.8402253,
+ "clawback_rate": null,
+ "est_waiting_time": null,
+ "total_units": "1070",
+ "waiting_time_note": null,
+ "ecd": null,
+ "dpd": null,
+ "booking_period": null,
+ "flat_types": [
+  "2-room Flexi",
+  "3-room",
+  "4-room"
+ ],
+ "units": []
+}

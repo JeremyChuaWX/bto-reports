@@ -1,0 +1,53 @@
+{
+ "project_name": "Toa Payoh Hillside - Prime",
+ "classification": "Prime",
+ "town": "Toa Payoh",
+ "lat": 1.3374762,
+ "lng": 103.8414967,
+ "clawback_rate": "11.00%",
+ "est_waiting_time": "45 months",
+ "total_units": null,
+ "waiting_time_note": "Estimated Completion Date (ECD) is the estimated date that the project will be completed. As ECD will depend on the progress of construction works on site, HDB shall not be responsible for any damage or loss arising from a change in the ECD. The ECD of this project is 1Q 2031. Delivery Possession Date (DPD) is the contractual date in the Agreement for Lease by which HDB is required to deliver vacant possession of the booked flat to buyers. DPD is later than the ECD. The estimated DPD for this project is 30 Sep 2032. HDB precincts are planned to serve the evolving needs of the community. There are spaces catered for future inclusion of amenities/ facilities (such as preschools, eldercare facilities, education centres, residents' network centres, day activity centres, etc), commercial facilities (such as shops and eating houses), mechanical and electrical rooms, and such other facilities depending on the prevailing needs, even after residents have moved into the precincts. These spaces could be in the void decks, common property, car parks, or stand-alone community buildings. In addition, housing projects may be located near roads, railways, airbases, construction sites, and land used for non-residential purposes including but not limited to industrial, commercial or utility uses. Hence, residents may experience related disamenities including but not limited to higher noise levels and smell nuisance. We have provided information on the surrounding land use, proposed facilities ",
+ "ecd": "1Q 2031",
+ "dpd": "30 Sep 2032",
+ "booking_period": "Mar 2027 and Jun 2027",
+ "flat_types": null,
+ "units": [
+  {
+   "flat_type": "Community Care Apartment",
+   "supply": "256",
+   "floor_area_sqm": "39",
+   "internal_area_sqm": "36",
+   "price_low": "88000",
+   "price_high": "201000",
+   "price_note": "Indicative price range for short leases 15 Years: $88,000 - $112,000 20 Years: $106,000 - $135,000 25 Years: $120,000 - $153,000 30 Years: $132,000 - $168,000 35 Years: $142,000 - $181,000 40 Years: $151,000 - $192,000 45 Years: $158,000 - $201,000"
+  },
+  {
+   "flat_type": "2-room Flexi (Type 1)",
+   "supply": "156",
+   "floor_area_sqm": "40",
+   "internal_area_sqm": "38",
+   "price_low": "81000",
+   "price_high": "322000",
+   "price_note": "Indicative price range for 99-year lease 99 Years: $243,000 - $322,000 Indicative price range for short leases 15 Years: $81,000 - $108,000 20 Years: $98,000 - $129,000 25 Years: $111,000 - $147,000 30 Years: $122,000 - $161,000 35 Years: $131,000 - $174,000 40 Years: $139,000 - $184,000 45 Years: $146,000 - $193,000"
+  },
+  {
+   "flat_type": "2-room Flexi (Type 2)",
+   "supply": "436",
+   "floor_area_sqm": "49",
+   "internal_area_sqm": "46",
+   "price_low": "101000",
+   "price_high": "400000",
+   "price_note": "Indicative price range for 99-year lease 99 Years: $301,000 - $400,000 Indicative price range for short leases 15 Years: $101,000 - $134,000 20 Years: $121,000 - $160,000 25 Years: $137,000 - $182,000 30 Years: $151,000 - $200,000 35 Years: $162,000 - $215,000 40 Years: $172,000 - $228,000 45 Years: $180,000 - $239,000"
+  },
+  {
+   "flat_type": "4-room",
+   "supply": "584",
+   "floor_area_sqm": "90-93",
+   "internal_area_sqm": "86-89",
+   "price_low": "558000",
+   "price_high": "832000",
+   "price_note": "4-room: $558,000 - $796,000 4-room (with balcony): $619,000 - $832,000"
+  }
+ ]
+}

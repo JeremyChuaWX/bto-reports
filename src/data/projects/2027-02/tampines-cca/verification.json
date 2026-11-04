@@ -1,0 +1,429 @@
+[
+ {
+  "item": "Feb 2027 exercise membership",
+  "old": "Feb 2027 BTO [Official] (preliminary listing)",
+  "new": "Confirmed by HDB Nov 2026 press release para 19 and Flat Portal landing (about 4,300 flats in Bishan, Tampines, Tengah, Toa Payoh; Tampines CCA + 4-room listed); portal 2026-11 field is the listing quarter",
+  "status": "verified",
+  "source": "https://www.hdb.gov.sg/hdb-pulse/news/2026/hdb-launches-7964-flats-across-seven-projects-in-nov-2026-bto-sales-exercise"
+ },
+ {
+  "item": "Site coordinates",
+  "old": "about 1.3464 N, 103.9491 E [Estimate, +/-100 m]",
+  "new": "1.3463672, 103.948828 (HDB XML); all distances recomputed from this point",
+  "status": "corrected",
+  "source": "official.json"
+ },
+ {
+  "item": "Unit mix",
+  "old": "330: 240 CCA and 90 4-room [Official]",
+  "new": "330 total on portal; 240 CCA / 90 4-room in Flat Mix box on HDB town map (issued Nov 2026)",
+  "status": "verified",
+  "source": "official.json; https://resource.homes.hdb.gov.sg/2026-11/upcoming-bto/tap_n1c14/townmap/townmap_tap_n1c14.jpg"
+ },
+ {
+  "item": "Simei MRT walk",
+  "old": "594 m SL; ~850 m / 11 min, crossing the PIE",
+  "new": "617 m SL; 761 m / ~10 min to station (861 m / ~11 min to Exit A), via the Tampines-Simei PIE underpass",
+  "status": "corrected",
+  "source": "OneMap + https://routing.openstreetmap.de"
+ },
+ {
+  "item": "Tampines MRT walk",
+  "old": "Tampines EW2/DT32 884 m SL; ~1.06 km / 14 min",
+  "new": "EW2: 874 m SL, 1.09 km / ~14 min; DT32 platforms 1.17 km SL, 1.56 km / ~19-21 min",
+  "status": "corrected",
+  "source": "OneMap + https://routing.openstreetmap.de"
+ },
+ {
+  "item": "Tampines West DT31 walk",
+  "old": "1.19 km SL; ~1.46 km / 19 min",
+  "new": "1.16 km SL; 1.56 km / ~19-21 min",
+  "status": "corrected",
+  "source": "OneMap + https://routing.openstreetmap.de"
+ },
+ {
+  "item": "Upper Changi DT34 walk",
+  "old": "1.47 km SL; ~25 min",
+  "new": "1.50 km SL; 2.17 km / ~27-29 min",
+  "status": "corrected",
+  "source": "OneMap + https://routing.openstreetmap.de"
+ },
+ {
+  "item": "Tampines East DT33 walk",
+  "old": "1.25 km SL; ~1.70 km / 23 min",
+  "new": "1.27 km SL; 1.71 km / ~21-23 min",
+  "status": "verified",
+  "source": "OneMap + https://routing.openstreetmap.de"
+ },
+ {
+  "item": "MRT opening dates",
+  "old": "Operating (no dates)",
+  "new": "EWL Simei/Tampines Dec 1989; DTL3 (Tampines West/Tampines/Tampines East/Upper Changi) 21 Oct 2017",
+  "status": "new",
+  "source": "https://www.propertyguru.com.sg/property-management-news/2017/6/153602/downtown-line-3-to-open-on-21-october; https://en.wikipedia.org/wiki/Simei_MRT_station"
+ },
+ {
+  "item": "Cross Island Line / Tampines North CR6",
+  "old": "Under construction, ~2030 [Reported]",
+  "new": "CRL1 expected 2030; Tampines North station between Tampines Link and Tampines Ave 11 [Official, LTA]",
+  "status": "verified",
+  "source": "https://www.lta.gov.sg/content/ltagov/en/upcoming_projects/rail_expansion/cross_island_line.html"
+ },
+ {
+  "item": "Changi T5 / TEL extension",
+  "old": "T5 mid-2030s with TEL and CRL extensions [Reported]",
+  "new": "T5 mid-2030s; 14 km TEL extension from Sungei Bedok and 5.8 km CRL branch to T5; no separate TEL date [Official, LTA Jul 2025]",
+  "status": "verified",
+  "source": "https://www.lta.gov.sg/content/ltagov/en/newsroom/2025/7/news-releases/TELe_and_CRL_changi_airport_to_city_centre.html"
+ },
+ {
+  "item": "Tampines Changkat CC distance",
+  "old": "224 m, 3 min",
+  "new": "153 m SL, 198 m / ~2-3 min",
+  "status": "corrected",
+  "source": "OneMap + https://routing.openstreetmap.de"
+ },
+ {
+  "item": "Round Market distance",
+  "old": "about 620 m, 8 min",
+  "new": "480 m SL, 592 m / ~7-8 min",
+  "status": "corrected",
+  "source": "OneMap + https://routing.openstreetmap.de"
+ },
+ {
+  "item": "Other food and mall walks",
+  "old": "OTH hawker 1.7 km/23 min; Tampines Mall ~1.1 km/15 min; Eastpoint ~930 m/12 min",
+  "new": "OTH hawker 1.75 km/~22-23 min; Tampines Mall 1.14 km/~14 min; Century Square 1.22 km/~15 min; Eastpoint 945 m/~12 min",
+  "status": "verified",
+  "source": "OneMap + https://routing.openstreetmap.de"
+ },
+ {
+  "item": "Primary schools within 1 km",
+  "old": "Chongzheng 543 m, Yumin 565 m, Changkat 762 m, Tampines Primary 764 m (SL)",
+  "new": "Chongzheng 562 m, Yumin 578 m, Tampines Primary 658 m, Changkat 773 m (SL); still 4 within 1 km",
+  "status": "corrected",
+  "source": "OneMap"
+ },
+ {
+  "item": "Primary schools within 2 km",
+  "old": "Junyuan 1.11 km, Gongshang 1.21 km, St Hilda's 1.39 km, East Spring/Tampines North ~1.56 km",
+  "new": "Junyuan 1.08, Gongshang 1.20, St Hilda's 1.36, Tampines North 1.57, East Spring 1.59, Poi Ching 1.97 km SL (10 within 2 km); walk distances added",
+  "status": "corrected",
+  "source": "OneMap + https://routing.openstreetmap.de"
+ },
+ {
+  "item": "Hospital and polyclinic walks",
+  "old": "CGH 1.25 km/17 min; St Andrew's 1.34 km/18 min; Polyclinic 1.53 km/20 min",
+  "new": "CGH 1.22 km/~15 min; St Andrew's 1.31 km/~16 min; CGH Medical Centre 1.45 km/~18 min; Tampines Polyclinic 1.56 km/~19-21 min",
+  "status": "corrected",
+  "source": "OneMap + https://routing.openstreetmap.de"
+ },
+ {
+  "item": "Nursing home on HDB map",
+  "old": "Nursing home on Tampines Ave 1, north-east; name unverified",
+  "new": "NTUC Health (Tampines), 1 Tampines St 22, 465 m SL / 690 m walk",
+  "status": "corrected",
+  "source": "OneMap"
+ },
+ {
+  "item": "Nearest supermarket",
+  "old": "Unverified; in malls",
+  "new": "FairPrice Blk 138 Tampines St 11 (442 m walk), from property listings only",
+  "status": "unverifiable",
+  "source": "https://www.srx.com.sg/listings/110446691/for-rent-tampines-street-11"
+ },
+ {
+  "item": "Noise sources",
+  "old": "MRT track to east, PIE to south",
+  "new": "EWL viaduct ~100-150 m east; PIE ~250 m south-east (estimated from town map)",
+  "status": "verified",
+  "source": "HDB town map"
+ },
+ {
+  "item": "URA zoning",
+  "old": "MP2019 ~1.94 ha Reserve Site [Estimate]",
+  "new": "Not checked; dropped as unverified",
+  "status": "removed",
+  "source": "n/a"
+ },
+ {
+  "item": "Construction stage",
+  "old": "Vacant reserve land [Estimate; not checked]",
+  "new": "Satellite imagery (date unknown) shows an open grass field, no works; no tender or award found",
+  "status": "verified",
+  "source": "Esri World Imagery; web search"
+ },
+ {
+  "item": "Resale window and figures",
+  "old": "Nov 2025 to early Nov 2026 incl. partial Nov; St 22 n=38 med $602.5k; St 61 n=116 range $699k-$904k; Ctrl 7 n=25 med $800.9k",
+  "new": "12 full months Nov 2025-Oct 2026; St 22 n=36 med $600k; St 61 n=113 range $699k-$868k; Ctrl 7 n=24 med $803.4k; ranges and lease years added",
+  "status": "corrected",
+  "source": "https://data.gov.sg/datasets/d_8b84c4ee58e3cfc0ece0d773c8ca6abc/view"
+ },
+ {
+  "item": "Resale St 11/12 nearby",
+  "old": "St 11 n=6 med $626.5k; St 12 n=27 med $640k",
+  "new": "Same (St 11 blocks 103-126, lease 1982-85; St 12 lease 1984-85)",
+  "status": "verified",
+  "source": "https://data.gov.sg/datasets/d_8b84c4ee58e3cfc0ece0d773c8ca6abc/view"
+ },
+ {
+  "item": "Project names on resale table",
+  "old": "Tampines GreenTerrace (Ave 1), Parc Lumiere, Centrale 8",
+  "new": "Listed by street and block numbers instead",
+  "status": "corrected",
+  "source": "https://data.gov.sg/datasets/d_8b84c4ee58e3cfc0ece0d773c8ca6abc/view"
+ },
+ {
+  "item": "HDB nearby-resale comparison ranges for Bliss/Nova/Toa Payoh Hillside",
+  "old": "$688k-$758k; $738k-$828k; $820k-$1.2M",
+  "new": "Removed (not found in the official files checked)",
+  "status": "removed",
+  "source": "n/a"
+ },
+ {
+  "item": "Tampines Nova clawback",
+  "old": "not stated (Plus ~6-9%)",
+  "new": "6%",
+  "status": "new",
+  "source": "https://www.hdb.gov.sg/-/media/hdb-pulse/news/2026/hdb-launches-9012-flats-in-february-2026-bto-and-sbf-exercises/Annex-A.pdf"
+ },
+ {
+  "item": "Simei Symphony",
+  "old": "Standard; ~$529k-$625k [Reported, unverified]",
+  "new": "Standard, 93 sqm, $529k-$625k, 42-month wait [Official]",
+  "status": "verified",
+  "source": "https://www.hdb.gov.sg/hdb-pulse/news/2025/hdb-launches-10209-flats-in-the-july-2025-bto-and-sbf-sales-exercises"
+ },
+ {
+  "item": "Merpati Alcove",
+  "old": "Plus; 4-room $530k-$647k; CCA 30-yr $102k-$129k [Reported]",
+  "new": "Plus, 8% clawback, 44 months; 4-room 89 sqm $530k-$647k; CCA 34 sqm, 15-35 yr $68k-$139k [Official]",
+  "status": "verified",
+  "source": "https://www.hdb.gov.sg/-/media/hdb-pulse/news/2024/oct-bto-launch/Annex-B.pdf"
+ },
+ {
+  "item": "Fernvale Plains",
+  "old": "$59k-$122k across 15-35 yr",
+  "new": "Standard; CCA $59k-$76k (15 yr) to $94k-$122k (35 yr) [Official]",
+  "status": "verified",
+  "source": "https://www.hdb.gov.sg/-/media/hdb-pulse/news/2025/october-2025-bto-sales-exercise/Annex-ABTO-sales-exercise-Oct-2025.pdf"
+ },
+ {
+  "item": "Toa Payoh Hillside CCA benchmark",
+  "old": "30-yr $132k-$168k; 40-yr $151k-$192k; 45-yr $158k-$201k; 15-yr $88k-$112k",
+  "new": "Confirmed; full 15-45 yr table added; 39 sqm gross / 36 sqm internal; Prime, 11%, ECD 1Q 2031",
+  "status": "verified",
+  "source": "official.json (toa-payoh-hillside)"
+ },
+ {
+  "item": "CCA price estimates",
+  "old": "Standard/Plus ranges per lease based on Merpati and Toa Payoh Hillside",
+  "new": "Lease-by-lease estimate at ~70-85% of Toa Payoh Hillside (e.g. 40-yr ~$106k-$163k, 45-yr ~$110k-$171k)",
+  "status": "corrected",
+  "source": "official.json (toa-payoh-hillside)"
+ },
+ {
+  "item": "4-room price estimate",
+  "old": "Standard ~$470k-$610k; Plus ~$480k-$640k",
+  "new": "Standard ~$490k-$630k; Plus ~$500k-$660k (estimate)",
+  "status": "corrected",
+  "source": "HDB Feb 2026, Jul 2025, Oct 2024 annexes"
+ },
+ {
+  "item": "Feb 2026 Tampines demand",
+  "old": "about 11.6 applicants per flat",
+  "new": "4-room: 3,484 applicants for 337 units (about 10.3x; first-timers 7.2x, second-timers 39.2x); 11.6 was a PropNex mid-exercise figure for all flat types",
+  "status": "corrected",
+  "source": "official.json assets api__getSalesPastApplicationRate.json"
+ },
+ {
+  "item": "Plus/Prime resale buyer income ceiling",
+  "old": "Presumably $16k for families [Unverified]",
+  "new": "Plus: $16,000 for families and singles; Prime: $16,000 families / $8,000 singles; raised from $14,000 from 24 Aug 2026 [Official]",
+  "status": "corrected",
+  "source": "https://www.mnd.gov.sg/our-work/housing-a-nation/bto-classification"
+ },
+ {
+  "item": "Clawback applies on first resale only",
+  "old": "[Unverified]",
+  "new": "Confirmed: subsidy recovery upon first resale; basis is the higher of resale price or valuation",
+  "status": "verified",
+  "source": "https://www.hdb.gov.sg/hdb-pulse/news/2025/hdb-launches-10209-flats-in-the-july-2025-bto-and-sbf-sales-exercises"
+ },
+ {
+  "item": "Plus/Prime clawback range",
+  "old": "~6-9% (Nov 2026 Plus 8-9%); Prime 11%",
+  "new": "Confirmed: Nova 6%, Merpati Alcove/Meadow 8%, Bayshore 9%, Toa Payoh Hillside 11%",
+  "status": "verified",
+  "source": "https://www.hdb.gov.sg/hdb-pulse/news/2026/hdb-launches-7964-flats-across-seven-projects-in-nov-2026-bto-sales-exercise"
+ },
+ {
+  "item": "4-room EHG illustration",
+  "old": "$80k Standard, $55k Plus/Prime",
+  "new": "Confirmed",
+  "status": "verified",
+  "source": "https://www.hdb.gov.sg/hdb-pulse/news/2026/hdb-launches-7964-flats-across-seven-projects-in-nov-2026-bto-sales-exercise"
+ },
+ {
+  "item": "4-room application terms",
+  "old": "Income ceiling $16k/$24k; >=90% first-timers; $2,000 option fee; 75% loan",
+  "new": "All confirmed in Nov 2026 Annex B ($24k is for extended families)",
+  "status": "verified",
+  "source": "https://www.hdb.gov.sg/-/media/hdb-pulse/news/2026/hdb-launches-7964-flats-across-seven-projects-in-nov-2026-bto-sales-exercise/Annex-B---Nov-2026-BTO---Final.pdf"
+ },
+ {
+  "item": "Extra ballot chance per child",
+  "old": "not mentioned",
+  "new": "From Feb 2027, first-timer families get one extra ballot chance per SC child aged 18 and below",
+  "status": "new",
+  "source": "https://www.hdb.gov.sg/hdb-pulse/news/2026/increase-in-income-ceilings-and-greater-support-for-families-with-children"
+ },
+ {
+  "item": "Parent CCA + child 4-room joint application",
+  "old": "Multi-Generation Priority Scheme lets parent take CCA [verify]",
+  "new": "Not confirmed; GCP's Family Care Scheme (Joint Balloting) covers 2-room Flexi to 5-room only, not CCAs; CCA joint balloting is only between up to two CCA households",
+  "status": "corrected",
+  "source": "https://services-homes.hdb.gov.sg/sales/files/general_conditions_for_purchase.pdf"
+ },
+ {
+  "item": "CCA minimum age 55 and start date",
+  "old": "55 from 13 Jul 2026 announcement; MOH says Oct 2026, HDB says Nov 2026",
+  "new": "55 from the Nov 2026 exercise; MOH's 'October' predates HDB moving the exercise to November on 23 Aug 2026",
+  "status": "verified",
+  "source": "https://www.moh.gov.sg/newsroom/age-eligibility-for-community-care-apartments-lowered-from-65-to-55-years-old---monthly-fees-reduced-by-18--to-75--with-new-subsidies-/"
+ },
+ {
+  "item": "CCA lease options",
+  "old": "15-45 yr in 5-yr steps, lease to age 95 [Reported, Tribe SG]",
+  "new": "Confirmed in HDB GCP; minimum lease by age table added (55-59: 40 yr ... 80+: 15 yr)",
+  "status": "verified",
+  "source": "https://services-homes.hdb.gov.sg/sales/files/general_conditions_for_purchase.pdf"
+ },
+ {
+  "item": "CCA eligibility and payment",
+  "old": "Income $16k; sell other home within 6 months of key collection; no HDB loan; CPF may be pro-rated; $500 option fee; sign BSP at booking",
+  "new": "Confirmed; open to second-timers; additional CPF usable after setting aside BRS with CPF Board approval; BSP signing: Annex B says at booking stage, GCP says key collection",
+  "status": "corrected",
+  "source": "https://services-homes.hdb.gov.sg/sales/files/general_conditions_for_purchase.pdf"
+ },
+ {
+  "item": "BSP scope",
+  "old": "Home fixes, letters/bills, 24h response (device optional), arranging add-ons, social activities moved to AACs",
+  "new": "Confirmed",
+  "status": "verified",
+  "source": "https://www.moh.gov.sg/newsroom/age-eligibility-for-community-care-apartments-lowered-from-65-to-55-years-old---monthly-fees-reduced-by-18--to-75--with-new-subsidies-/"
+ },
+ {
+  "item": "BSP fee cuts for older CCAs",
+  "old": "18-75% from Q2 2027; per-project table [Reported]",
+  "new": "Confirmed; table matches operator page",
+  "status": "verified",
+  "source": "https://go.gov.sg/basicservicepackage"
+ },
+ {
+  "item": "BSP fee for this project",
+  "old": "about $100-$140/month before subsidy [Estimate]",
+  "new": "Toa Payoh Hillside (first post-2026 CCA) is $61-$71/month before GST and subsidy; Tampines likely ~$60-$75 [Estimate]",
+  "status": "corrected",
+  "source": "https://www.vanguardhealthcare.com.sg/our-services/assisted-living/basic-service-package"
+ },
+ {
+  "item": "BSP subsidy tiers",
+  "old": "<=$900 95%; $1,501-2,300 85%; $2,601-3,600 55%; $3,601-4,800 35%; >$4,800 0%; SCs born 1969 or earlier only",
+  "new": "Up to $1,500 95%; $1,501-2,300 85%; $2,301-2,600 75%; $2,601-3,600 55%; $3,601-4,800 35%; >$4,800 0% (SCs born <=1969); lower rates also for SCs born after 1969 (80-20%) and PRs (55-10%)",
+  "status": "corrected",
+  "source": "https://www.moh.gov.sg/newsroom/age-eligibility-for-community-care-apartments-lowered-from-65-to-55-years-old---monthly-fees-reduced-by-18--to-75--with-new-subsidies-/"
+ },
+ {
+  "item": "BSP lifetime cost",
+  "old": "45-yr lease at Merpati/Fernvale rates: ~$264k falling to $149k",
+  "new": "Removed (not reproducible; those projects cap at 35 yr); replaced with $29k-$34k over 40 yr at Toa Payoh Hillside fee, before GST/subsidy",
+  "status": "removed",
+  "source": "https://www.vanguardhealthcare.com.sg/our-services/assisted-living/basic-service-package"
+ },
+ {
+  "item": "CCA EHG",
+  "old": "CCA $120k (HDB illustration)",
+  "new": "Confirmed as HDB's assumed EHG; buyer must still pay at least 5% of price",
+  "status": "verified",
+  "source": "https://www.hdb.gov.sg/hdb-pulse/news/2026/hdb-launches-7964-flats-across-seven-projects-in-nov-2026-bto-sales-exercise"
+ },
+ {
+  "item": "CCA no resale / no rental",
+  "old": "Cannot be sold or rented",
+  "new": "Confirmed in GCP",
+  "status": "verified",
+  "source": "https://services-homes.hdb.gov.sg/sales/files/general_conditions_for_purchase.pdf"
+ },
+ {
+  "item": "CCA refund on return",
+  "old": "Straight-line pro-rated; within 12 months lower of pro-rated or 95% [Reported]",
+  "new": "Official: HDB refunds the value of the remaining lease; straight-line and 12-month/95% mechanics remain third-party only",
+  "status": "unverifiable",
+  "source": "https://services-homes.hdb.gov.sg/sales/files/general_conditions_for_purchase.pdf; https://teeco.sg/community-care-apartments-cca/"
+ },
+ {
+  "item": "CCA on death of last owner",
+  "old": "[Unverified]",
+  "new": "Still not found in official sources",
+  "status": "unverifiable",
+  "source": "n/a"
+ },
+ {
+  "item": "CCA project count",
+  "old": "7th [Estimate]",
+  "new": "HDB calls Toa Payoh Hillside the sixth, so this would be the 7th; still unconfirmed by HDB",
+  "status": "verified",
+  "source": "https://www.hdb.gov.sg/hdb-pulse/news/2026/hdb-launches-7964-flats-across-seven-projects-in-nov-2026-bto-sales-exercise"
+ },
+ {
+  "item": "Completion estimate",
+  "old": "36-48 months, about 2030-31",
+  "new": "Kept; anchored to Toa Payoh Hillside 45 months (ECD 1Q 2031, DPD 30 Sep 2032), Bliss 23, Nova 32",
+  "status": "verified",
+  "source": "official.json (toa-payoh-hillside)"
+ },
+ {
+  "item": "Queue/booking timing",
+  "old": "Queue 6-8 weeks; booking 3-5 months after launch",
+  "new": "Queue ~2 months, booking ~4 months after launch (Nov 2026 pattern: queue Jan 2027, booking from Mar 2027)",
+  "status": "corrected",
+  "source": "https://www.hdb.gov.sg/-/media/hdb-pulse/news/2026/hdb-launches-7964-flats-across-seven-projects-in-nov-2026-bto-sales-exercise/Annex-B---Nov-2026-BTO---Final.pdf"
+ },
+ {
+  "item": "Likely classification",
+  "old": "Standard ~55-60%, Plus ~40%, Prime <5%",
+  "new": "Kept as estimate; precedents rechecked (Simei Symphony, Tampines Bliss, Fernvale Plains Standard; Tampines Nova, Merpati Alcove Plus)",
+  "status": "verified",
+  "source": "HDB annexes Jul 2025, Oct 2024, Oct 2025, Feb 2026"
+ },
+ {
+  "item": "Neighbourhood centre with coffee shops",
+  "old": "about 200-300 m [Estimate]",
+  "new": "Shops cluster around Blk 137-138 (Round Market, FairPrice), about 440-590 m walk",
+  "status": "corrected",
+  "source": "OneMap + https://routing.openstreetmap.de"
+ },
+ {
+  "item": "Train journey times",
+  "old": "Simei-Raffles Place 25-28 min etc. [Estimate]",
+  "new": "Kept as estimates; not checked against a journey planner",
+  "status": "unverifiable",
+  "source": "n/a"
+ },
+ {
+  "item": "Tampines Regional Centre / Tampines North developments",
+  "old": "Regional Centre ~1 km; Tampines North hub to ~2030 [Reported]",
+  "new": "Regional Centre 1.1-1.8 km walk; PARKTOWN Residence (U/C) 2.6 km SL; hub timing not verified",
+  "status": "corrected",
+  "source": "OneMap"
+ },
+ {
+  "item": "Labels",
+  "old": "[Reported] and [Speculative] tags",
+  "new": "Replaced with [Official]/[Verified]/[Estimate]/[Unverified]",
+  "status": "corrected",
+  "source": "n/a"
+ }
+]

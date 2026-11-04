@@ -1,0 +1,62 @@
+{
+ "project_name": "Sembawang Anchor – Standard",
+ "classification": "Standard",
+ "town": "Sembawang",
+ "lat": 1.4580898,
+ "lng": 103.8154954,
+ "clawback_rate": "Not applicable",
+ "est_waiting_time": "34 months",
+ "total_units": null,
+ "waiting_time_note": "Estimated Completion Date (ECD) is the estimated date that the project will be completed. As ECD will depend on the progress of construction works on site, HDB shall not be responsible for any damage or loss arising from a change in the ECD. The ECD of this project is 1Q 2030. Delivery Possession Date (DPD) is the contractual date in the Agreement for Lease by which HDB is required to deliver vacant possession of the booked flat to buyers. DPD is later than the ECD. The estimated DPD for this project is 30 Sep 2031. HDB precincts are planned to serve the evolving needs of the community. There are spaces catered for future inclusion of amenities/ facilities (such as preschools, eldercare facilities, education centres, residents' network centres, day activity centres, etc), commercial facilities (such as shops and eating houses), mechanical and electrical rooms, and such other facilities depending on the prevailing needs, even after residents have moved into the precincts. These spaces could be in the void decks, common property, car parks, or stand-alone community buildings. In addition, housing projects may be located near roads, railways, airbases, construction sites, and land used for non-residential purposes including but not limited to industrial, commercial or utility uses. Hence, residents may experience related disamenities including but not limited to higher noise levels and smell nuisance. We have provided information on the surrounding land use, proposed facilities ",
+ "ecd": "1Q 2030",
+ "dpd": "30 Sep 2031",
+ "booking_period": "Mar 2027 and Jun 2027",
+ "flat_types": null,
+ "units": [
+  {
+   "flat_type": "2-room Flexi (Type 1)",
+   "supply": "92",
+   "floor_area_sqm": "40",
+   "internal_area_sqm": "38",
+   "price_low": "54000",
+   "price_high": "203000",
+   "price_note": "Indicative price range for 99-year lease 99 Years: $156,000 - $203,000 Indicative price range for short leases 15 Years: $54,000 - $70,000 20 Years: $65,000 - $83,000 25 Years: $73,000 - $94,000 30 Years: $80,000 - $103,000 35 Years: $86,000 - $111,000 40 Years: $91,000 - $117,000 45 Years: $95,000 - $123,000"
+  },
+  {
+   "flat_type": "2-room Flexi (Type 2)",
+   "supply": "241",
+   "floor_area_sqm": "48",
+   "internal_area_sqm": "46",
+   "price_low": "62000",
+   "price_high": "245000",
+   "price_note": "Indicative price range for 99-year lease 99 Years: $178,000 - $245,000 Indicative price range for short leases 15 Years: $62,000 - $84,000 20 Years: $73,000 - $100,000 25 Years: $83,000 - $113,000 30 Years: $91,000 - $124,000 35 Years: $97,000 - $133,000 40 Years: $103,000 - $141,000 45 Years: $108,000 - $148,000"
+  },
+  {
+   "flat_type": "3-room",
+   "supply": "96",
+   "floor_area_sqm": "69",
+   "internal_area_sqm": "66",
+   "price_low": "274000",
+   "price_high": "348000",
+   "price_note": ""
+  },
+  {
+   "flat_type": "4-room",
+   "supply": "464",
+   "floor_area_sqm": "93",
+   "internal_area_sqm": "90",
+   "price_low": "312000",
+   "price_high": "428000",
+   "price_note": ""
+  },
+  {
+   "flat_type": "5-room",
+   "supply": "417",
+   "floor_area_sqm": "113",
+   "internal_area_sqm": "110",
+   "price_low": "479000",
+   "price_high": "614000",
+   "price_note": ""
+  }
+ ]
+}

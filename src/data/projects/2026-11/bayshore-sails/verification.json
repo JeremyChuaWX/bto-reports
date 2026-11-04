@@ -1,0 +1,317 @@
+[
+ {
+  "item": "4-room floor area",
+  "old": "About 93 sqm assumed in body",
+  "new": "90 sqm (86 sqm internal)",
+  "status": "corrected",
+  "source": "official.json / HDB Annex A Nov 2026"
+ },
+ {
+  "item": "4-room psf",
+  "old": "About $580-$757 psf",
+  "new": "About $599-$782 psf on 90 sqm",
+  "status": "corrected",
+  "source": "Calculation from official.json"
+ },
+ {
+  "item": "Prices for all flat types",
+  "old": "From Home & Decor launch review (partly AI-generated)",
+  "new": "2RF T1 $208k-$292k; 2RF T2 $272k-$360k; 3-room $409k-$526k; 4-room $580k-$758k",
+  "status": "verified",
+  "source": "official.json / HDB Annex A Nov 2026"
+ },
+ {
+  "item": "Unit mix",
+  "old": "890 2RF / 90 3-room / 657 4-room (secondary)",
+  "new": "322 2RF T1, 568 2RF T2, 90 3-room, 657 4-room; 1,637 sale units plus 58 rental (1,695 total)",
+  "status": "verified",
+  "source": "official.json; HDB site plan"
+ },
+ {
+  "item": "Waiting time",
+  "old": "3 years 8 months (secondary)",
+  "new": "44 months (official)",
+  "status": "verified",
+  "source": "official.json"
+ },
+ {
+  "item": "Estimated completion",
+  "old": "About Q3 2030 (estimate)",
+  "new": "1Q 2031; DPD 30 Sep 2032",
+  "status": "corrected",
+  "source": "official.json"
+ },
+ {
+  "item": "Earliest MOP",
+  "old": "Mid-late 2040",
+  "new": "About 2041",
+  "status": "corrected",
+  "source": "Calculation from 1Q 2031 completion and 10-year MOP"
+ },
+ {
+  "item": "Application closing time",
+  "old": "11 Nov 2026, 3:59pm or 11:59pm (sources disagree)",
+  "new": "11 Nov 2026, 11:59pm SGT (3:59pm was the UTC timestamp)",
+  "status": "corrected",
+  "source": "HDB portal / launch API launchEndDate"
+ },
+ {
+  "item": "Booking period",
+  "old": "Not stated",
+  "new": "March and June 2027",
+  "status": "new",
+  "source": "official.json"
+ },
+ {
+  "item": "SWT status",
+  "old": "Unclear",
+  "new": "Not SWT; only Sembawang Anchor is SWT in Nov 2026",
+  "status": "corrected",
+  "source": "mynicehome Nov 2026 sales launch"
+ },
+ {
+  "item": "Bedok South and Sungei Bedok MRT opening",
+  "old": "26 Dec 2026",
+  "new": "26 Dec 2026 confirmed, together with Xilin (DTL3e), 4.3 km of new line",
+  "status": "verified",
+  "source": "LTA newsroom 4 Nov 2026; Malay Mail; AsiaOne"
+ },
+ {
+  "item": "Walk to Bayshore MRT",
+  "old": "About 2-8 min",
+  "new": "About 170 m, 2 min from site centre; exits at precinct edge",
+  "status": "verified",
+  "source": "OSRM foot routing; HDB site plan"
+ },
+ {
+  "item": "Distance to East Coast Park",
+  "old": "About 300-600 m via underpass or planned bridges",
+  "new": "About 460 m straight-line to Area F, about 1.2 km / 15 min walk today",
+  "status": "corrected",
+  "source": "OneMap geocode; OSRM foot routing"
+ },
+ {
+  "item": "Pedestrian bridge to ECP",
+  "old": "Planned pedestrian bridges or links",
+  "new": "Site plan shows only a 'possible future elevated linkbridge (under study)'; flyover tender includes a pedestrian link",
+  "status": "corrected",
+  "source": "HDB site plan; Stomp/ST"
+ },
+ {
+  "item": "Preschools on site",
+  "old": "2 preschools",
+  "new": "Site plan marks one preschool, on the 1st-2nd storeys of Blk 902; count not stated",
+  "status": "unverifiable",
+  "source": "HDB site plan"
+ },
+ {
+  "item": "On-site facilities",
+  "old": "Eating house, 2 shops, RNC, AAC, dialysis centre, playgrounds, fitness, hardcourt",
+  "new": "Confirmed eating house and shops (Blk 902), AAC (Care) and dialysis centre (Blk 904), RNC (Blk 906), 4 playgrounds, 3 adult and 4 elderly fitness stations, 1 hardcourt, two roof gardens, future community and amenity spaces",
+  "status": "verified",
+  "source": "HDB site plan"
+ },
+ {
+  "item": "Nearby resale figures in old correction box",
+  "old": "About 82 years left: 3-room $662k-$705k, 4-room $905k-$985k described as nearby",
+  "new": "These are Bedok Central 2010-lease blocks about 1.5 km away; nearest comparable is Bedok South Horizon, 4-room median $985k",
+  "status": "corrected",
+  "source": "data.gov.sg resale dataset"
+ },
+ {
+  "item": "Bedok South Horizon distance",
+  "old": "About 1.5-2 km",
+  "new": "About 0.8 km straight-line, 1.8 km walk",
+  "status": "corrected",
+  "source": "OneMap; OSRM"
+ },
+ {
+  "item": "Bedok South Horizon 4-room resale",
+  "old": "Median $985,444, $900k-$1.19M",
+  "new": "Same (n=54)",
+  "status": "verified",
+  "source": "data.gov.sg resale dataset"
+ },
+ {
+  "item": "Costa Del Sol psf",
+  "old": "About $1,728 (2024)",
+  "new": "About $1,950-$2,060 (Jul-Aug 2026)",
+  "status": "corrected",
+  "source": "URA caveat aggregators (PropKaki and others)"
+ },
+ {
+  "item": "The Bayshore psf",
+  "old": "About $1,349 (2024)",
+  "new": "About $1,360-$1,460 (Aug-Sep 2026)",
+  "status": "corrected",
+  "source": "URA caveat aggregators"
+ },
+ {
+  "item": "Vela Bay psf",
+  "old": "Average $2,886 psf, 72% sold",
+  "new": "Average $2,886 at launch (371 of 515 sold); median about $2,829 by Jul 2026",
+  "status": "verified",
+  "source": "EdgeProp; Stacked Homes; URA caveat aggregators"
+ },
+ {
+  "item": "Sails vs Vela Bay psf",
+  "old": "20-26% of Vela Bay psf",
+  "new": "21-27% of Vela Bay psf",
+  "status": "corrected",
+  "source": "Calculation"
+ },
+ {
+  "item": "Resale Plus buyer income ceiling",
+  "old": "$16k (secondary)",
+  "new": "$16,000 families / $24,000 extended families / $16,000 singles, without CPF grant, from 24 Aug 2026",
+  "status": "verified",
+  "source": "HDB Annex A Revised Income Ceilings"
+ },
+ {
+  "item": "Oct 2024 Bayshore application rate",
+  "old": "About 5 applicants per 4-room flat",
+  "new": "Bedok 4-room first-timer rate about 2.1-2.5; about 3.9 overall (town-level)",
+  "status": "corrected",
+  "source": "MoneySmart; Stacked Homes"
+ },
+ {
+  "item": "Second Bayshore GLS site",
+  "old": "About 1,250 units, tendered 1H 2026",
+  "new": "About 1,280 homes plus 22,500 sqm commercial space, integrated with Bedok South MRT and bus interchange; tender closed 15 Jul 2026; award not confirmed",
+  "status": "corrected",
+  "source": "URA pr26-23; The Star"
+ },
+ {
+  "item": "Long Island",
+  "old": "Preparatory works from end-2026 west of Bedok Jetty",
+  "new": "Confirmed; Phase 1 about 570 ha west of Bedok Jetty, Phase 2 about 155 ha east, HDB as reclamation agent",
+  "status": "verified",
+  "source": "URA pr26-50"
+ },
+ {
+  "item": "Changi General Hospital distance",
+  "old": "About 5-6 km",
+  "new": "About 3.1 km straight-line",
+  "status": "corrected",
+  "source": "OneMap geocode"
+ },
+ {
+  "item": "Bedok Polyclinic distance",
+  "old": "About 3-4 km",
+  "new": "About 1.8 km straight-line, 2.5 km walk",
+  "status": "corrected",
+  "source": "OneMap; OSRM"
+ },
+ {
+  "item": "East Coast Lagoon Food Village distance",
+  "old": "About 1.5-2 km",
+  "new": "About 1.0 km straight-line, 1.4 km walk",
+  "status": "corrected",
+  "source": "OneMap; OSRM"
+ },
+ {
+  "item": "Bedok Mall / Heartbeat@Bedok distance",
+  "old": "About 3 km",
+  "new": "About 1.8 km straight-line, 2.5-2.6 km walk",
+  "status": "corrected",
+  "source": "OneMap; OSRM"
+ },
+ {
+  "item": "Siglap Centre distance",
+  "old": "About 1.5 km",
+  "new": "About 2.05 km straight-line",
+  "status": "corrected",
+  "source": "OneMap"
+ },
+ {
+  "item": "Primary school distances",
+  "old": "Temasek 0.6, Bedok Green 1.2, Opera Estate/Fengshan 2.2, St Anthony's/Red Swastika 2.4 km",
+  "new": "0.63, 1.17, 2.08, 2.11, 2.34, 2.32 km from site centre",
+  "status": "verified",
+  "source": "OneMap geocodes"
+ },
+ {
+  "item": "Nearest supermarket",
+  "old": "Minimarts near Bayshore Road (listings)",
+  "new": "Sheng Siong Bedok South about 0.68 km straight-line, 1.1 km walk; minimarts not confirmed",
+  "status": "new",
+  "source": "OpenStreetMap / Overpass; OSRM"
+ },
+ {
+  "item": "SAFRA Bayshore",
+  "old": "Around 2030 (secondary)",
+  "new": "'Proposed New SAFRA Clubhouse' on HDB town map; around 2030 timing unconfirmed",
+  "status": "unverifiable",
+  "source": "HDB town map; Mothership Mar 2025"
+ },
+ {
+  "item": "Proposed nursing home on Bayshore Walk",
+  "old": "Secondary",
+  "new": "Shown on HDB town map",
+  "status": "verified",
+  "source": "HDB town map"
+ },
+ {
+  "item": "Bayshore parks",
+  "old": "3 ha Bayshore Central Park",
+  "new": "About 3 ha of parks with a heritage trail",
+  "status": "verified",
+  "source": "official.json project description"
+ },
+ {
+  "item": "Bayshore estate home count",
+  "old": "About 10,000 (or 12,000-12,500)",
+  "new": "Sources inconsistent; not confirmed",
+  "status": "unverifiable",
+  "source": "PropertyGuru, ERA, EdgeProp"
+ },
+ {
+  "item": "Palms/Vista prices and clawback",
+  "old": "Palms 4-room $495k-$683k; Vista 4-room $514k-$694k, 3-room $369k-$476k; 7%",
+  "new": "Same",
+  "status": "verified",
+  "source": "Dollars & Sense; Home & Decor; EdgeProp"
+ },
+ {
+  "item": "Bayshore Oasis summary",
+  "old": "855 units, Plus, 9%, about 3 yr 2 mth wait",
+  "new": "855 units, 38-month wait, 3Q 2030 completion, 4-room $559k-$786k",
+  "status": "verified",
+  "source": "HDB portal (BD_N10C3A)"
+ },
+ {
+  "item": "Temasek JC",
+  "old": "Within about 1 km",
+  "new": "Under construction at 22 Bedok South Rd, about 0.86 km",
+  "status": "verified",
+  "source": "HDB town map; OneMap"
+ },
+ {
+  "item": "Damai Primary relocation",
+  "old": "Not mentioned",
+  "new": "Moving to Tampines North, tentatively 2029",
+  "status": "new",
+  "source": "HDB town map"
+ },
+ {
+  "item": "HDB listing URL",
+  "old": "Link to a June 2026 UPB listing (2026-06_UPB_...)",
+  "new": "Correct Bayshore Sails portal page",
+  "status": "corrected",
+  "source": "HDB portal"
+ },
+ {
+  "item": "Vela Bay 1-bedroom from $1.354M",
+  "old": "Stated",
+  "new": "Dropped; not re-checked",
+  "status": "removed",
+  "source": "n/a"
+ },
+ {
+  "item": "Resale buyer citizenship and 30-month wait-out",
+  "old": "Secondary",
+  "new": "Kept as unverified",
+  "status": "unverifiable",
+  "source": "Beansprout; PropertyNet"
+ }
+]

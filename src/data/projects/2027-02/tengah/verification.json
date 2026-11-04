@@ -1,0 +1,240 @@
+[
+ {
+  "item": "Feb 2027 exercise inclusion",
+  "old": "Feb 2027 exercise; launch date not announced",
+  "new": "HDB Flat Portal: next BTO exercise in Feb 2027 with about 4,300 flats (plus about 5,000 SBF flats); HFE deadline 15 Dec 2026; site listed as upcoming BTO. Towns reported as Bishan, Tampines, Tengah, Toa Payoh. 'upcomingBtoExpectedLaunch: 2026-11' is the listing quarter",
+  "status": "verified",
+  "source": "https://homes.hdb.gov.sg/ ; https://www.asiaone.com/singapore/hdb-november-bto-launch-higher-income-ceilings"
+ },
+ {
+  "item": "Site coordinates and boundaries",
+  "old": "1.36983, 103.74633; Brickland Cres (W/NW), Brickland Close (NE), Bukit Batok Rd (SE)",
+  "new": "Confirmed; a Proposed Place of Worship strip lies between the site and Bukit Batok Rd",
+  "status": "verified",
+  "source": "official.json; townmap_tg_d5c3.jpg"
+ },
+ {
+  "item": "Unit mix and facilities",
+  "old": "410/80/350/440 = 1,280; preschool and RNC",
+  "new": "Confirmed; flat types listed are 2-room Flexi, 3-, 4-, 5-room only (no 3Gen); one pure rental block and three integrated sold-and-rental blocks",
+  "status": "verified",
+  "source": "official.json; townmap_tg_d5c3.jpg"
+ },
+ {
+  "item": "3Gen flats",
+  "old": "Not yet published whether there are 3Gen flats",
+  "new": "No 3Gen flats in HDB's flat-type list for this site",
+  "status": "corrected",
+  "source": "official.json"
+ },
+ {
+  "item": "NS3A distance",
+  "old": "250-350 m straight line; 4-6 min walk",
+  "new": "375 m straight / about 390 m walk (5 min) from HDB's site point; about 250 m from the nearest site edge (map scale)",
+  "status": "corrected",
+  "source": "official.json; OSM; routing.openstreetmap.de"
+ },
+ {
+  "item": "NS3A opening year",
+  "old": "2034 target",
+  "new": "2034 (LTA Jul 2023 and Dec 2025); Obayashi contract about $281m; construction from 1H 2026, some works at night",
+  "status": "verified",
+  "source": "https://www.lta.gov.sg/content/ltagov/en/newsroom/2025/12/news-releases/lta_awards_civil_contract_ns3a_station.html"
+ },
+ {
+  "item": "NS3A '13,000 households'",
+  "old": "LTA: serves about 13,000 households",
+  "new": "Not in either LTA release; LTA says it serves Keat Hong, Bukit Batok West, Pavilion Park and Brickland residents",
+  "status": "removed",
+  "source": "https://lta.gov.sg/content/ltagov/en/newsroom/2023/7/news-releases/new-brickland-station-to-enhance-rail-connectivity-in-western-si.html"
+ },
+ {
+  "item": "JRL JS2/JS2A",
+  "old": "JS2/JS2A (Forest Hill) ~1.0-1.1 km, JS2A mid-2030s, shuttle buses linked to JS2A",
+  "new": "JS2 Choa Chu Kang West: 1.26 km straight / 1.6 km walk, Stage 1 mid-2028. JS2A (new infill, Forest Hill): about 1.4 km, mid-2030s. Interim shuttle buses from end-2027 are due to the Stage 1 delay, not JS2A",
+  "status": "corrected",
+  "source": "https://www.lta.gov.sg/content/ltagov/en/newsroom/2026/3/news-releases/next-phase-of-rail-development.html"
+ },
+ {
+  "item": "JRL JS3 Tengah distance and stage",
+  "old": "~1.3 km; sources disagree on stage",
+  "new": "1.85 km straight / 2.7 km walk; JS3 is in Stage 1 (Choa Chu Kang-Boon Lay), mid-2028",
+  "status": "corrected",
+  "source": "https://lta.gov.sg/content/ltagov/en/upcoming_projects/rail_expansion/jurong_region_line.html"
+ },
+ {
+  "item": "Bus services",
+  "old": "Not stated",
+  "new": "Buses 172, 300, 301, 975, 983, 991 serve Brickland/Keat Hong (MOT, Oct 2023)",
+  "status": "new",
+  "source": "https://www.mot.gov.sg/news-resources/newsroom/written-reply-to-parliamentary-question-on-plans-to-increase-transport-connectivity-in-keat-hong-and-brickland-in-chua-chu-kang-with-opening-of-ns3a-brickland-mrt-station/"
+ },
+ {
+  "item": "Tengah hospital",
+  "old": "Not mentioned",
+  "new": "MOH (Mar 2024): integrated general and community hospital in Tengah by early 2030s, run by NUHS. Korean press (Sept 2026): Ssangyong E&C won ~$2.15bn design-and-build contract, 1,534 beds; exact site not disclosed",
+  "status": "new",
+  "source": "https://moht.com.sg/news-and-updates/new-hospital-in-tengah-by-early-2030s-public-hospitals-to-add-4000-beds-over-next-6-years-ong-ye-kung ; https://koreaherald.com/article/10877189"
+ },
+ {
+  "item": "ACS(P) site",
+  "old": "Whether the town-map school site is ACS(P) is unverified; ~1-1.5 km",
+  "new": "Town map labels it 'Future Primary School (Anglo-Chinese School (Pri)) and SPED School'; 1.24 km straight / 2.0 km walk; opens 2030",
+  "status": "corrected",
+  "source": "townmap_tg_d5c3.jpg; https://moe.gov.sg/news/press-releases/20230209-new-schools-to-meet-demand-in-the-west-and-north-east-of-singapore"
+ },
+ {
+  "item": "Parc Point status",
+  "old": "FairPrice and Gourmet Paradise due 1Q 2026",
+  "new": "Open: Gourmet Paradise food court opened about Mar 2026; FairPrice in basement",
+  "status": "corrected",
+  "source": "https://sethlui.com/gourmet-paradise-opens-parc-point-singapore-mar-2026/ ; https://www.littledayout.com/parc-point-tengah-food-shops/"
+ },
+ {
+  "item": "Tengah hawker centre timing",
+  "old": "Late 2026-2027",
+  "new": "No source found for a date",
+  "status": "unverifiable",
+  "source": "searches, Nov 2026"
+ },
+ {
+  "item": "Tengah Town Centre mall timing",
+  "old": "Tied to JRL, mid-2028 or later",
+  "new": "No official completion date found; JS3 and an integrated transport hub are planned in the town centre",
+  "status": "unverifiable",
+  "source": "https://landtransportguru.net/tengah-station/"
+ },
+ {
+  "item": "Amenity distances",
+  "old": "Keat Hong SC 0.87 km, Parc Point 1.3, Le Quest 1.6, Plantation Plaza 1.7, BBW Hawker 1.7, Lot One 1.7, West Mall 2.2, Bukit Gombak 1.4, CCK 1.7, Bukit Batok 2.3, LRT 1.0-1.2, schools, polyclinics, CCs",
+  "new": "Straight-line figures confirmed; OSRM walking distances added (e.g. Bukit Gombak 1.53 km / 19 min, hawker centre 2.26 km)",
+  "status": "verified",
+  "source": "OneMap; routing.openstreetmap.de"
+ },
+ {
+  "item": "Bukit Gombak walk time",
+  "old": "18-22 min",
+  "new": "1.53 km, about 19 min",
+  "status": "verified",
+  "source": "routing.openstreetmap.de"
+ },
+ {
+  "item": "Second Health & Medical Care plot",
+  "old": "One plot next to site",
+  "new": "Town map shows one next to the SW corner and another across Brickland Road near Choa Chu Kang Grove; uses not stated",
+  "status": "corrected",
+  "source": "townmap_tg_d5c3.jpg"
+ },
+ {
+  "item": "Resale town medians",
+  "old": "May-Nov 2026 window, no transaction counts",
+  "new": "Recomputed for Nov 2025-early Nov 2026 with n, ranges and lease years (e.g. Bukit Batok 4-room $625k, n=601)",
+  "status": "corrected",
+  "source": "data.gov.sg d_8b84c4ee58e3cfc0ece0d773c8ca6abc"
+ },
+ {
+  "item": "Young-flat resale benchmarks",
+  "old": "BB 4-room $680k, 5-room $824k; CCK $600k/$713k; JW $642.5k/$768k; BP $625k/$730k",
+  "new": "BB $680k/$828k; CCK $602k/$710k; JW $640k/$751k; BP $625k/$745k (lease 2015+, 12 months)",
+  "status": "corrected",
+  "source": "data.gov.sg d_8b84c4ee58e3cfc0ece0d773c8ca6abc"
+ },
+ {
+  "item": "Street-level resale",
+  "old": "BB West Ave 6 4-room $690k; Ave 9 3-room ~$505-520k; lease 2019",
+  "new": "BB West Ave 6 (lease 2017-19) 4-room $698k (n=50); Ave 8 3-room $521k; Ave 9 3-room $519k; other streets confirmed within ~$5k",
+  "status": "corrected",
+  "source": "data.gov.sg d_8b84c4ee58e3cfc0ece0d773c8ca6abc"
+ },
+ {
+  "item": "Tengah resale records",
+  "old": "None yet",
+  "new": "0 Tengah records on data.gov.sg (queried 4 Nov 2026)",
+  "status": "verified",
+  "source": "data.gov.sg d_8b84c4ee58e3cfc0ece0d773c8ca6abc"
+ },
+ {
+  "item": "Plantation Dew precedent",
+  "old": "Standard; 2RF $131k-$207k, 3R $266k-$317k, 4R $339k-$445k, 5R $494k-$626k; 3Q 2030",
+  "new": "Confirmed; 38-month wait, DPD 31 Mar 2032, clawback not applicable; HDB resale comparables 4-room $570,888-$705,888",
+  "status": "verified",
+  "source": "projects/2026-11/plantation-dew/official.json"
+ },
+ {
+  "item": "Brickland Weave precedent",
+  "old": "Prices $97k-$503k",
+  "new": "Confirmed; 1,641 flats, 48-month wait at launch",
+  "status": "verified",
+  "source": "https://www.hdb.gov.sg/-/media/hdb-pulse/news/2023/hdb-launches-4428-flats-in-february-2023-bto-exercise/28022023_AnnexA_Feb2023_BTO.pdf"
+ },
+ {
+  "item": "Plus/Prime resale income ceiling",
+  "old": "Open question: $14k vs $16k",
+  "new": "Settled: HDB puts new flats and resale Plus flats in one column: $16,000 for 4-/5-room ($24,000 extended families), $8,000 2-room Flexi; resale Prime follows prevailing BTO rules; singles buying resale Plus $16,000",
+  "status": "corrected",
+  "source": "https://www.hdb.gov.sg/buying-a-flat/flat-grant-and-loan-eligibility/couples-and-families"
+ },
+ {
+  "item": "Plus/Prime resale citizenship",
+  "old": "At least one SC; sources conflict on PRs",
+  "new": "Applicant must be SC with at least one other SC or SPR (same as BTO)",
+  "status": "corrected",
+  "source": "https://www.hdb.gov.sg/buying-a-flat/flat-grant-and-loan-eligibility/couples-and-families"
+ },
+ {
+  "item": "Renting out rooms",
+  "old": "Allowed while living in flat [check]",
+  "new": "3-room or larger may rent spare bedrooms with HDB approval, including during MOP; no rule for 2-room Flexi room rental listed (implied not allowed); same for Standard/Plus/Prime",
+  "status": "corrected",
+  "source": "https://www.hdb.gov.sg/buying-a-flat/bto-sbf-and-open-booking-of-flats/conditions-after-buying-a-new-flat"
+ },
+ {
+  "item": "Subsidy recovery basis",
+  "old": "% of higher of price or valuation",
+  "new": "Confirmed; not applicable to resale Plus/Prime flats; 8-11% in Nov 2026 Plus/Prime projects",
+  "status": "verified",
+  "source": "https://www.hdb.gov.sg/buying-a-flat/bto-sbf-and-open-booking-of-flats/conditions-after-buying-a-new-flat"
+ },
+ {
+  "item": "Extra ballot per child",
+  "old": "From Feb 2027, one extra ballot per SC child aged 18 or below",
+  "new": "Confirmed in NDR 2026 coverage; HDB text not yet found",
+  "status": "verified",
+  "source": "https://www.era.com.sg/blogs/ndr2026-housing ; https://theonlinecitizen.com/2026/08/23/ndr-2026-bto-and-ec-income-ceilings-raised-first-timers-get-extra-ballot-per-child"
+ },
+ {
+  "item": "Past application rates",
+  "old": "Not given",
+  "new": "HDB has no Tengah rates in the last year; Feb 2023 Tengah overall 2.84x (EdgeProp)",
+  "status": "new",
+  "source": "api__getSalesPastApplicationRate.json; https://www.edgeprop.sg/property-news/lower-application-rates-february-2023-bto-exercise"
+ },
+ {
+  "item": "Brickland Weave completion",
+  "old": "About Q4 2027, DPD 30 Jun 2029",
+  "new": "Unchanged; still secondary sources only (99.co, BTOHQ ~78% complete Apr 2026)",
+  "status": "unverifiable",
+  "source": "https://www.btohq.com/bto-project-spec/brickland-weave"
+ },
+ {
+  "item": "Over 8,800 Tengah flats completed",
+  "old": "Stated as fact",
+  "new": "Single source (Straits Times headline); tagged unverified",
+  "status": "unverifiable",
+  "source": "https://magzter.com/tr/stories/newspaper/The-Straits-Times/OVER-8800-BTO-FLATS-COMPLETED-IN-TENGAH-RESIDENTS-MOVE-INTO-TOWNS-GARDEN-DISTRICT"
+ },
+ {
+  "item": "Tengah Polyclinic",
+  "old": "Opened 28 Feb 2026, 1.3 km",
+  "new": "Confirmed; 1.31 km straight / 1.76 km walk",
+  "status": "verified",
+  "source": "https://www.webjosh.com/article/tengah-polyclinic-opens-first-under-national-university-polyclinics-with-added-lactation-services-1772382203-1662"
+ },
+ {
+  "item": "HDB getUpcomingProjects API as source",
+  "old": "Listed as a source",
+  "new": "Not reachable (405/empty); replaced by Flat Portal homepage and project page",
+  "status": "removed",
+  "source": "https://homes.hdb.gov.sg/"
+ }
+]

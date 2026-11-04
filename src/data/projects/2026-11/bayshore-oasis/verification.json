@@ -1,0 +1,303 @@
+[
+ {
+  "item": "4-room price",
+  "old": "$559k-$786k (Home & Decor only)",
+  "new": "$559,000-$786,000",
+  "status": "verified",
+  "source": "official.json"
+ },
+ {
+  "item": "2-room Flexi prices",
+  "old": "Type 1 $230k-$298k; Type 2 $261k-$378k",
+  "new": "Type 1 $230,000-$298,000; Type 2 $261,000-$378,000",
+  "status": "verified",
+  "source": "official.json"
+ },
+ {
+  "item": "Unit mix",
+  "old": "855: about 347 2-room Flexi and 508 4-room (media)",
+  "new": "855 for sale: 87 Type 1 + 260 Type 2 2-room Flexi, 508 4-room; plus 30 rental flats (885 total)",
+  "status": "corrected",
+  "source": "official.json"
+ },
+ {
+  "item": "2-room Flexi sizes",
+  "old": "~36-38 sqm and ~45-47 sqm (estimate)",
+  "new": "40 sqm (38 internal) and 48 sqm (46 internal)",
+  "status": "corrected",
+  "source": "official.json"
+ },
+ {
+  "item": "4-room size",
+  "old": "~90-93 sqm (estimate)",
+  "new": "90 sqm (86 internal)",
+  "status": "corrected",
+  "source": "official.json"
+ },
+ {
+  "item": "Subsidy clawback",
+  "old": "9% (media)",
+  "new": "9%",
+  "status": "verified",
+  "source": "official.json"
+ },
+ {
+  "item": "Waiting time",
+  "old": "3 years 2 months",
+  "new": "38 months",
+  "status": "verified",
+  "source": "official.json"
+ },
+ {
+  "item": "Key collection",
+  "old": "around Q1-Q2 2030 (estimate)",
+  "new": "ECD 3Q 2030; delivery date 31 Mar 2032",
+  "status": "corrected",
+  "source": "official.json"
+ },
+ {
+  "item": "Flat booking",
+  "old": "around Q1 2027",
+  "new": "Mar 2027 to Jun 2027",
+  "status": "corrected",
+  "source": "official.json"
+ },
+ {
+  "item": "Blocks and storeys",
+  "old": "4 blocks, one mixing rental (AsiaOne)",
+  "new": "4 blocks (908A, 909A, 910A, 910B), 7-30 storeys; 30 rental flats in 910A",
+  "status": "verified",
+  "source": "official.json"
+ },
+ {
+  "item": "Minimart and shops location",
+  "old": "at ground level by the car park",
+  "new": "ground floor of block 910B facing Bayshore Drive; preschool is in the car park building",
+  "status": "corrected",
+  "source": "https://homes.hdb.gov.sg/home/bto/details/2026-11_BTO_QkRfTjEwQzNBXzE3OTA4MzUyOTMyMDc"
+ },
+ {
+  "item": "Other site facilities",
+  "old": "playgrounds, fitness corners, pavilions",
+  "new": "adds hardcourt, elderly fitness, roof gardens on 3 blocks and the car park, community garden, pneumatic waste system, future community space",
+  "status": "verified",
+  "source": "https://homes.hdb.gov.sg/home/bto/details/2026-11_BTO_QkRfTjEwQzNBXzE3OTA4MzUyOTMyMDc"
+ },
+ {
+  "item": "3 ha park in neighbourhood",
+  "old": "Home & Decor only",
+  "new": "stated in HDB project text",
+  "status": "verified",
+  "source": "official.json"
+ },
+ {
+  "item": "Bedok South and Sungei Bedok opening",
+  "old": "26 Dec 2026",
+  "new": "26 Dec 2026, announced by Transport Minister 4 Nov 2026; Xilin also opens",
+  "status": "verified",
+  "source": "https://www.asiaone.com/singapore/new-mrt-stations-bedok-south-sungei-bedok-xilin-tel-dtl"
+ },
+ {
+  "item": "TEL extension to T5",
+  "old": "mid-2030s (unverified)",
+  "new": "mid-2030s, 14 km from Sungei Bedok",
+  "status": "verified",
+  "source": "https://www.lta.gov.sg/content/ltagov/en/newsroom/2025/7/news-releases/TELe_and_CRL_changi_airport_to_city_centre.html"
+ },
+ {
+  "item": "Walk to Bayshore MRT",
+  "old": "about 3-8 min",
+  "new": "240 m, about 3 min",
+  "status": "corrected",
+  "source": "OneMap + OSRM"
+ },
+ {
+  "item": "Walk to Bedok South MRT",
+  "old": "about 5-12 min",
+  "new": "790 m, about 10 min",
+  "status": "corrected",
+  "source": "OneMap + OSRM"
+ },
+ {
+  "item": "East Coast Park access",
+  "old": "reachable on foot via underpass near Bayshore MRT",
+  "new": "about 400 m straight line; about 1.1 km (14 min) walk via the Bayshore Road underpass; about 1.5 km to Area F or Bedok Jetty",
+  "status": "corrected",
+  "source": "OneMap + OSRM"
+ },
+ {
+  "item": "Distance to Bedok MRT and Heartbeat@Bedok",
+  "old": "about 3 km",
+  "new": "2.0-2.1 km straight line, 2.8-2.9 km walk",
+  "status": "corrected",
+  "source": "OneMap + OSRM"
+ },
+ {
+  "item": "Changi General Hospital distance",
+  "old": "about 6 km",
+  "new": "about 3.2 km straight line",
+  "status": "corrected",
+  "source": "OneMap"
+ },
+ {
+  "item": "Bedok South hawker centre distance",
+  "old": "about 1-1.5 km",
+  "new": "1.30 km straight line, 1.84 km walk",
+  "status": "verified",
+  "source": "OneMap + OSRM"
+ },
+ {
+  "item": "Opera Estate Primary distance",
+  "old": "1-2 km",
+  "new": "2.40 km straight line (more than 2 km)",
+  "status": "corrected",
+  "source": "OneMap"
+ },
+ {
+  "item": "Fengshan Primary",
+  "old": "listed nearby (doubtful)",
+  "new": "2.35 km, more than 2 km",
+  "status": "corrected",
+  "source": "OneMap"
+ },
+ {
+  "item": "Temasek Primary within 1 km",
+  "old": "needs checking",
+  "new": "545 m straight line",
+  "status": "verified",
+  "source": "OneMap"
+ },
+ {
+  "item": "Preschools Mulberry / Oxford Explorers Bayshore",
+  "old": "3 and 11 min walk",
+  "new": "not found on OneMap",
+  "status": "unverifiable",
+  "source": "OneMap"
+ },
+ {
+  "item": "Bus services list",
+  "old": "10, 10E, 13, 14, 14A, 14E, 43, 48, 55, 137, 853M",
+  "new": "not checked; HDB confirms future bus stops on Bayshore Drive",
+  "status": "unverifiable",
+  "source": "official.json"
+ },
+ {
+  "item": "Bedok South Horizon 4-room resale",
+  "old": "52 sales, $900k-$1.19m, median $980k, blocks 152A-154C",
+  "new": "54 sales, $900k-$1.19m, median $985,444, ~$984 psf, blocks 152A-154B",
+  "status": "corrected",
+  "source": "https://data.gov.sg/datasets/d_8b84c4ee58e3cfc0ece0d773c8ca6abc/view"
+ },
+ {
+  "item": "HDB nearby resale comparison",
+  "old": "4-room $905k-$985k",
+  "new": "4-room $905k-$985k (87-97 sqm, about 82 years left); no 2-room comparison",
+  "status": "verified",
+  "source": "official.json"
+ },
+ {
+  "item": "Older Bedok South and Marine Parade resale rows",
+  "old": "3-room ~25 sales; Marine 29 sales $545k-$770k; Bedok 4-room 312 sales median $600k",
+  "new": "3-room 44 sales $345k-$513k; Marine 38 sales $505k-$770k median $637.5k; Bedok 4-room 544 sales median $599.5k (12 months)",
+  "status": "corrected",
+  "source": "https://data.gov.sg/datasets/d_8b84c4ee58e3cfc0ece0d773c8ca6abc/view"
+ },
+ {
+  "item": "Resale Plus income ceiling",
+  "old": "$14k, reportedly now $16k (unverified)",
+  "new": "$16,000 for 4/5-room ($24,000 extended family), $8,000 for 2-room Flexi",
+  "status": "corrected",
+  "source": "https://www.hdb.gov.sg/buying-a-flat/flat-grant-and-loan-eligibility/couples-and-families"
+ },
+ {
+  "item": "Resale Plus first-timer requirement",
+  "old": "none found, verify",
+  "new": "no first-timer requirement; two-time subsidy takers barred only from resale Prime",
+  "status": "verified",
+  "source": "https://www.hdb.gov.sg/buying-a-flat/flat-grant-and-loan-eligibility/couples-and-families"
+ },
+ {
+  "item": "Room rental",
+  "old": "allowed, including during MOP",
+  "new": "only for 3-room or bigger; 2-room Flexi owners cannot rent rooms; short-lease Flexi cannot be rented at all",
+  "status": "corrected",
+  "source": "https://www.hdb.gov.sg/buying-a-flat/bto-sbf-and-open-booking-of-flats/finding-a-new-flat/standard-plus-and-prime-housing-framework"
+ },
+ {
+  "item": "Grants after EHG",
+  "old": "after-grant prices with $120k max EHG",
+  "new": "removed; EHG amounts not checked after the Aug 2026 income ceiling change",
+  "status": "removed",
+  "source": "https://www.hdb.gov.sg/buying-a-flat/flat-grant-and-loan-eligibility/couples-and-families"
+ },
+ {
+  "item": "Short-lease 2-room Flexi prices",
+  "old": "not mentioned",
+  "new": "Type 1 $77k-$179k, Type 2 $87k-$226k (15-45 years)",
+  "status": "new",
+  "source": "official.json"
+ },
+ {
+  "item": "Shorter Waiting Time status",
+  "old": "Home & Decor says yes, treated as wrong",
+  "new": "not Shorter Waiting Time; 38 months",
+  "status": "verified",
+  "source": "official.json"
+ },
+ {
+  "item": "Construction contract",
+  "old": "site status unknown",
+  "new": "awarded May 2026 to HP Construction & Engineering, $213.80m, 885 units",
+  "status": "new",
+  "source": "https://isomer-user-content.by.gov.sg/338/5cca02a3-8034-4bbc-994f-646b5e9910f3/free_pjt_list.pdf"
+ },
+ {
+  "item": "Bayshore Drive GLS site",
+  "old": "about 1,250 homes, offered 1H 2026",
+  "new": "about 1,280 homes, mall and bus interchange over Bedok South MRT; tender closed Jul 2026, top bid $2.128bn; award not confirmed",
+  "status": "corrected",
+  "source": "https://www.cbre.com.sg/press-releases/commentary-on-ura-tender-closing-of-commercial-and-residential-site-at-bayshore-drive"
+ },
+ {
+  "item": "Sports and recreation site",
+  "old": "shown on Palms site plan",
+  "new": "town map shows a proposed SAFRA clubhouse and proposed park; health and medical care site and nursing home to the east",
+  "status": "corrected",
+  "source": "https://homes.hdb.gov.sg/home/bto/details/2026-11_BTO_QkRfTjEwQzNBXzE3OTA4MzUyOTMyMDc"
+ },
+ {
+  "item": "Palms / Vista 2024 prices and clawback",
+  "old": "Palms $495k-$683k, Vista $514k-$694k, 7%",
+  "new": "same; 47 and 45-month waits",
+  "status": "verified",
+  "source": "https://www.hdb.gov.sg/-/media/hdb-pulse/news/2024/oct-bto-launch/Annex-B.pdf"
+ },
+ {
+  "item": "Palms completion Jun 2029",
+  "old": "Jun 2029 (Home & Decor)",
+  "new": "around 2028-29, estimated from 47-month wait",
+  "status": "unverifiable",
+  "source": "https://www.hdb.gov.sg/-/media/hdb-pulse/news/2024/oct-bto-launch/Annex-B.pdf"
+ },
+ {
+  "item": "Bayshore Sails waiting time",
+  "old": "not confirmed",
+  "new": "44 months, ECD 1Q 2031",
+  "status": "corrected",
+  "source": "official.json"
+ },
+ {
+  "item": "Long Island",
+  "old": "about 800 ha; preparatory works first, no reclamation",
+  "new": "potentially over 800 ha; preparatory works, no reclamation, design not final",
+  "status": "verified",
+  "source": "https://www.ura.gov.sg/Corporate/Media-Room/Media-Releases/pr26-24"
+ },
+ {
+  "item": "Plus application rates",
+  "old": "not given",
+  "new": "Plus 4-room first-timer rates 0.9-7.2 in recent exercises; no Bedok project in Feb/Jun 2026",
+  "status": "new",
+  "source": "HDB getSalesPastApplicationRate API"
+ }
+]

@@ -1,0 +1,44 @@
+{
+ "project_name": "Bayshore Oasis – Plus",
+ "classification": "Plus",
+ "town": "Bedok",
+ "lat": 1.3129352,
+ "lng": 103.944456,
+ "clawback_rate": "9.00%",
+ "est_waiting_time": "38 months",
+ "total_units": null,
+ "waiting_time_note": "Estimated Completion Date (ECD) is the estimated date that the project will be completed. As ECD will depend on the progress of construction works on site, HDB shall not be responsible for any damage or loss arising from a change in the ECD. The ECD of this project is 3Q 2030. Delivery Possession Date (DPD) is the contractual date in the Agreement for Lease by which HDB is required to deliver vacant possession of the booked flat to buyers. DPD is later than the ECD. The estimated DPD for this project is 31 Mar 2032. HDB precincts are planned to serve the evolving needs of the community. There are spaces catered for future inclusion of amenities/ facilities (such as preschools, eldercare facilities, education centres, residents' network centres, day activity centres, etc), commercial facilities (such as shops and eating houses), mechanical and electrical rooms, and such other facilities depending on the prevailing needs, even after residents have moved into the precincts. These spaces could be in the void decks, common property, car parks, or stand-alone community buildings. In addition, housing projects may be located near roads, railways, airbases, construction sites, and land used for non-residential purposes including but not limited to industrial, commercial or utility uses. Hence, residents may experience related disamenities including but not limited to higher noise levels and smell nuisance. We have provided information on the surrounding land use, proposed facilities ",
+ "ecd": "3Q 2030",
+ "dpd": "31 Mar 2032",
+ "booking_period": "Mar 2027 and Jun 2027",
+ "flat_types": null,
+ "units": [
+  {
+   "flat_type": "2-room Flexi (Type 1)",
+   "supply": "87",
+   "floor_area_sqm": "40",
+   "internal_area_sqm": "38",
+   "price_low": "77000",
+   "price_high": "298000",
+   "price_note": "Indicative price range for 99-year lease 99 Years: $230,000 - $298,000 Indicative price range for short leases 15 Years: $77,000 - $100,000 20 Years: $92,000 - $120,000 25 Years: $105,000 - $136,000 30 Years: $115,000 - $149,000 35 Years: $124,000 - $161,000 40 Years: $131,000 - $171,000 45 Years: $138,000 - $179,000"
+  },
+  {
+   "flat_type": "2-room Flexi (Type 2)",
+   "supply": "260",
+   "floor_area_sqm": "48",
+   "internal_area_sqm": "46",
+   "price_low": "87000",
+   "price_high": "378000",
+   "price_note": "Indicative price range for 99-year lease 99 Years: $261,000 - $378,000 Indicative price range for short leases 15 Years: $87,000 - $126,000 20 Years: $105,000 - $151,000 25 Years: $119,000 - $172,000 30 Years: $131,000 - $189,000 35 Years: $141,000 - $204,000 40 Years: $149,000 - $216,000 45 Years: $156,000 - $226,000"
+  },
+  {
+   "flat_type": "4-room",
+   "supply": "508",
+   "floor_area_sqm": "90",
+   "internal_area_sqm": "86",
+   "price_low": "559000",
+   "price_high": "786000",
+   "price_note": ""
+  }
+ ]
+}

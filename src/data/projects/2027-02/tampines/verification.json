@@ -1,0 +1,205 @@
+[
+ {
+  "item": "Total units and flat mix",
+  "old": "Not published; estimate about 400-700 flats",
+  "new": "460 units: 120 2-room Flexi, 100 3-room, 120 4-room, 120 5-room [Official]",
+  "status": "corrected",
+  "source": "official.json"
+ },
+ {
+  "item": "On-site facilities",
+  "old": "Only in the added correction box",
+  "new": "Eating house, minimart, 4 shops, preschool, Residents' Network Centre [Official], folded into the body",
+  "status": "new",
+  "source": "https://homes.hdb.gov.sg/home/bto/details/2026-11_UPB_VEFQX04wQzI1XzE3OTE5MDM1MDE0MzI"
+ },
+ {
+  "item": "Site location",
+  "old": "Plot south of Simei Symphony between Sunbird Ave and Upper Changi Rd East [Inferred]",
+  "new": "Triangle bounded by Upper Changi Road, Upper Changi Rd East and Upper Changi Link at the Simei Rd junction, opposite Somapah Rd [Official]",
+  "status": "corrected",
+  "source": "https://isomer-user-content.by.gov.sg/467/073b6414-e665-449a-9cd7-d8436d1c0834/R7_MPA20260103.pdf"
+ },
+ {
+  "item": "Parcel area",
+  "old": "About 2.15 ha",
+  "new": "About 2.13 ha (MP2019 polygon, 21,314 sqm)",
+  "status": "corrected",
+  "source": "https://data.gov.sg/datasets/d_90d86daa5bfaa371668b84fa5f01424f/view"
+ },
+ {
+  "item": "Plot ratio",
+  "old": "Residential, plot ratio 2.1 (MP2019); MP2025 changes not researched",
+  "new": "Plot ratio 2.1 raised to a maximum of 3.5, approved 13 Oct 2026 (MPA20260103)",
+  "status": "new",
+  "source": "https://www.ura.gov.sg/land-planning/master-plan/amendments-to-master-plan/2025/list-of-gazetted-approved-amendments-to-master-plan-2025/r7-30oct26/"
+ },
+ {
+  "item": "Neighbouring upzonings",
+  "old": "Not mentioned",
+  "new": "4.28 ha south of Upper Changi Link to plot ratio 3.5 with a park strip (MPA20260105); Simei Rd/Simei Lane 1.81 ha to 3.4 (MPA20260106)",
+  "status": "new",
+  "source": "https://www.ura.gov.sg/land-planning/master-plan/amendments-to-master-plan/2025/list-of-gazetted-approved-amendments-to-master-plan-2025/r7-30oct26/"
+ },
+ {
+  "item": "Simei Avenue Health and Medical Care rezoning",
+  "old": "Not mentioned",
+  "new": "Rezoned from transport/road to Health and Medical Care, approved 29 Sep 2026 (MPA20260079)",
+  "status": "new",
+  "source": "https://isomer-user-content.by.gov.sg/467/f008e6f0-51ef-4074-8b53-ac9d10dfc4c3/R7_MPA20260079.pdf"
+ },
+ {
+  "item": "Walk to Upper Changi DT34",
+  "old": "About 380 m, 5 min [Estimate]",
+  "new": "286-399 m depending on exit plus up to 60 m snap; about 4-6 min [Verified]",
+  "status": "verified",
+  "source": "https://routing.openstreetmap.de/"
+ },
+ {
+  "item": "Walk to Expo",
+  "old": "About 800 m, 10-11 min",
+  "new": "796 m, about 11 min [Verified]",
+  "status": "verified",
+  "source": "https://routing.openstreetmap.de/"
+ },
+ {
+  "item": "Walk to Simei EW3",
+  "old": "About 1.1 km, 14-15 min",
+  "new": "995 m, about 13-14 min [Verified]",
+  "status": "corrected",
+  "source": "https://routing.openstreetmap.de/"
+ },
+ {
+  "item": "Sungei Bedok distance",
+  "old": "About 3.3 km",
+  "new": "2.14 km straight-line [Verified]",
+  "status": "corrected",
+  "source": "https://www.onemap.gov.sg/"
+ },
+ {
+  "item": "DTL3e and TEL5 opening",
+  "old": "2H 2026, not open; exact date unverified",
+  "new": "Xilin, Bedok South and Sungei Bedok open to passengers on 26 Dec 2026 [Verified]",
+  "status": "corrected",
+  "source": "https://www.asiaone.com/singapore/new-mrt-stations-bedok-south-sungei-bedok-xilin-tel-dtl"
+ },
+ {
+  "item": "TEL extension to T5",
+  "old": "Mid-2030s or about 2040; contract T3206 tendered 2024 [Unverified]",
+  "new": "Mid-2030s together with T5; Tanah Merah, Expo and Changi Airport converted to TEL [Official]. 2040 and T3206 claims dropped.",
+  "status": "corrected",
+  "source": "https://www.lta.gov.sg/content/ltagov/en/newsroom/2025/7/news-releases/TELe_and_CRL_changi_airport_to_city_centre.html"
+ },
+ {
+  "item": "No hawker centre within about 1.8 km",
+  "old": "Nearest Tampines Round Market 1.82 km straight-line",
+  "new": "Confirmed: 1.82 km straight-line, 2.34 km walk (about 31 min)",
+  "status": "verified",
+  "source": "https://data.gov.sg/datasets/d_4a086da0a5553be1d89383cd90d07ecd/view"
+ },
+ {
+  "item": "Polyclinic distance",
+  "old": "Not computed",
+  "new": "Tampines Polyclinic 2.52 km straight-line, 3.06 km walk; Bedok Polyclinic 3.41 km",
+  "status": "new",
+  "source": "https://www.onemap.gov.sg/"
+ },
+ {
+  "item": "Japanese School",
+  "old": "About 1.75 km",
+  "new": "Removed; not located on OneMap and not an MOE school",
+  "status": "removed",
+  "source": "https://www.onemap.gov.sg/"
+ },
+ {
+  "item": "School distances",
+  "old": "Changkat Pri 0.87 km etc.",
+  "new": "Straight-line distances confirmed; walking distances added (Changkat Pri 1.30 km, Changkat Changi Sec 1.41 km)",
+  "status": "verified",
+  "source": "https://www.onemap.gov.sg/"
+ },
+ {
+  "item": "EHG income label",
+  "old": "Example for a household earning about $7,000-7,500",
+  "new": "Illustrative assumed amounts only; the release ties $80k to $4,000, $30k to $7,000 and $5k to $9,000 income",
+  "status": "corrected",
+  "source": "https://www.hdb.gov.sg/hdb-pulse/news/2026/hdb-launches-7964-flats-across-seven-projects-in-nov-2026-bto-sales-exercise"
+ },
+ {
+  "item": "Plus/Prime resale buyer income ceiling",
+  "old": "Likely $16k families; singles $8k reported, sources differ [Unverified]",
+  "new": "$16,000 families ($24,000 extended); $8,000 singles for Plus; 2-room Prime singles $8,000 or $16,000 joint [Official]",
+  "status": "corrected",
+  "source": "https://www.hdb.gov.sg/-/media/hdb-pulse/news/2026/increase-in-income-ceilings-and-greater-support-for-families-with-children/Annex-A.pdf"
+ },
+ {
+  "item": "Extra ballot chance per child",
+  "old": "Reported by secondary sources [Unverified]",
+  "new": "From Feb 2027, one extra ballot chance per Singapore Citizen child aged 18 or below, for first-timer families [Official]",
+  "status": "corrected",
+  "source": "https://www.hdb.gov.sg/hdb-pulse/news/2026/increase-in-income-ceilings-and-greater-support-for-families-with-children"
+ },
+ {
+  "item": "Simei Symphony prices, wait, classification",
+  "old": "Standard, 42 months, 4-room $529k-$625k, 5-room $658k-$763k, 380 units",
+  "new": "Confirmed; 2-room Flexi Type 1 $193k-$234k, Type 2 $223k-$280k",
+  "status": "verified",
+  "source": "https://www.hdb.gov.sg/-/media/hdb-pulse/news/2025/hdb-launches-10209-flats-in-the-july-2025-bto-and-sbf-sales-exercises/Annex-A-20250723.pdf"
+ },
+ {
+  "item": "Simei Symphony demand",
+  "old": "About 2,400 applicants for 240 4/5-room flats; about 10 per flat",
+  "new": "Only 5-room published: 1,161 applications for 100 flats (first-timers 7.5, second-timers 52.4); 2-room Flexi singles 38.7-43.9 [Unverified]",
+  "status": "corrected",
+  "source": "https://www.99.co/singapore/insider/july-2025-bto-application-rates/"
+ },
+ {
+  "item": "Tampines Feb 2026 application rates",
+  "old": "Not given",
+  "new": "4-room first-timers 7.2 (Bliss and Nova combined); Bliss 3-room 3.7; Nova 2-room Flexi families 4.0, singles 117.5 [Official]",
+  "status": "new",
+  "source": "https://homes.hdb.gov.sg/home/bto/details/2026-11_UPB_VEFQX04wQzI1XzE3OTE5MDM1MDE0MzI"
+ },
+ {
+  "item": "Tampines Bliss and Nova prices, waits, Nova clawback",
+  "old": "Bliss 23 months, Nova Plus 32 months, 6%",
+  "new": "Confirmed",
+  "status": "verified",
+  "source": "https://www.hdb.gov.sg/-/media/hdb-pulse/news/2026/hdb-launches-9012-flats-in-february-2026-bto-and-sbf-exercises/Annex-A.pdf"
+ },
+ {
+  "item": "Resale medians",
+  "old": "Tampines 4-room $666k, 5-room $815k; Simei 4-room $640k; Simei 5-room $760k (n=64)",
+  "new": "Recomputed: 4-room $665.5k, 5-room $815k; Simei 4-room $640k; Simei 5-room $764k (n=62); St 61 and lease-year rows updated",
+  "status": "verified",
+  "source": "https://data.gov.sg/datasets/d_8b84c4ee58e3cfc0ece0d773c8ca6abc/view"
+ },
+ {
+  "item": "Simei St 1, 1996 lease resale",
+  "old": "About $720k 4-room, $829k 5-room",
+  "new": "Replaced by Simei St 1, 1987-96 leases: 4-room $608k, 5-room $753k",
+  "status": "corrected",
+  "source": "https://data.gov.sg/datasets/d_8b84c4ee58e3cfc0ece0d773c8ca6abc/view"
+ },
+ {
+  "item": "Park next to site",
+  "old": "Small wooded patch, likely cleared",
+  "new": "HDB town map shows Park (U/C) near the site; MP2019 park plot about 180 m west",
+  "status": "new",
+  "source": "https://homes.hdb.gov.sg/home/bto/details/2026-11_UPB_VEFQX04wQzI1XzE3OTE5MDM1MDE0MzI"
+ },
+ {
+  "item": "Supermarket and GP distances",
+  "old": "FairPrice Finest 0.63 km, Giant 0.84 km, GPs 0.55-0.59 km",
+  "new": "Could not be geocoded; kept as approximate [Unverified]",
+  "status": "unverifiable",
+  "source": "https://www.onemap.gov.sg/"
+ },
+ {
+  "item": "Construction status and waiting time",
+  "old": "Vacant plot; 3.5-4 years [Estimate]",
+  "new": "No project details or contract award published; Nov 2026 non-SWT projects under 4 years [Official]; estimate kept",
+  "status": "unverifiable",
+  "source": "https://www.hdb.gov.sg/hdb-pulse/news/2026/hdb-launches-7964-flats-across-seven-projects-in-nov-2026-bto-sales-exercise"
+ }
+]
