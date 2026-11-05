@@ -61,6 +61,20 @@ export interface Layout {
   note: string;
 }
 
+// Unofficial 3D models (SketchUp viewer links) from Btomyhome; see scripts/fetch_models.py
+export interface Model {
+  flat_type: string;
+  variant: string;
+  title: string;
+  url: string;
+}
+
+export interface Models {
+  source: string;
+  retrieved: string;
+  models: Model[];
+}
+
 export interface Verification {
   item: string;
   old?: string;
@@ -94,6 +108,7 @@ export interface Project {
   stats: GovStats | null;
   verification: Verification[];
   layouts: Layout[];
+  models: Models | null;
   images: Record<string, ImageMetadata>;
   totalUnits: number | null;
   fourRoom: Unit | undefined;
@@ -122,6 +137,7 @@ function load(entry: CollectionEntry<'reports'>): Project {
     stats: (json[base + 'gov-stats.json'] as GovStats) ?? null,
     verification: (json[base + 'verification.json'] as Verification[]) ?? [],
     layouts: (json[base + 'layouts.json'] as Layout[]) ?? [],
+    models: (json[base + 'models.json'] as Models) ?? null,
     images: imgs,
     totalUnits: total,
     fourRoom: units.find((u) => u.flat_type.startsWith('4-room')),

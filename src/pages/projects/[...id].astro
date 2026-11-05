@@ -46,6 +46,8 @@ const charts = [['2rm', '2-room Flexi'], ['3rm', '3-room'], ['4rm', '4-room'], [
   .map(([k, label]) => ({ label, resale: img[`chart-resale-${k}.jpg`], afford: img[`chart-oydh-${k}.jpg`] }))
   .filter((c) => c.resale || c.afford);
 const chartDefault = charts.find((c) => c.label === '4-room')?.label ?? charts[0]?.label;
+const models = p.models?.models ?? [];
+const retrieved = p.models && new Date(p.models.retrieved).toLocaleDateString('en-GB', { day: 'numeric', month: 'short', year: 'numeric' });
 const planCaption = (l: (typeof p.layouts)[number]) =>
   `${l.flat_type} floor plan${l.variant ? ` (${l.variant})` : ''}: about ${l.area_sqm} m², of which ${l.internal_sqm} m² is internal floor area and the rest the air-con ledge. HDB Layout Ideas, with suggested furniture.${l.note ? ' ' + l.note : ''}`;
 
@@ -159,12 +161,39 @@ const links = (src?: string) =>
           <p class="sub">
             HDB's "Layout Ideas" for this project, from the Flat Portal. Areas include the air-con ledge. The furniture is only a suggestion, and HDB notes that the coloured plan doesn't mark the boundary of the flat. Click a plan to open it at full size.
           </p>
+          <p class="sub">
+            {
+              models.length ? (
+                <>
+                  <b>3D models:</b> <a href={p.models!.source} target="_blank" rel="noopener">Btomyhome</a>, a private company, has published free 3D models of {models.length} layouts, built from HDB's brochures (links retrieved {retrieved}). They're unofficial and their dimensions are estimates, so check against HDB's plans. They open in the SketchUp viewer: drag to look around, and use Scenes for preset views.
+                </>
+              ) : (
+                <>
+                  <b>3D models:</b> <a href={p.models?.source ?? 'https://btomyhome.com/blogs/news'} target="_blank" rel="noopener">Btomyhome</a> hasn't published free 3D models for this project yet{retrieved ? ` (checked ${retrieved})` : ''}.
+                </>
+              )
+            }
+          </p>
           <div class="tabs" role="tablist" aria-label="Flat type">
             {planGroups.map(([type]) => <button role="tab" data-plan={type} aria-selected={String(type === planDefault)}>{type}</button>)}
           </div>
           {
             planGroups.map(([type, plans]) => (
               <div class="gallery panel" role="tabpanel" data-plan={type} hidden={type !== planDefault}>
+                {models.some((m) => m.flat_type === type) && (
+                  <div class="models">
+                    <div class="model-links">
+                      {models.filter((m) => m.flat_type === type).map((m) => (
+                        <span class="model">
+                          <b>3D model{m.variant ? ` (${m.variant})` : ''}</b>
+                          <button type="button" data-model={m.url} data-title={m.title}>View here</button>
+                          <a href={m.url} target="_blank" rel="noopener">Open in new tab ↗</a>
+                        </span>
+                      ))}
+                    </div>
+                    <div class="model-frame"></div>
+                  </div>
+                )}
                 {plans.map((l) => (
                   <Figure src={img[l.image]} wide={img[l.image].width > img[l.image].height * 1.3} caption={planCaption(l)} />
                 ))}
@@ -313,6 +342,25 @@ const links = (src?: string) =>
 <script>
   import '../../scripts/maps';
 
+  // 3D models load in an iframe only when asked for, since the SketchUp viewer is heavy
+  document.querySelectorAll<HTMLButtonElement>('button[data-model]').forEach((b) =>
+    b.addEventListener('click', () => {
+      const box = b.closest('.models')!;
+      const frame = box.querySelector<HTMLElement>('.model-frame')!;
+      const open = b.textContent === 'Hide';
+      box.querySelectorAll<HTMLButtonElement>('button[data-model]').forEach((x) => (x.textContent = 'View here'));
+      frame.replaceChildren();
+      if (open) return;
+      const f = document.createElement('iframe');
+      f.src = b.dataset.model!;
+      f.title = `${b.dataset.title} (3D model, Btomyhome)`;
+      f.allow = 'fullscreen; xr-spatial-tracking';
+      f.allowFullscreen = true;
+      frame.append(f);
+      b.textContent = 'Hide';
+    }),
+  );
+
   // Floor plans and HDB charts: show one flat type at a time
   document.querySelectorAll<HTMLElement>('[data-tabs]').forEach((section) => {
     const tabs = section.querySelectorAll<HTMLButtonElement>('.tabs button');
@@ -335,7 +383,12 @@ const links = (src?: string) =>
   .tabs button { border: 1px solid var(--bd); background: #fff; border-radius: 999px; padding: 5px 12px; font: inherit; font-size: 13px; cursor: pointer; }
   .tabs button[aria-selected='true'] { background: #1d2329; border-color: #1d2329; color: #fff; }
   .panel[hidden] { display: none; }
-  .panel:has(> figure:only-child:not(.wide)) { grid-template-columns: minmax(0, 560px); justify-content: center; }
+  .models { grid-column: 1 / -1; }
+  .model-links { display: flex; flex-wrap: wrap; gap: 8px 20px; font-size: 14px; }
+  .model { display: inline-flex; flex-wrap: wrap; align-items: center; gap: 8px; }
+  .model button { border: 1px solid #1d2329; background: #1d2329; color: #fff; border-radius: 6px; padding: 4px 10px; font: inherit; font-size: 13px; cursor: pointer; }
+  .model-frame :global(iframe) { display: block; width: 100%; height: min(70vh, 600px); border: 1px solid var(--bd); border-radius: 10px; margin-top: 10px; }
+  .panel:has(> figure:only-of-type:not(.wide)) { grid-template-columns: minmax(0, 560px); justify-content: center; }
   .toc ul { margin: 4px 0; padding-left: 18px; columns: 2; font-size: 14px; }
   .toc li.d3 { margin-left: 16px; }
   @media (max-width: 700px) { .toc ul { columns: 1; } }
