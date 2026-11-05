@@ -66,6 +66,16 @@ def main():
         for f in sorted(glob.glob(os.path.join(pdir, "assets", "hdb", "carousel__*.jpg"))):
             name = "siteplan.jpg" if "siteplan" in f else re.sub(r"^carousel__", "", os.path.basename(f))
             shutil.copy2(f, os.path.join(img, name))
+        # HDB "Layout Ideas" floor plans, renamed layout-NN.jpg, with captions in layouts.json
+        lf = os.path.join(pdir, "layouts.json")
+        if os.path.exists(lf):
+            layouts = json.load(open(lf))
+            for i, l in enumerate(layouts, 1):
+                l["image"] = f"layout-{i:02d}.jpg"
+                shutil.copy2(os.path.join(pdir, l.pop("file")), os.path.join(img, l["image"]))
+            json.dump(layouts, open(os.path.join(dst, "layouts.json"), "w"), indent=1, ensure_ascii=False)
+        elif os.path.exists(os.path.join(dst, "layouts.json")):
+            os.remove(os.path.join(dst, "layouts.json"))
         if rail is not None:
             lat, lng = o["lat"], o["lng"]
             near_rail = [l for l in rail if any(hav(lat, lng, a, b) < 3500 for a, b in l["pts"][:: max(1, len(l["pts"]) // 8)] + [l["pts"][-1]])]

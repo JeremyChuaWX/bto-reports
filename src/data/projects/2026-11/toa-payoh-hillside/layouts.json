@@ -1,0 +1,42 @@
+[
+ {
+  "flat_type": "Community Care Apartment",
+  "variant": "",
+  "area_sqm": 39,
+  "internal_sqm": 36,
+  "note": "Community Care Apartments are for seniors aged 65 and above, on 15–35 year leases, with care services bundled.",
+  "image": "layout-01.jpg"
+ },
+ {
+  "flat_type": "2-room Flexi (Type 1)",
+  "variant": "",
+  "area_sqm": 40,
+  "internal_sqm": 38,
+  "note": "",
+  "image": "layout-02.jpg"
+ },
+ {
+  "flat_type": "2-room Flexi (Type 2)",
+  "variant": "",
+  "area_sqm": 49,
+  "internal_sqm": 46,
+  "note": "",
+  "image": "layout-03.jpg"
+ },
+ {
+  "flat_type": "4-room",
+  "variant": "90 m² layout",
+  "area_sqm": 90,
+  "internal_sqm": 86,
+  "note": "",
+  "image": "layout-04.jpg"
+ },
+ {
+  "flat_type": "4-room",
+  "variant": "93 m² layout",
+  "area_sqm": 93,
+  "internal_sqm": 89,
+  "note": "",
+  "image": "layout-05.jpg"
+ }
+]

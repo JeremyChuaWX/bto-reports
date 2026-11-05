@@ -51,6 +51,16 @@ export interface GovStats {
   hdb_uc_300m: { blk: string; postal: string; dist_m: number }[];
 }
 
+// HDB "Layout Ideas" floor plans (Nov 2026 projects; HDB publishes these at launch)
+export interface Layout {
+  image: string;
+  flat_type: string;
+  variant: string;
+  area_sqm: number;
+  internal_sqm: number;
+  note: string;
+}
+
 export interface Verification {
   item: string;
   old?: string;
@@ -83,6 +93,7 @@ export interface Project {
   amenities: Amenity[];
   stats: GovStats | null;
   verification: Verification[];
+  layouts: Layout[];
   images: Record<string, ImageMetadata>;
   totalUnits: number | null;
   fourRoom: Unit | undefined;
@@ -110,6 +121,7 @@ function load(entry: CollectionEntry<'reports'>): Project {
     official, amenities,
     stats: (json[base + 'gov-stats.json'] as GovStats) ?? null,
     verification: (json[base + 'verification.json'] as Verification[]) ?? [],
+    layouts: (json[base + 'layouts.json'] as Layout[]) ?? [],
     images: imgs,
     totalUnits: total,
     fourRoom: units.find((u) => u.flat_type.startsWith('4-room')),

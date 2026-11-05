@@ -1,0 +1,42 @@
+[
+ {
+  "flat_type": "2-room Flexi (Type 1)",
+  "variant": "",
+  "area_sqm": 40,
+  "internal_sqm": 38,
+  "note": "",
+  "image": "layout-01.jpg"
+ },
+ {
+  "flat_type": "2-room Flexi (Type 2)",
+  "variant": "",
+  "area_sqm": 48,
+  "internal_sqm": 46,
+  "note": "",
+  "image": "layout-02.jpg"
+ },
+ {
+  "flat_type": "3-room",
+  "variant": "",
+  "area_sqm": 69,
+  "internal_sqm": 66,
+  "note": "",
+  "image": "layout-03.jpg"
+ },
+ {
+  "flat_type": "4-room",
+  "variant": "",
+  "area_sqm": 93,
+  "internal_sqm": 90,
+  "note": "",
+  "image": "layout-04.jpg"
+ },
+ {
+  "flat_type": "5-room",
+  "variant": "",
+  "area_sqm": 113,
+  "internal_sqm": 110,
+  "note": "",
+  "image": "layout-05.jpg"
+ }
+]

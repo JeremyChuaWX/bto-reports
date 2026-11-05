@@ -1,0 +1,82 @@
+[
+ {
+  "flat_type": "2-room Flexi (Type 1)",
+  "variant": "",
+  "area_sqm": 40,
+  "internal_sqm": 38,
+  "note": "",
+  "image": "layout-01.jpg"
+ },
+ {
+  "flat_type": "2-room Flexi (Type 2)",
+  "variant": "",
+  "area_sqm": 48,
+  "internal_sqm": 46,
+  "note": "",
+  "image": "layout-02.jpg"
+ },
+ {
+  "flat_type": "3-room",
+  "variant": "Default",
+  "area_sqm": 69,
+  "internal_sqm": 66,
+  "note": "",
+  "image": "layout-03.jpg"
+ },
+ {
+  "flat_type": "3-room",
+  "variant": "White flat",
+  "area_sqm": 69,
+  "internal_sqm": 66,
+  "note": "White flats have no partition walls between the living room and bedrooms and fewer power points, and cost $6,000 less (HDB).",
+  "image": "layout-04.jpg"
+ },
+ {
+  "flat_type": "4-room",
+  "variant": "Default",
+  "area_sqm": 93,
+  "internal_sqm": 90,
+  "note": "",
+  "image": "layout-05.jpg"
+ },
+ {
+  "flat_type": "4-room",
+  "variant": "White flat",
+  "area_sqm": 93,
+  "internal_sqm": 90,
+  "note": "White flats have no partition walls between the living room and bedrooms and fewer power points, and cost $6,000 less (HDB).",
+  "image": "layout-06.jpg"
+ },
+ {
+  "flat_type": "5-room",
+  "variant": "Default",
+  "area_sqm": 113,
+  "internal_sqm": 110,
+  "note": "",
+  "image": "layout-07.jpg"
+ },
+ {
+  "flat_type": "5-room",
+  "variant": "White flat, idea 1",
+  "area_sqm": 113,
+  "internal_sqm": 110,
+  "note": "White flats have no partition walls between the living room and bedrooms and fewer power points, and cost $6,000 less (HDB).",
+  "image": "layout-08.jpg"
+ },
+ {
+  "flat_type": "5-room",
+  "variant": "White flat, idea 2",
+  "area_sqm": 113,
+  "internal_sqm": 110,
+  "note": "White flats have no partition walls between the living room and bedrooms and fewer power points, and cost $6,000 less (HDB).",
+  "image": "layout-09.jpg"
+ },
+ {
+  "flat_type": "3Gen",
+  "variant": "",
+  "area_sqm": 121,
+  "internal_sqm": 115,
+  "note": "",
+  "image": "layout-10.jpg"
+ }
+]
