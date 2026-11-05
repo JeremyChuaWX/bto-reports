@@ -66,6 +66,10 @@ def main():
         for f in sorted(glob.glob(os.path.join(pdir, "assets", "hdb", "carousel__*.jpg"))):
             name = "siteplan.jpg" if "siteplan" in f else re.sub(r"^carousel__", "", os.path.basename(f))
             shutil.copy2(f, os.path.join(img, name))
+        # HDB's resale comparison and affordability charts, e.g. chart__resale_<code>_4rm.jpg -> chart-resale-4rm.jpg
+        for f in sorted(glob.glob(os.path.join(pdir, "assets", "hdb", "chart__*.jpg"))):
+            kind, ftype = re.match(r"chart__(resale|oydh)_.+_(\w+)\.jpg$", os.path.basename(f)).groups()
+            shutil.copy2(f, os.path.join(img, f"chart-{kind}-{ftype.replace('type2', '')}.jpg"))
         # HDB "Layout Ideas" floor plans, renamed layout-NN.jpg, with captions in layouts.json
         lf = os.path.join(pdir, "layouts.json")
         if os.path.exists(lf):
