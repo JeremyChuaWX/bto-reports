@@ -1,5 +1,36 @@
 {
  "source": "https://btomyhome.com/blogs/news/november-bto-2026-models-pre-ballot-result-free-to-view",
- "retrieved": "2026-11-05",
- "models": []
+ "retrieved": "2026-11-06",
+ "models": [
+  {
+   "flat_type": "2-room Flexi (Type 1)",
+   "variant": "",
+   "title": "Sembawang Anchor 2-room Flexi (Type 1)",
+   "url": "https://app.sketchup.com/share/tc/northAmerica/lUYUx6VJl80?source=web&stoken=pHaKA2dm8ghMvYRaF4a5A_eDFaK-bpQ0I5QTnvivDwTnnjGJrfwu4zkrYN1XHv9E"
+  },
+  {
+   "flat_type": "2-room Flexi (Type 2)",
+   "variant": "",
+   "title": "Sembawang Anchor 2-room Flexi (Type 2)",
+   "url": "https://app.sketchup.com/share/tc/northAmerica/zmQnFXrMBUI?source=web&stoken=j_eMn2uqElU65g4ZEJPh_RsSQriRBMgvHtlw09ckTlxKLIfA1naBLYPO1iVQUuj2"
+  },
+  {
+   "flat_type": "3-room",
+   "variant": "",
+   "title": "Sembawang Anchor 3-room",
+   "url": "https://app.sketchup.com/share/tc/northAmerica/XQwCwJ1qgk8?source=web&stoken=zQwWlhOFNRC9mJnV7S6swe-H76MH5nhfXsUXAAGc36lugXIh37WEvRA4402QPa4F"
+  },
+  {
+   "flat_type": "4-room",
+   "variant": "",
+   "title": "Sembawang Anchor 4-room",
+   "url": "https://app.sketchup.com/share/tc/northAmerica/HVySrKnrNoc?source=web&stoken=Qo2HmfdYEfzveSJ7za7-ZwRgODmRMeVkHaMZg7kN0lt8mJ2hP9KFbY_Awnkwfcq_"
+  },
+  {
+   "flat_type": "5-room",
+   "variant": "",
+   "title": "Sembawang Anchor 5-room",
+   "url": "https://app.sketchup.com/share/tc/northAmerica/AnKimKgrhcU?source=web&stoken=jwxuYgpoF8H4wOpQBOsb6QIbdjGYRwBxwDkUORfhGBHpVqshe0nOGHB1ZBfGTmsG"
+  }
+ ]
 }
