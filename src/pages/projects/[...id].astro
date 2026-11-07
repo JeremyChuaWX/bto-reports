@@ -2,7 +2,7 @@
 import Layout from '../../layouts/Layout.astro';
 import Figure from '../../components/Figure.astro';
 import MapStyles from '../../components/MapStyles.astro';
-import { getProjects, url, type Project } from '../../lib/data';
+import { getProjects, sgTime, url, type Project } from '../../lib/data';
 import { cat, CLS_COLOUR, metres, money, tagColour, tagify, walk } from '../../lib/format';
 
 export async function getStaticPaths() {
@@ -75,6 +75,10 @@ const AGE_COLOUR: Record<string, string> = { 'Under 10 years': '#1a9850', '10–
 const ageBand = (age: number) => (age < 10 ? 'Under 10 years' : age < 20 ? '10–19 years' : age < 30 ? '20–29 years' : age < 40 ? '30–39 years' : '40+ years');
 const pct = (n: number, d: number) => (d ? Math.round((100 * n) / d) : 0);
 const under20 = rs ? rs.age_at_sale.filter((a) => a.band === 'Under 10 years' || a.band === '10–19 years').reduce((n, a) => n + a.flats, 0) : 0;
+const ar = p.appRates;
+const RATE_COLS = [['first_time_fam', 'First-timer families'], ['second_time_fam', 'Second-timer families'], ['first_time_singles', 'First-timer singles'], ['elderly', 'Seniors']] as const;
+const rateCols = ar ? RATE_COLS.filter(([k]) => ar.rows.some((r) => r.rates[k] != null)) : [];
+const rateClass = (v: number | null) => (v == null ? '' : v < 1 ? 'r-low' : v < 3 ? 'r-mid' : 'r-high');
 const legend = [...new Map(amenities.map(({ colour, label }) => [label, colour])).entries()].map(([label, colour]) => [colour, label]);
 const mapConfig = JSON.stringify({
   name: p.name,
@@ -174,6 +178,42 @@ const links = (src?: string) =>
       )
     }
   </header>
+
+  {
+    ar && ar.rows.length > 0 && (
+      <section class="card" id="application-rates">
+        <h2>Application rates {ar.is_final ? '(final)' : '(live, still open)'}</h2>
+        <p>
+          HDB's {ar.is_final ? 'final' : 'latest'} count, as at {sgTime(ar.as_at)}. Applications {ar.is_final ? 'closed' : 'close'} on {new Date(ar.launch_end).toLocaleDateString('en-GB', { day: 'numeric', month: 'short', year: 'numeric' })}
+          {ar.is_final ? '.' : ' at 11:59pm, so these numbers will keep rising.'}
+        </p>
+        <div class="tablewrap">
+          <table class="rates">
+            <tr>
+              <th>Flat type</th><th>Units</th><th>Applicants</th>
+              {rateCols.map(([, label]) => <th>{label}</th>)}
+            </tr>
+            {ar.rows.map((r) => (
+              <tr>
+                <td>
+                  {r.flat_type}
+                  {r.shared_with.length > 0 && <div class="sub">Combined with {r.shared_with.join(', ')}. This project has {r.project_units.toLocaleString('en-US')} of the {r.units.toLocaleString('en-US')} units.</div>}
+                </td>
+                <td>{r.units.toLocaleString('en-US')}</td>
+                <td>{r.applicants.toLocaleString('en-US')}{r.overall != null && <div class="sub">{r.overall.toFixed(1)} per unit</div>}</td>
+                {rateCols.map(([k]) => <td class={rateClass(r.rates[k])}>{r.rates[k] != null ? r.rates[k]!.toFixed(1) : '–'}</td>)}
+              </tr>
+            ))}
+          </table>
+        </div>
+        <p class="sub">
+          Each rate is HDB's figure: applicants in that group for each flat set aside for them. Under 1.0 (green) means fewer applicants than flats; above 3.0 (red) means heavy competition, with more than three applicants for every flat.
+          Groups get different shares of the flats, so the rates differ from the overall applicants per unit. A dash means the group cannot apply for that flat type.
+          Source: <a href={ar.source}>HDB application rate page</a> <span class="tag" style={`background:${tagColour(ar.tag)}`}>{ar.tag}</span>
+        </p>
+      </section>
+    )
+  }
 
   <section class="card">
     <h2>The plot</h2>
@@ -506,6 +546,9 @@ const links = (src?: string) =>
   .model button { border: 1px solid #1d2329; background: #1d2329; color: #fff; border-radius: 6px; padding: 4px 10px; font: inherit; font-size: 13px; cursor: pointer; }
   .model-frame :global(iframe) { display: block; width: 100%; height: min(70vh, 600px); border: 1px solid var(--bd); border-radius: 10px; margin-top: 10px; }
   .panel:has(> figure:only-of-type:not(.wide)) { grid-template-columns: minmax(0, 560px); justify-content: center; }
+  .rates td.r-low { color: #1e7e34; font-weight: 600; }
+  .rates td.r-mid { color: #b9770e; font-weight: 600; }
+  .rates td.r-high { color: #922b21; font-weight: 600; }
   .toc ul { margin: 4px 0; padding-left: 18px; columns: 2; font-size: 14px; }
   .toc li.d3 { margin-left: 16px; }
   @media (max-width: 700px) { .toc ul { columns: 1; } }

@@ -116,6 +116,26 @@ export interface Competition {
   projects: Competitor[];
 }
 
+export interface AppRateRow {
+  flat_type: string;
+  shared_with: string[];
+  units: number;
+  project_units: number;
+  applicants: number;
+  overall: number | null;
+  rates: { elderly: number | null; first_time_fam: number | null; second_time_fam: number | null; first_time_singles: number | null };
+}
+
+export interface AppRates {
+  as_at: string;
+  is_final: boolean;
+  launch_start: string;
+  launch_end: string;
+  source: string;
+  tag: string;
+  rows: AppRateRow[];
+}
+
 export interface Verification {
   item: string;
   old?: string;
@@ -151,6 +171,7 @@ export interface Project {
   layouts: Layout[];
   models: Models | null;
   competition: Competition | null;
+  appRates: AppRates | null;
   images: Record<string, ImageMetadata>;
   totalUnits: number | null;
   fourRoom: Unit | undefined;
@@ -181,11 +202,20 @@ function load(entry: CollectionEntry<'reports'>): Project {
     layouts: (json[base + 'layouts.json'] as Layout[]) ?? [],
     models: (json[base + 'models.json'] as Models) ?? null,
     competition: (json[base + 'competition.json'] as Competition) ?? null,
+    appRates: (json[base + 'application-rates.json'] as AppRates) ?? null,
     images: imgs,
     totalUnits: total,
     fourRoom: units.find((u) => u.flat_type.startsWith('4-room')),
     entry,
   };
+}
+
+// "7 Nov 2026, 12pm" in Singapore time
+export function sgTime(iso: string): string {
+  const d = new Date(iso);
+  const day = d.toLocaleDateString('en-GB', { day: 'numeric', month: 'short', year: 'numeric', timeZone: 'Asia/Singapore' });
+  const time = d.toLocaleTimeString('en-US', { hour: 'numeric', minute: '2-digit', timeZone: 'Asia/Singapore' }).replace(':00', '').replace(' ', '').toLowerCase();
+  return `${day}, ${time}`;
 }
 
 export async function getProjects(): Promise<Project[]> {

@@ -1,0 +1,38 @@
+{
+ "as_at": "2026-11-07T04:00:00.000Z",
+ "is_final": false,
+ "launch_start": "2026-11-04",
+ "launch_end": "2026-11-11",
+ "source": "https://services-homes.hdb.gov.sg/sales/application-rate/bto/202611",
+ "tag": "Official",
+ "rows": [
+  {
+   "flat_type": "2-Room Flexi",
+   "shared_with": [],
+   "units": 167,
+   "project_units": 167,
+   "applicants": 441,
+   "overall": 2.64,
+   "rates": {
+    "elderly": 1.8,
+    "first_time_fam": 0.4,
+    "second_time_fam": 0.6,
+    "first_time_singles": 5.7
+   }
+  },
+  {
+   "flat_type": "4-Room",
+   "shared_with": [],
+   "units": 271,
+   "project_units": 271,
+   "applicants": 415,
+   "overall": 1.53,
+   "rates": {
+    "elderly": null,
+    "first_time_fam": 1.1,
+    "second_time_fam": 5.7,
+    "first_time_singles": null
+   }
+  }
+ ]
+}
