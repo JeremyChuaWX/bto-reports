@@ -1,0 +1,265 @@
+{
+    "display_datetime": "2026-02-11T15:59:00.000Z",
+    "is_final_update": true,
+    "launch_start_date": "2026-02-04",
+    "launch_end_date": "2026-02-11",
+    "estate_list": [
+        {
+            "estate_name": "Bukit Merah",
+            "flat_type_list": [
+                {
+                    "flat_type": "2-Room Flexi",
+                    "projects": [
+                        {
+                            "project_name": "Redhill Peaks",
+                            "project_classification": "Prime"
+                        }
+                    ],
+                    "flat_supply": 368,
+                    "total_applicant_no": 1540,
+                    "app_rates": {
+                        "elderly": 2.4,
+                        "first_time_fam": 0.0,
+                        "second_time_fam": 0.2,
+                        "first_time_singles": 8.3
+                    }
+                },
+                {
+                    "flat_type": "3-Room",
+                    "projects": [
+                        {
+                            "project_name": "Redhill Peaks",
+                            "project_classification": "Prime"
+                        }
+                    ],
+                    "flat_supply": 91,
+                    "total_applicant_no": 238,
+                    "app_rates": {
+                        "elderly": null,
+                        "first_time_fam": 0.8,
+                        "second_time_fam": 19.4,
+                        "first_time_singles": null
+                    }
+                },
+                {
+                    "flat_type": "4-Room",
+                    "projects": [
+                        {
+                            "project_name": "Redhill Peaks",
+                            "project_classification": "Prime"
+                        }
+                    ],
+                    "flat_supply": 593,
+                    "total_applicant_no": 2137,
+                    "app_rates": {
+                        "elderly": null,
+                        "first_time_fam": 2.2,
+                        "second_time_fam": 16.6,
+                        "first_time_singles": null
+                    }
+                }
+            ]
+        },
+        {
+            "estate_name": "Sembawang",
+            "flat_type_list": [
+                {
+                    "flat_type": "2-Room Flexi",
+                    "projects": [
+                        {
+                            "project_name": "Sembawang Deck",
+                            "project_classification": "Standard"
+                        },
+                        {
+                            "project_name": "Sembawang Voyage",
+                            "project_classification": "Standard"
+                        }
+                    ],
+                    "flat_supply": 479,
+                    "total_applicant_no": 957,
+                    "app_rates": {
+                        "elderly": 0.9,
+                        "first_time_fam": 0.1,
+                        "second_time_fam": 0.6,
+                        "first_time_singles": 4.0
+                    }
+                },
+                {
+                    "flat_type": "3-Room",
+                    "projects": [
+                        {
+                            "project_name": "Sembawang Deck",
+                            "project_classification": "Standard"
+                        }
+                    ],
+                    "flat_supply": 84,
+                    "total_applicant_no": 239,
+                    "app_rates": {
+                        "elderly": null,
+                        "first_time_fam": 1.4,
+                        "second_time_fam": 8.9,
+                        "first_time_singles": null
+                    }
+                },
+                {
+                    "flat_type": "4-Room",
+                    "projects": [
+                        {
+                            "project_name": "Sembawang Deck",
+                            "project_classification": "Standard"
+                        },
+                        {
+                            "project_name": "Sembawang Voyage",
+                            "project_classification": "Standard"
+                        }
+                    ],
+                    "flat_supply": 725,
+                    "total_applicant_no": 689,
+                    "app_rates": {
+                        "elderly": null,
+                        "first_time_fam": 0.6,
+                        "second_time_fam": 3.9,
+                        "first_time_singles": null
+                    }
+                },
+                {
+                    "flat_type": "5-Room",
+                    "projects": [
+                        {
+                            "project_name": "Sembawang Deck",
+                            "project_classification": "Standard"
+                        },
+                        {
+                            "project_name": "Sembawang Voyage",
+                            "project_classification": "Standard"
+                        }
+                    ],
+                    "flat_supply": 662,
+                    "total_applicant_no": 479,
+                    "app_rates": {
+                        "elderly": null,
+                        "first_time_fam": 0.4,
+                        "second_time_fam": 3.7,
+                        "first_time_singles": null
+                    }
+                }
+            ]
+        },
+        {
+            "estate_name": "Tampines",
+            "flat_type_list": [
+                {
+                    "flat_type": "2-Room Flexi",
+                    "projects": [
+                        {
+                            "project_name": "Tampines Nova",
+                            "project_classification": "Plus"
+                        }
+                    ],
+                    "flat_supply": 122,
+                    "total_applicant_no": 2604,
+                    "app_rates": {
+                        "elderly": 9.1,
+                        "first_time_fam": 4.0,
+                        "second_time_fam": 9.0,
+                        "first_time_singles": 117.5
+                    }
+                },
+                {
+                    "flat_type": "3-Room",
+                    "projects": [
+                        {
+                            "project_name": "Tampines Bliss",
+                            "project_classification": "Standard"
+                        }
+                    ],
+                    "flat_supply": 80,
+                    "total_applicant_no": 565,
+                    "app_rates": {
+                        "elderly": null,
+                        "first_time_fam": 3.7,
+                        "second_time_fam": 20.7,
+                        "first_time_singles": null
+                    }
+                },
+                {
+                    "flat_type": "4-Room",
+                    "projects": [
+                        {
+                            "project_name": "Tampines Bliss",
+                            "project_classification": "Standard"
+                        },
+                        {
+                            "project_name": "Tampines Nova",
+                            "project_classification": "Plus"
+                        }
+                    ],
+                    "flat_supply": 337,
+                    "total_applicant_no": 3484,
+                    "app_rates": {
+                        "elderly": null,
+                        "first_time_fam": 7.2,
+                        "second_time_fam": 39.2,
+                        "first_time_singles": null
+                    }
+                }
+            ]
+        },
+        {
+            "estate_name": "Toa Payoh",
+            "flat_type_list": [
+                {
+                    "flat_type": "2-Room Flexi",
+                    "projects": [
+                        {
+                            "project_name": "Kim Keat Crest",
+                            "project_classification": "Plus"
+                        }
+                    ],
+                    "flat_supply": 277,
+                    "total_applicant_no": 882,
+                    "app_rates": {
+                        "elderly": 1.9,
+                        "first_time_fam": 0.1,
+                        "second_time_fam": 0.2,
+                        "first_time_singles": 6.2
+                    }
+                },
+                {
+                    "flat_type": "3-Room",
+                    "projects": [
+                        {
+                            "project_name": "Kim Keat Crest",
+                            "project_classification": "Plus"
+                        }
+                    ],
+                    "flat_supply": 87,
+                    "total_applicant_no": 165,
+                    "app_rates": {
+                        "elderly": null,
+                        "first_time_fam": 0.6,
+                        "second_time_fam": 14.8,
+                        "first_time_singles": null
+                    }
+                },
+                {
+                    "flat_type": "4-Room",
+                    "projects": [
+                        {
+                            "project_name": "Kim Keat Crest",
+                            "project_classification": "Plus"
+                        }
+                    ],
+                    "flat_supply": 787,
+                    "total_applicant_no": 1065,
+                    "app_rates": {
+                        "elderly": null,
+                        "first_time_fam": 0.9,
+                        "second_time_fam": 5.9,
+                        "first_time_singles": null
+                    }
+                }
+            ]
+        }
+    ]
+}

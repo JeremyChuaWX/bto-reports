@@ -4,6 +4,9 @@ on:
   push:
     branches: [main]
   workflow_dispatch:
+  # Refresh HDB application rates: HDB updates them daily around 12pm SGT, and posts the final figures at 2pm the day after applications close
+  schedule:
+    - cron: '35 4,6,10 * * *' # 12:35pm, 2:35pm and 6:35pm SGT
 
 permissions:
   contents: read
@@ -14,11 +17,42 @@ concurrency:
   group: pages
   cancel-in-progress: false
 
+env:
+  # Launches whose application rates are refreshed (yyyymm). Add the next launch here; launches marked final are no longer fetched.
+  RATE_LAUNCHES: '202611 202702'
+
 jobs:
+  rates:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    outputs:
+      changed: ${{ steps.commit.outputs.changed }}
+    steps:
+      - uses: actions/checkout@v5
+      - run: python3 -I scripts/rates.py $RATE_LAUNCHES
+      - id: commit
+        run: |
+          if [ -n "$(git status --porcelain data src/data)" ]; then
+            git config user.name 'github-actions[bot]'
+            git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+            git add data src/data
+            git commit -m "Update HDB application rates"
+            git push
+            echo changed=true >> "$GITHUB_OUTPUT"
+          else
+            echo changed=false >> "$GITHUB_OUTPUT"
+          fi
+
   build:
+    needs: rates
+    # Scheduled runs only rebuild when the rates changed
+    if: github.event_name != 'schedule' || needs.rates.outputs.changed == 'true'
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v5
+        with:
+          ref: main
       - uses: withastro/action@v5
         with:
           node-version: 24
