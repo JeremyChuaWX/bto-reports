@@ -1,5 +1,5 @@
 {
-    "display_datetime": "2026-11-07T04:00:00.000Z",
+    "display_datetime": "2026-11-07T09:00:00.000Z",
     "is_final_update": false,
     "launch_start_date": "2026-11-04",
     "launch_end_date": "2026-11-11",
@@ -20,12 +20,12 @@
                         }
                     ],
                     "flat_supply": 1237,
-                    "total_applicant_no": 2932,
+                    "total_applicant_no": 3038,
                     "app_rates": {
-                        "elderly": 1.9,
+                        "elderly": 2.0,
                         "first_time_fam": 0.1,
                         "second_time_fam": 0.2,
-                        "first_time_singles": 4.0
+                        "first_time_singles": 4.1
                     }
                 },
                 {
@@ -37,11 +37,11 @@
                         }
                     ],
                     "flat_supply": 90,
-                    "total_applicant_no": 455,
+                    "total_applicant_no": 469,
                     "app_rates": {
                         "elderly": null,
                         "first_time_fam": 1.8,
-                        "second_time_fam": 34.2,
+                        "second_time_fam": 35.6,
                         "first_time_singles": null
                     }
                 },
@@ -58,11 +58,11 @@
                         }
                     ],
                     "flat_supply": 1165,
-                    "total_applicant_no": 3202,
+                    "total_applicant_no": 3352,
                     "app_rates": {
                         "elderly": null,
-                        "first_time_fam": 1.9,
-                        "second_time_fam": 10.4,
+                        "first_time_fam": 2.0,
+                        "second_time_fam": 11.0,
                         "first_time_singles": null
                     }
                 }
@@ -80,12 +80,12 @@
                         }
                     ],
                     "flat_supply": 167,
-                    "total_applicant_no": 441,
+                    "total_applicant_no": 459,
                     "app_rates": {
-                        "elderly": 1.8,
+                        "elderly": 1.9,
                         "first_time_fam": 0.4,
                         "second_time_fam": 0.6,
-                        "first_time_singles": 5.7
+                        "first_time_singles": 5.9
                     }
                 },
                 {
@@ -97,11 +97,11 @@
                         }
                     ],
                     "flat_supply": 271,
-                    "total_applicant_no": 415,
+                    "total_applicant_no": 436,
                     "app_rates": {
                         "elderly": null,
                         "first_time_fam": 1.1,
-                        "second_time_fam": 5.7,
+                        "second_time_fam": 6.0,
                         "first_time_singles": null
                     }
                 }
@@ -119,12 +119,12 @@
                         }
                     ],
                     "flat_supply": 333,
-                    "total_applicant_no": 476,
+                    "total_applicant_no": 494,
                     "app_rates": {
-                        "elderly": 1.3,
+                        "elderly": 1.4,
                         "first_time_fam": 0.0,
                         "second_time_fam": 0.4,
-                        "first_time_singles": 2.2
+                        "first_time_singles": 2.3
                     }
                 },
                 {
@@ -136,11 +136,11 @@
                         }
                     ],
                     "flat_supply": 96,
-                    "total_applicant_no": 119,
+                    "total_applicant_no": 124,
                     "app_rates": {
                         "elderly": null,
                         "first_time_fam": 0.7,
-                        "second_time_fam": 3.4,
+                        "second_time_fam": 3.6,
                         "first_time_singles": null
                     }
                 },
@@ -153,11 +153,11 @@
                         }
                     ],
                     "flat_supply": 464,
-                    "total_applicant_no": 283,
+                    "total_applicant_no": 298,
                     "app_rates": {
                         "elderly": null,
                         "first_time_fam": 0.5,
-                        "second_time_fam": 1.9,
+                        "second_time_fam": 2.1,
                         "first_time_singles": null
                     }
                 },
@@ -170,11 +170,11 @@
                         }
                     ],
                     "flat_supply": 417,
-                    "total_applicant_no": 112,
+                    "total_applicant_no": 118,
                     "app_rates": {
                         "elderly": null,
                         "first_time_fam": 0.2,
-                        "second_time_fam": 1.1,
+                        "second_time_fam": 1.3,
                         "first_time_singles": null
                     }
                 }
@@ -192,12 +192,12 @@
                         }
                     ],
                     "flat_supply": 178,
-                    "total_applicant_no": 1144,
+                    "total_applicant_no": 1182,
                     "app_rates": {
-                        "elderly": 4.4,
+                        "elderly": 4.6,
                         "first_time_fam": 1.2,
-                        "second_time_fam": 2.0,
-                        "first_time_singles": 13.3
+                        "second_time_fam": 2.1,
+                        "first_time_singles": 13.6
                     }
                 },
                 {
@@ -209,11 +209,11 @@
                         }
                     ],
                     "flat_supply": 84,
-                    "total_applicant_no": 294,
+                    "total_applicant_no": 306,
                     "app_rates": {
                         "elderly": null,
                         "first_time_fam": 2.0,
-                        "second_time_fam": 10.0,
+                        "second_time_fam": 10.6,
                         "first_time_singles": null
                     }
                 },
@@ -226,11 +226,11 @@
                         }
                     ],
                     "flat_supply": 168,
-                    "total_applicant_no": 845,
+                    "total_applicant_no": 867,
                     "app_rates": {
                         "elderly": null,
-                        "first_time_fam": 3.9,
-                        "second_time_fam": 15.8,
+                        "first_time_fam": 4.0,
+                        "second_time_fam": 16.4,
                         "first_time_singles": null
                     }
                 },
@@ -243,11 +243,11 @@
                         }
                     ],
                     "flat_supply": 280,
-                    "total_applicant_no": 1036,
+                    "total_applicant_no": 1078,
                     "app_rates": {
                         "elderly": null,
-                        "first_time_fam": 2.5,
-                        "second_time_fam": 14.6,
+                        "first_time_fam": 2.6,
+                        "second_time_fam": 15.1,
                         "first_time_singles": null
                     }
                 }
@@ -265,12 +265,12 @@
                         }
                     ],
                     "flat_supply": 592,
-                    "total_applicant_no": 2144,
+                    "total_applicant_no": 2248,
                     "app_rates": {
-                        "elderly": 3.9,
+                        "elderly": 4.1,
                         "first_time_fam": 0.2,
                         "second_time_fam": 0.2,
-                        "first_time_singles": 5.2
+                        "first_time_singles": 5.4
                     }
                 },
                 {
@@ -282,11 +282,11 @@
                         }
                     ],
                     "flat_supply": 584,
-                    "total_applicant_no": 3600,
+                    "total_applicant_no": 3773,
                     "app_rates": {
                         "elderly": null,
-                        "first_time_fam": 3.9,
-                        "second_time_fam": 26.4,
+                        "first_time_fam": 4.1,
+                        "second_time_fam": 27.8,
                         "first_time_singles": null
                     }
                 },
@@ -299,9 +299,9 @@
                         }
                     ],
                     "flat_supply": 256,
-                    "total_applicant_no": 334,
+                    "total_applicant_no": 350,
                     "app_rates": {
-                        "elderly": 1.3,
+                        "elderly": 1.4,
                         "first_time_fam": null,
                         "second_time_fam": null,
                         "first_time_singles": null
@@ -321,12 +321,12 @@
                         }
                     ],
                     "flat_supply": 392,
-                    "total_applicant_no": 1446,
+                    "total_applicant_no": 1519,
                     "app_rates": {
-                        "elderly": 3.3,
+                        "elderly": 3.5,
                         "first_time_fam": 0.4,
                         "second_time_fam": 1.1,
-                        "first_time_singles": 5.8
+                        "first_time_singles": 6.0
                     }
                 },
                 {
@@ -338,11 +338,11 @@
                         }
                     ],
                     "flat_supply": 84,
-                    "total_applicant_no": 362,
+                    "total_applicant_no": 383,
                     "app_rates": {
                         "elderly": null,
-                        "first_time_fam": 1.7,
-                        "second_time_fam": 15.4,
+                        "first_time_fam": 1.8,
+                        "second_time_fam": 16.3,
                         "first_time_singles": null
                     }
                 },
@@ -355,11 +355,11 @@
                         }
                     ],
                     "flat_supply": 462,
-                    "total_applicant_no": 1190,
+                    "total_applicant_no": 1238,
                     "app_rates": {
                         "elderly": null,
                         "first_time_fam": 1.7,
-                        "second_time_fam": 10.7,
+                        "second_time_fam": 11.3,
                         "first_time_singles": null
                     }
                 },
@@ -372,11 +372,11 @@
                         }
                     ],
                     "flat_supply": 644,
-                    "total_applicant_no": 1702,
+                    "total_applicant_no": 1778,
                     "app_rates": {
                         "elderly": null,
-                        "first_time_fam": 1.5,
-                        "second_time_fam": 12.6,
+                        "first_time_fam": 1.6,
+                        "second_time_fam": 13.0,
                         "first_time_singles": null
                     }
                 }
