@@ -8,7 +8,7 @@ SRC = os.path.expanduser(sys.argv[1])
 GOV = os.path.expanduser(sys.argv[2]) if len(sys.argv) > 2 else "/tmp/govdata"
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 OUT = os.path.join(ROOT, "src", "data")
-JSONS = ["amenities.json", "gov-stats.json", "verification.json", "models.json", "competition.json", "application-rates.json"]
+JSONS = ["amenities.json", "gov-stats.json", "verification.json", "models.json", "competition.json", "application-rates.json", "fittings.json"]
 MAPS = ["plot-satellite.jpg", "area-satellite.jpg", "townmap-crop.jpg"]
 OFFICIAL_KEYS = ["project_name", "classification", "town", "lat", "lng", "clawback_rate", "est_waiting_time", "total_units",
                  "waiting_time_note", "ecd", "dpd", "booking_period", "flat_types", "units"]

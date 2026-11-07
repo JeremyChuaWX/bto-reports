@@ -136,6 +136,32 @@ export interface AppRates {
   rows: AppRateRow[];
 }
 
+export interface Package {
+  kind: string;
+  name: string;
+  price: number | null;
+  price_text: string | null;
+  items: string[];
+  notes: string[];
+}
+
+export interface Fittings {
+  source: string;
+  tag: string;
+  ocs_note: string;
+  features: Record<string, string[]>;
+  types: { flat_type: string; standard: string[]; packages: Package[]; info: { title: string; text: string }[] }[];
+}
+
+export interface PastLaunch {
+  launch: string;
+  qtr: string;
+  final: boolean;
+  as_at: string;
+  source: string;
+  rows: { town: string; flat_type: string; projects: { name: string; cls: string | null }[]; units: number; applicants: number; rates: AppRateRow['rates'] }[];
+}
+
 export interface Verification {
   item: string;
   old?: string;
@@ -172,6 +198,7 @@ export interface Project {
   models: Models | null;
   competition: Competition | null;
   appRates: AppRates | null;
+  fittings: Fittings | null;
   images: Record<string, ImageMetadata>;
   totalUnits: number | null;
   fourRoom: Unit | undefined;
@@ -203,6 +230,7 @@ function load(entry: CollectionEntry<'reports'>): Project {
     models: (json[base + 'models.json'] as Models) ?? null,
     competition: (json[base + 'competition.json'] as Competition) ?? null,
     appRates: (json[base + 'application-rates.json'] as AppRates) ?? null,
+    fittings: (json[base + 'fittings.json'] as Fittings) ?? null,
     images: imgs,
     totalUnits: total,
     fourRoom: units.find((u) => u.flat_type.startsWith('4-room')),

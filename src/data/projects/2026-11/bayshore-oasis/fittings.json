@@ -1,0 +1,166 @@
+{
+ "source": "HDB Flat Portal project data (Nov 2026 launch)",
+ "tag": "Official",
+ "types": [
+  {
+   "flat_type": "2-room Flexi (Type 1)",
+   "standard": [
+    "Floor tiles in the: Bathroom, Household shelter, Kitchen",
+    "Wall tiles in the: Bathroom, Kitchen",
+    "Sliding partition/ door for the bedroom (please refer to the floor plans under Layout Ideas)",
+    "Bathroom door",
+    "Water closet suite in the bathroom",
+    "Grab bars (for 2-room Flexi flats on short-leases)"
+   ],
+   "packages": [
+    {
+     "kind": "floor",
+     "name": "Package 1 - Flooring for living/ dining and bedroom",
+     "price": 2590,
+     "price_text": null,
+     "items": [
+      "Vinyl strip flooring"
+     ],
+     "notes": [
+      "Buyers who opt for Package 1, will be provided with a 3-panel sliding partition, separating the living room and bedroom. Those who do not opt for Package 1, will be provided with a 2-panel sliding partition separating the living room and bedroom."
+     ]
+    },
+    {
+     "kind": "door",
+     "name": "Package 2 - Sanitary fittings",
+     "price": 630,
+     "price_text": null,
+     "items": [
+      "Wash basin with tap mixer",
+      "Shower set with bath/ shower mixer"
+     ],
+     "notes": []
+    },
+    {
+     "kind": "elderly",
+     "name": "Package 3 for short-lease 2-room Flexi flats",
+     "price": 6510,
+     "price_text": null,
+     "items": [
+      "Lighting",
+      "Window grilles",
+      "Built-in kitchen cabinets with induction hob and cooker hood, kitchen sink, tap, and dish drying rack. Buyers may choose to have a lower kitchen countertop",
+      "Built-in wardrobe",
+      "Water heater",
+      "Mirror and toilet roll holder in bathroom"
+     ],
+     "notes": [
+      "Buyers who opt for Package 3 must opt for Package 1."
+     ]
+    }
+   ],
+   "info": []
+  },
+  {
+   "flat_type": "2-room Flexi (Type 2)",
+   "standard": [
+    "Floor tiles in the: Bathroom, Household shelter, Kitchen",
+    "Wall tiles in the: Bathroom, Kitchen",
+    "Sliding partition/ door for the bedroom (please refer to the floor plans under Layout Ideas)",
+    "Bathroom door",
+    "Water closet suite in the bathroom",
+    "Grab bars (for 2-room Flexi flats on short-leases)"
+   ],
+   "packages": [
+    {
+     "kind": "floor",
+     "name": "Package 1 - Flooring for living/ dining and bedroom",
+     "price": 2440,
+     "price_text": null,
+     "items": [
+      "Vinyl strip flooring"
+     ],
+     "notes": [
+      "Buyers will be provided with a 1-panel sliding partition separating the living room and bedroom, regardless of their Package 1 option."
+     ]
+    },
+    {
+     "kind": "door",
+     "name": "Package 2 - Sanitary fittings",
+     "price": 630,
+     "price_text": null,
+     "items": [
+      "Wash basin with tap mixer",
+      "Shower set with bath/ shower mixer"
+     ],
+     "notes": []
+    },
+    {
+     "kind": "elderly",
+     "name": "Package 3 for short-lease 2-room Flexi flats",
+     "price": 7720,
+     "price_text": null,
+     "items": [
+      "Lighting",
+      "Window grilles",
+      "Built-in kitchen cabinets with induction hob and cooker hood, kitchen sink, tap, and dish drying rack. Buyers may choose to have a lower kitchen countertop",
+      "Built-in wardrobe",
+      "Water heater",
+      "Mirror and toilet roll holder in bathroom",
+      "Laminated UPVC door for the flexible space"
+     ],
+     "notes": [
+      "Buyers who opt for Package 3 must opt for Package 1."
+     ]
+    }
+   ],
+   "info": []
+  },
+  {
+   "flat_type": "4-room",
+   "standard": [
+    "Floor tiles in the: Bathrooms, Household shelter, Kitchen and service yard",
+    "Wall tiles in the: Bathrooms, Kitchen",
+    "Water closet suite in the bathrooms"
+   ],
+   "packages": [
+    {
+     "kind": "floor",
+     "name": "Flooring for living/ dining and bedrooms",
+     "price": 4980,
+     "price_text": null,
+     "items": [
+      "Polished porcelain floor tiles in the living/ dining",
+      "Vinyl strip flooring in the bedrooms"
+     ],
+     "notes": []
+    },
+    {
+     "kind": "door",
+     "name": "Internal doors and sanitary fittings",
+     "price": 3240,
+     "price_text": null,
+     "items": [
+      "3 laminated UPVC bedroom doors",
+      "2 laminated UPVC bathroom doors",
+      "Wash basin with tap mixer",
+      "Shower set with bath/ shower mixer"
+     ],
+     "notes": []
+    }
+   ],
+   "info": []
+  }
+ ],
+ "features": {
+  "Eco-friendly features": [
+   "Separate chutes for recyclable waste",
+   "Regenerative lifts to reduce energy consumption",
+   "Bicycle stands to encourage cycling as an environmentally-friendly form of transport",
+   "Parking spaces to facilitate future provision of electric vehicle charging stations",
+   "Use of sustainable products in the project",
+   "Active, Beautiful, Clean Waters design features to clean rainwater and beautify the landscapes"
+  ],
+  "Smart solutions": [
+   "Smart-Enabled Homes with provisions to facilitate adoption of smart home solutions",
+   "Smart Lighting in common areas to reduce energy usage",
+   "Smart Pneumatic Waste Conveyance System to optimise the deployment of resources for cleaner and fuss-free waste disposal"
+  ]
+ },
+ "ocs_note": "Optional Component Scheme (OCS) packages are optional; the price is added to the flat price at key collection."
+}

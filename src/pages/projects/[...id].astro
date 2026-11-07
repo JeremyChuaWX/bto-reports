@@ -2,7 +2,8 @@
 import Layout from '../../layouts/Layout.astro';
 import Figure from '../../components/Figure.astro';
 import MapStyles from '../../components/MapStyles.astro';
-import { getProjects, sgTime, url, type Project } from '../../lib/data';
+import { getProjects, sgTime, url, type PastLaunch, type Project } from '../../lib/data';
+import pastRates from '../../data/past-rates.json';
 import { cat, CLS_COLOUR, metres, money, tagColour, tagify, walk } from '../../lib/format';
 
 export async function getStaticPaths() {
@@ -79,6 +80,19 @@ const ar = p.appRates;
 const RATE_COLS = [['first_time_fam', 'First-timer families'], ['second_time_fam', 'Second-timer families'], ['first_time_singles', 'First-timer singles'], ['elderly', 'Seniors']] as const;
 const rateCols = ar ? RATE_COLS.filter(([k]) => ar.rows.some((r) => r.rates[k] != null)) : [];
 const rateClass = (v: number | null) => (v == null ? '' : v < 1 ? 'r-low' : v < 3 ? 'r-mid' : 'r-high');
+// Earlier 2026 launches (HDB final figures): rows in this town, and every 4-room row for an island-wide view
+const past = (pastRates as { launches: PastLaunch[] }).launches;
+const isMe = (r: PastLaunch['rows'][number]) => r.projects.some((x) => p.name.startsWith(x.name) || x.name.startsWith(p.name));
+const pastTown = past.flatMap((l) => l.rows.filter((r) => r.town === o.town && !isMe(r)).map((r) => ({ l, r })));
+const past4 = past.flatMap((l) => l.rows.filter((r) => r.flat_type === '4-Room' && r.rates.first_time_fam != null).map((r) => ({ l, r })))
+  .sort((a, b) => b.r.rates.first_time_fam! - a.r.rates.first_time_fam!);
+const launchLabel = (l: PastLaunch) => (l.final ? l.launch : `${l.launch} (live)`);
+const projNames = (r: PastLaunch['rows'][number]) => r.projects.map((x) => x.name).join(', ');
+const projCls = (r: PastLaunch['rows'][number]) => [...new Set(r.projects.map((x) => x.cls).filter(Boolean))].join('/');
+const ft4 = ar?.rows.find((r) => r.flat_type === '4-Room')?.rates.first_time_fam ?? null;
+const ft = p.fittings;
+const pkgPrice = (k: { price: number | null; price_text: string | null }) => (k.price != null ? money(k.price) : k.price_text ?? '–');
+const pkgName = (n: string) => n.replace(/^Default \(with bedroom walls\) - OCS opt-in\s*[-–]\s*/, '').replace(/^Package \d+ - /, '');
 const legend = [...new Map(amenities.map(({ colour, label }) => [label, colour])).entries()].map(([label, colour]) => [colour, label]);
 const mapConfig = JSON.stringify({
   name: p.name,
@@ -180,8 +194,9 @@ const links = (src?: string) =>
   </header>
 
   {
-    ar && ar.rows.length > 0 && (
+    (ar?.rows.length || pastTown.length > 0) && (
       <section class="card" id="application-rates">
+        {ar ? (<>
         <h2>Application rates {ar.is_final ? '(final)' : '(live, still open)'}</h2>
         <p>
           HDB's {ar.is_final ? 'final' : 'latest'} count, as at {sgTime(ar.as_at)}. Applications {ar.is_final ? 'closed' : 'close'} on {new Date(ar.launch_end).toLocaleDateString('en-GB', { day: 'numeric', month: 'short', year: 'numeric' })}
@@ -210,6 +225,54 @@ const links = (src?: string) =>
           Each rate is HDB's figure: applicants in that group for each flat set aside for them. Under 1.0 (green) means fewer applicants than flats; above 3.0 (red) means heavy competition, with more than three applicants for every flat.
           Groups get different shares of the flats, so the rates differ from the overall applicants per unit. A dash means the group cannot apply for that flat type.
           Source: <a href={ar.source}>HDB application rate page</a> <span class="tag" style={`background:${tagColour(ar.tag)}`}>{ar.tag}</span>
+        </p>
+        {ft4 != null && ft4 > 1 && (
+          <p>
+            Rough odds: there are {ft4.toFixed(1)} first-timer family applicants for every 4-room flat set aside for them, so only about 1 in {Math.round(ft4)} will end up with one here. HDB gives out more queue numbers than there are flats because some applicants decline, so getting a queue number is likelier than that. Families with young children and other priority schemes get extra ballot chances. <span class="tag" style={`background:${tagColour('Estimate')}`}>Estimate</span>.
+          </p>
+        )}
+        </>) : (
+          <>
+            <h2>Demand guide: earlier launches</h2>
+            <p>Application rates are published once this project launches. Until then, the rates of other 2026 launches in {o.town} are the best guide to demand.</p>
+          </>
+        )}
+        {pastTown.length > 0 && (
+          <>
+            <h3>Other 2026 launches in {o.town}</h3>
+            <div class="tablewrap">
+              <table class="rates">
+                <tr><th>Launch</th><th>Project</th><th>Flat type</th><th>Units</th><th>Applicants</th><th>First-timer families</th><th>Second-timer families</th><th>First-timer singles</th><th>Seniors</th></tr>
+                {pastTown.map(({ l, r }) => (
+                  <tr>
+                    <td class="nw">{launchLabel(l)}</td>
+                    <td>{projNames(r)}<div class="sub">{projCls(r)}</div></td>
+                    <td>{r.flat_type}</td>
+                    <td>{r.units.toLocaleString('en-US')}</td>
+                    <td>{r.applicants.toLocaleString('en-US')}</td>
+                    {(['first_time_fam', 'second_time_fam', 'first_time_singles', 'elderly'] as const).map((k) => <td class={rateClass(r.rates[k])}>{r.rates[k] != null ? r.rates[k]!.toFixed(1) : '–'}</td>)}
+                  </tr>
+                ))}
+              </table>
+            </div>
+          </>
+        )}
+        <details>
+          <summary>4-room first-timer family rates at every 2026 launch, highest first</summary>
+          <div class="tablewrap">
+            <table class="rates">
+              <tr><th>Launch</th><th>Town</th><th>Project</th><th>Type</th><th>4-room units</th><th>First-timer families</th></tr>
+              {past4.map(({ l, r }) => (
+                <tr class={isMe(r) ? 'me' : ''}>
+                  <td class="nw">{launchLabel(l)}</td><td>{r.town}</td><td>{projNames(r)}</td><td>{projCls(r)}</td>
+                  <td>{r.units.toLocaleString('en-US')}</td><td class={rateClass(r.rates.first_time_fam)}>{r.rates.first_time_fam!.toFixed(1)}</td>
+                </tr>
+              ))}
+            </table>
+          </div>
+        </details>
+        <p class="sub">
+          From HDB's application rate pages: final figures for {past.filter((l) => l.final).map((l) => l.launch).join(' and ')}{past.some((l) => !l.final) && `, and the latest count for ${past.filter((l) => !l.final).map((l) => `${l.launch} (as at ${sgTime(l.as_at)}, still open)`).join(', ')}`}. HDB's earlier rate pages are no longer online, so older launches are not shown <span class="tag" style={`background:${tagColour('Official')}`}>Official</span>
         </p>
       </section>
     )
@@ -283,6 +346,52 @@ const links = (src?: string) =>
       )
     }
   </section>
+
+  {
+    ft && (
+      <section class="card" id="fittings">
+        <h2>Finishes and optional packages</h2>
+        <p>
+          What each flat comes with, and what HDB will fit for an extra charge under its Optional Component Scheme (OCS). Each package is optional. If you take one, its price is added to the flat price.
+          Fitting these yourself through a contractor can cost more or less, but HDB's work is covered by its defects liability period.
+        </p>
+        <div class="tablewrap">
+          <table class="fit">
+            <tr><th>Flat type</th><th>Included as standard</th><th>Optional packages</th></tr>
+            {ft.types.map((t) => (
+              <tr>
+                <td class="nw"><b>{t.flat_type}</b></td>
+                <td><ul>{t.standard.map((x) => <li>{x}</li>)}</ul></td>
+                <td>
+                  {t.packages.length === 0 && <span class="sub">None offered{t.standard.some((x) => /flooring/i.test(x)) ? '. Flooring, doors and sanitary fittings are already included.' : '.'}</span>}
+                  {t.packages.map((k) => (
+                    <div class="pkg">
+                      <b>{pkgName(k.name)}</b>: <span class="nw">{pkgPrice(k)}</span>
+                      {k.items.length > 0 && <div class="sub">{k.items.join('; ')}</div>}
+                      {k.notes.map((n) => <div class="sub">{n}</div>)}
+                    </div>
+                  ))}
+                  {t.info.map((i) => (
+                    <div class="pkg white"><b>{i.title}</b><div class="sub">{i.text}</div></div>
+                  ))}
+                </td>
+              </tr>
+            ))}
+          </table>
+        </div>
+        {Object.keys(ft.features).length > 0 && (
+          <div class="feats">
+            {Object.entries(ft.features).map(([h, list]) => (
+              <div><h3>{h}</h3><ul>{list.map((x) => <li>{x}</li>)}</ul></div>
+            ))}
+          </div>
+        )}
+        <p class="sub">
+          Source: {ft.source}. HDB's OCS leaflets and general specifications are on the project's page on the <a href="https://homes.hdb.gov.sg/home/finding-a-flat">HDB Flat Portal</a> <span class="tag" style={`background:${tagColour(ft.tag)}`}>{ft.tag}</span>
+        </p>
+      </section>
+    )
+  }
 
   {
     charts.length > 0 && (
@@ -549,6 +658,13 @@ const links = (src?: string) =>
   .rates td.r-low { color: #1e7e34; font-weight: 600; }
   .rates td.r-mid { color: #b9770e; font-weight: 600; }
   .rates td.r-high { color: #922b21; font-weight: 600; }
+  .rates tr.me td { background: #fff7e0; }
+  .fit td { vertical-align: top; }
+  .fit ul { margin: 0; padding-left: 16px; }
+  .pkg { margin-bottom: 6px; }
+  .pkg.white { border-left: 3px solid #b9770e; padding-left: 6px; }
+  .feats { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 0 24px; }
+  .feats ul { margin-top: 0; padding-left: 18px; }
   .toc ul { margin: 4px 0; padding-left: 18px; columns: 2; font-size: 14px; }
   .toc li.d3 { margin-left: 16px; }
   @media (max-width: 700px) { .toc ul { columns: 1; } }
