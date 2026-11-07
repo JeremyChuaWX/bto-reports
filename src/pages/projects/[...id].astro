@@ -70,6 +70,11 @@ const compSummary = near1k.length
     `${unitsSum(near1k.filter(({ c }) => c.open_market === true)).toLocaleString('en-US')} sell on the open market and ` +
     `${unitsSum(near1k.filter(({ c }) => c.open_market === false)).toLocaleString('en-US')} only to BTO-eligible buyers (Plus or Prime).`
   : 'No other BTO project within 1 km.';
+const rs = p.competition?.resale ?? null;
+const AGE_COLOUR: Record<string, string> = { 'Under 10 years': '#1a9850', '10–19 years': '#91cf60', '20–29 years': '#e3c13b', '30–39 years': '#fc8d59', '40+ years': '#d73027' };
+const ageBand = (age: number) => (age < 10 ? 'Under 10 years' : age < 20 ? '10–19 years' : age < 30 ? '20–29 years' : age < 40 ? '30–39 years' : '40+ years');
+const pct = (n: number, d: number) => (d ? Math.round((100 * n) / d) : 0);
+const under20 = rs ? rs.age_at_sale.filter((a) => a.band === 'Under 10 years' || a.band === '10–19 years').reduce((n, a) => n + a.flats, 0) : 0;
 const legend = [...new Map(amenities.map(({ colour, label }) => [label, colour])).entries()].map(([label, colour]) => [colour, label]);
 const mapConfig = JSON.stringify({
   name: p.name,
@@ -87,6 +92,14 @@ const mapConfig = JSON.stringify({
       `<br>${esc(c.status)}${c.completion ? `, completion ${esc(c.completion)}` : ''}` +
       (c.resale_from ? `<br>Earliest resale: ${esc(c.resale_from)}` : '') +
       (c.note ? `<br>${esc(c.note)}` : ''),
+  })),
+  resaleLabel: rs ? `HDB resale blocks (colour: age in ${rs.sale_year})` : '',
+  resale: (rs?.blocks ?? []).map((b) => ({
+    lat: b.lat, lng: b.lng, colour: AGE_COLOUR[ageBand(rs!.sale_year - b.year)], r: Math.min(9, 3 + Math.sqrt(b.flats) / 4),
+    popup:
+      `<b>Blk ${esc(b.blk)} ${esc(b.street)}</b><br><span class="pc">Completed ${b.year} · ${rs!.sale_year - b.year} years old in ${rs!.sale_year}</span>` +
+      `<br>${b.flats.toLocaleString('en-US')} sold flats (${esc(b.types)}) · ${metres(b.dist)} away` +
+      `<br>Resales ${esc(rs!.window)}: ${b.sales}${b.median_4rm ? ` · 4-room median ${money(b.median_4rm)}` : ''}`,
   })),
 });
 
@@ -262,6 +275,7 @@ const links = (src?: string) =>
       <span><span class="lg line"></span>Rail line (incl. planned)</span>
       <span><span class="lg uc"></span>HDB blocks under construction</span>
       {competitors.length > 0 && <span><span class="lg bto"></span>Nearby BTO project (lettered)</span>}
+      {rs && <span><span class="lg resale"></span>HDB resale block (colour: age in {rs.sale_year})</span>}
       <span><span class="lg ring"></span>500 m / 1 km / 2 km</span>
     </p>
     <p class="sub">
@@ -304,6 +318,7 @@ const links = (src?: string) =>
     p.competition && (
       <section class="card" id="competition">
         <h2>Competition when you sell</h2>
+        <h3>New BTO projects nearby</h3>
         <p>{compSummary}</p>
         <p class="sub">
           Other BTO projects nearby whose flats you will be selling against. Compare the earliest resale year with this project's: projects that reach resale in the same few years compete most directly. Letters match the square markers on the map above; click a row to find it. Plus and Prime flats can only be resold to buyers who meet BTO-style eligibility, so they compete with each other for a smaller pool of buyers, while open-market flats nearby are open to anyone.
@@ -329,6 +344,50 @@ const links = (src?: string) =>
           </table>
         </div>
         <p class="sub">{p.competition.method} Updated {p.competition.updated}.</p>
+        {
+          rs && (
+            <>
+              <h3>Existing resale flats nearby</h3>
+              <p>
+                {rs.blocks_count.toLocaleString('en-US')} HDB blocks within 1 km hold {rs.flats.toLocaleString('en-US')} sold flats, and {rs.sales.toLocaleString('en-US')} of them were resold in {rs.window}.
+                By {rs.sale_year}, the first year this project's flats can be resold ({rs.sale_note}), {pct(under20, rs.flats)}% of those flats will be under 20 years old <span class="tag" style={`background:${tagColour('Estimate')}`}>Estimate</span>.
+              </p>
+              <p class="sub">
+                These are the flats a buyer could pick instead of yours. Round dots on the map are these blocks, sized by number of flats and coloured by their age in {rs.sale_year}; click one for its recent resales. Prices are today's, not {rs.sale_year}'s. Blocks still being built are not counted here; they are in the BTO table above.
+              </p>
+              <div class="tablewrap">
+                <table class="amen">
+                  <tr><th>Flat type</th><th>Sold flats within 1 km</th><th>Resales, last 12 months</th><th>Median price</th><th>Middle half</th><th>Median size</th><th>Young flats resold<div class="sub">lease began in the last 10 years</div></th></tr>
+                  {
+                    rs.by_type.map((t) => (
+                      <tr>
+                        <td><b>{t.flat_type}</b></td>
+                        <td>{t.stock.toLocaleString('en-US')}</td>
+                        <td>{t.sales.toLocaleString('en-US')}{t.turnover_pct != null && <div class="sub">{t.turnover_pct}% of stock</div>}</td>
+                        <td>{t.median ? money(t.median) : '–'}</td>
+                        <td style="white-space:nowrap">{t.p25 && t.p75 ? `${money(t.p25)} – ${money(t.p75)}` : '–'}</td>
+                        <td>{t.median_sqm ? `${t.median_sqm} m²` : '–'}</td>
+                        <td>{t.young_sales ? <>{t.young_sales}<div class="sub">median {money(t.young_median!)}</div></> : '–'}</td>
+                      </tr>
+                    ))
+                  }
+                </table>
+              </div>
+              <p><b>Age of those flats in {rs.sale_year}</b></p>
+              <div class="agebar">
+                {rs.age_at_sale.map((a) => (
+                  <span style={`width:${(100 * a.flats) / rs.flats}%;background:${AGE_COLOUR[a.band]}`} title={`${a.band}: ${a.flats.toLocaleString('en-US')} flats`}></span>
+                ))}
+              </div>
+              <ul class="agekey">
+                {rs.age_at_sale.map((a) => (
+                  <li><i style={`background:${AGE_COLOUR[a.band]}`}></i>{a.band}: {a.flats.toLocaleString('en-US')} flats ({pct(a.flats, rs.flats)}%)</li>
+                ))}
+              </ul>
+              <p class="sub">{rs.method} Source: {rs.source} <span class="tag" style={`background:${tagColour(rs.tag)}`}>{rs.tag}</span></p>
+            </>
+          )
+        }
       </section>
     )
   }
@@ -452,6 +511,9 @@ const links = (src?: string) =>
   @media (max-width: 700px) { .toc ul { columns: 1; } }
   .amen tr[data-amenity], .amen tr[data-bto] { cursor: pointer; }
   .amen tr[data-amenity]:hover td, .amen tr[data-bto]:hover td { background: #eef5ff; }
+  .agebar { display: flex; height: 16px; border-radius: 4px; overflow: hidden; margin: 4px 0 6px; }
+  .agekey { list-style: none; padding: 0; margin: 0 0 8px; display: flex; flex-wrap: wrap; gap: 4px 16px; font-size: 13px; }
+  .agekey i { display: inline-block; width: 10px; height: 10px; border-radius: 50%; margin-right: 5px; }
   .key { display: inline-flex; align-items: center; justify-content: center; width: 22px; height: 22px; border-radius: 4px; color: #fff; font-weight: 700; font-size: 12px; }
   .pager { display: flex; justify-content: space-between; margin: 0 0 20px; font-weight: 600; }
 </style>

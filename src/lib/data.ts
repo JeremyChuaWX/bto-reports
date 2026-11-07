@@ -94,8 +94,24 @@ export interface Competitor {
   tag: string;
 }
 
+export interface ResaleBlock {
+  blk: string; street: string; year: number; flats: number; dist: number; lat: number; lng: number;
+  types: string; sales: number; median_4rm: number | null;
+}
+export interface ResaleType {
+  flat_type: string; stock: number; sales: number; turnover_pct: number | null;
+  median: number | null; p25: number | null; p75: number | null; median_sqm: number | null;
+  young_sales: number; young_median: number | null; // leases that started within the last 10 years
+}
+export interface Resale {
+  radius_m: number; window: string; sale_year: number; sale_note: string;
+  blocks_count: number; flats: number; sales: number;
+  age_at_sale: { band: string; flats: number }[];
+  by_type: ResaleType[]; blocks: ResaleBlock[]; method: string; source: string; tag: string;
+}
 export interface Competition {
   updated: string;
+  resale?: Resale;
   method: string;
   projects: Competitor[];
 }

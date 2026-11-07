@@ -112,6 +112,8 @@ interface ProjectCfg {
   geo: string;
   amenities: AmenityCfg[];
   competitors: CompetitorCfg[];
+  resale: { lat: number; lng: number; colour: string; r: number; popup: string }[];
+  resaleLabel: string;
 }
 
 function numberIcon(n: number, colour: string) {
@@ -183,6 +185,17 @@ async function projectMap(el: HTMLElement) {
   if (cfg.competitors.length) {
     bto.addTo(map);
     overlays['<span class="lg bto"></span>Nearby BTO projects'] = bto;
+  }
+
+  // Existing HDB blocks whose flats will be on the resale market, coloured by age in the year this project can first be resold
+  if (cfg.resale?.length) {
+    const canvas = L.canvas({ padding: 0.3 });
+    const resale = L.layerGroup(
+      cfg.resale.map((b) =>
+        L.circleMarker([b.lat, b.lng], { renderer: canvas, radius: b.r, color: '#fff', weight: 1, fillColor: b.colour, fillOpacity: 0.85 }).bindPopup(b.popup),
+      ),
+    ).addTo(map);
+    overlays[`<span class="lg resale"></span>${esc(cfg.resaleLabel)}`] = resale;
   }
 
   L.marker([cfg.lat, cfg.lng], { icon: siteIcon(), zIndexOffset: 1000, keyboard: false }).bindPopup(`<b>${esc(cfg.name)}</b><br>HDB's site coordinate`).addTo(map);

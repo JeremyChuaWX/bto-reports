@@ -36,5 +36,159 @@
    "source": "HDB launch data (this site)",
    "tag": "Official"
   }
- ]
+ ],
+ "resale": {
+  "radius_m": 1000,
+  "window": "Nov 2025 – Oct 2026",
+  "sale_year": 2040,
+  "sale_note": "keys around 2030–31 plus a 10-year MOP, assuming Prime or Plus",
+  "blocks_count": 8,
+  "flats": 873,
+  "sales": 21,
+  "age_at_sale": [
+   {
+    "band": "40+ years",
+    "flats": 873
+   }
+  ],
+  "by_type": [
+   {
+    "flat_type": "3-room",
+    "stock": 575,
+    "sales": 13,
+    "turnover_pct": 2.3,
+    "median": 362000,
+    "p25": 338000,
+    "p75": 373000,
+    "median_sqm": 65,
+    "young_sales": 0,
+    "young_median": null
+   },
+   {
+    "flat_type": "4-room",
+    "stock": 137,
+    "sales": 2,
+    "turnover_pct": 1.5,
+    "median": 752000,
+    "p25": 715000,
+    "p75": 789000,
+    "median_sqm": 104,
+    "young_sales": 0,
+    "young_median": null
+   },
+   {
+    "flat_type": "5-room",
+    "stock": 161,
+    "sales": 6,
+    "turnover_pct": 3.7,
+    "median": 1027500,
+    "p25": 950000,
+    "p75": 1060000,
+    "median_sqm": 124,
+    "young_sales": 0,
+    "young_median": null
+   }
+  ],
+  "blocks": [
+   {
+    "blk": "174",
+    "street": "LOR 1 TOA PAYOH",
+    "year": 1972,
+    "flats": 127,
+    "dist": 743,
+    "lat": 1.330666,
+    "lng": 103.841875,
+    "types": "3-room, 5-room",
+    "sales": 2,
+    "median_4rm": null
+   },
+   {
+    "blk": "172A",
+    "street": "LOR 1 TOA PAYOH",
+    "year": 1993,
+    "flats": 35,
+    "dist": 803,
+    "lat": 1.330319,
+    "lng": 103.842478,
+    "types": "4-room, 5-room",
+    "sales": 0,
+    "median_4rm": null
+   },
+   {
+    "blk": "173",
+    "street": "LOR 1 TOA PAYOH",
+    "year": 1972,
+    "flats": 218,
+    "dist": 806,
+    "lat": 1.330073,
+    "lng": 103.842532,
+    "types": "3-room, 5-room",
+    "sales": 6,
+    "median_4rm": null
+   },
+   {
+    "blk": "171",
+    "street": "LOR 1 TOA PAYOH",
+    "year": 1994,
+    "flats": 160,
+    "dist": 849,
+    "lat": 1.330831,
+    "lng": 103.842818,
+    "types": "4-room, 5-room",
+    "sales": 5,
+    "median_4rm": 752000
+   },
+   {
+    "blk": "169",
+    "street": "LOR 1 TOA PAYOH",
+    "year": 1972,
+    "flats": 118,
+    "dist": 861,
+    "lat": 1.331773,
+    "lng": 103.84268,
+    "types": "3-room, 5-room",
+    "sales": 1,
+    "median_4rm": null
+   },
+   {
+    "blk": "172",
+    "street": "LOR 1 TOA PAYOH",
+    "year": 1994,
+    "flats": 69,
+    "dist": 868,
+    "lat": 1.33039,
+    "lng": 103.843056,
+    "types": "4-room, 5-room",
+    "sales": 2,
+    "median_4rm": null
+   },
+   {
+    "blk": "168",
+    "street": "LOR 1 TOA PAYOH",
+    "year": 1972,
+    "flats": 122,
+    "dist": 943,
+    "lat": 1.331904,
+    "lng": 103.843409,
+    "types": "3-room, 5-room",
+    "sales": 5,
+    "median_4rm": null
+   },
+   {
+    "blk": "104",
+    "street": "JLN DUSUN",
+    "year": 1980,
+    "flats": 24,
+    "dist": 991,
+    "lat": 1.328438,
+    "lng": 103.844186,
+    "types": "4-room",
+    "sales": 0,
+    "median_4rm": null
+   }
+  ],
+  "method": "Sold HDB flats in blocks within 1 km (straight line), from HDB Existing Building and HDB Property Information on data.gov.sg; blocks were matched by postal code through OneMap. Sales are HDB resale registrations over the last 12 months of data. Rental flats are excluded because they cannot be resold. \"Young\" means a lease that started within the last 10 years.",
+  "source": "HDB via data.gov.sg (resale flat prices, property information, existing buildings); OneMap",
+  "tag": "Official"
+ }
 }
