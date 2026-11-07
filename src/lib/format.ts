@@ -25,6 +25,8 @@ const TAGS: Record<string, string> = {
   unverified: '#922b21', opinion: '#6c3483', inferred: '#b9770e', unconfirmed: '#922b21',
 };
 
+export const tagColour = (tag: string) => TAGS[tag.toLowerCase()] ?? '#555555';
+
 // Turn status markers such as [Official] or **[Estimate, high confidence]** into coloured tags.
 export function tagify(html: string): string {
   const rep = (whole: string, word: string) => {

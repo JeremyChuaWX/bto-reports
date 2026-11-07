@@ -75,6 +75,31 @@ export interface Models {
   models: Model[];
 }
 
+// Other BTO projects near the site: the flats this one will compete with on the resale market
+export interface Competitor {
+  name: string;
+  classification: string; // Standard, Plus or Prime; "Pre-2024" for launches before the Oct 2024 framework
+  launch: string | null;
+  units: number | null;
+  flat_types: string | null;
+  status: string;
+  completion: string | null;
+  resale_from: string | null;
+  open_market: boolean | null; // null while the classification is not yet announced; false where resale buyers must meet BTO-style eligibility (Plus and Prime)
+  lat: number;
+  lng: number;
+  straight_m: number;
+  note?: string;
+  source: string;
+  tag: string;
+}
+
+export interface Competition {
+  updated: string;
+  method: string;
+  projects: Competitor[];
+}
+
 export interface Verification {
   item: string;
   old?: string;
@@ -109,6 +134,7 @@ export interface Project {
   verification: Verification[];
   layouts: Layout[];
   models: Models | null;
+  competition: Competition | null;
   images: Record<string, ImageMetadata>;
   totalUnits: number | null;
   fourRoom: Unit | undefined;
@@ -138,6 +164,7 @@ function load(entry: CollectionEntry<'reports'>): Project {
     verification: (json[base + 'verification.json'] as Verification[]) ?? [],
     layouts: (json[base + 'layouts.json'] as Layout[]) ?? [],
     models: (json[base + 'models.json'] as Models) ?? null,
+    competition: (json[base + 'competition.json'] as Competition) ?? null,
     images: imgs,
     totalUnits: total,
     fourRoom: units.find((u) => u.flat_type.startsWith('4-room')),

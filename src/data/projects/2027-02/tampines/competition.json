@@ -1,0 +1,22 @@
+{
+ "updated": "2026-11-07",
+ "method": "BTO projects within about 1 km (straight line, nearest block), found by grouping HDB blocks by their OneMap building name. Completed projects use HDB unit counts; under-construction projects use BTOHQ (unverified). Earliest resale is completion plus the minimum occupation period (5 years; 10 for Plus and Prime) and is an estimate.",
+ "projects": [
+  {
+   "name": "Simei Symphony",
+   "classification": "Standard",
+   "launch": "Jul 2025",
+   "units": 380,
+   "flat_types": "2-room Flexi, 4-room, and 5-room",
+   "status": "Under construction",
+   "completion": "Sep 2029 (est.)",
+   "resale_from": "~2034",
+   "open_market": true,
+   "lat": 1.34089,
+   "lng": 103.960028,
+   "straight_m": 119,
+   "source": "OneMap and HDB building data, BTOHQ",
+   "tag": "Unverified"
+  }
+ ]
+}

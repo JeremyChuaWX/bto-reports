@@ -1,0 +1,22 @@
+{
+ "updated": "2026-11-07",
+ "method": "BTO projects within about 1 km (straight line, nearest block), found by grouping HDB blocks by their OneMap building name. Completed projects use HDB unit counts; under-construction projects use BTOHQ (unverified). Earliest resale is completion plus the minimum occupation period (5 years; 10 for Plus and Prime) and is an estimate.",
+ "projects": [
+  {
+   "name": "Tampines GreenTopaz",
+   "classification": "Pre-2024",
+   "launch": "Jun 2024",
+   "units": 561,
+   "flat_types": "2-room Flexi, 4-room and 5-room",
+   "status": "Under construction",
+   "completion": "Jun 2028 (est.)",
+   "resale_from": "~2033",
+   "open_market": true,
+   "lat": 1.343716,
+   "lng": 103.940566,
+   "straight_m": 962,
+   "source": "OneMap and HDB building data, BTOHQ",
+   "tag": "Unverified"
+  }
+ ]
+}

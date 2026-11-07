@@ -96,18 +96,39 @@ interface AmenityCfg {
   source: string;
 }
 
+interface CompetitorCfg {
+  key: string;
+  name: string;
+  colour: string;
+  lat: number;
+  lng: number;
+  popup: string;
+}
+
 interface ProjectCfg {
   name: string;
   lat: number;
   lng: number;
   geo: string;
   amenities: AmenityCfg[];
+  competitors: CompetitorCfg[];
 }
 
 function numberIcon(n: number, colour: string) {
   return L.divIcon({
     className: 'num-icon',
     html: `<span style="background:${colour}">${n}</span>`,
+    iconSize: [26, 26],
+    iconAnchor: [13, 13],
+    popupAnchor: [0, -12],
+  });
+}
+
+// Nearby BTO projects: lettered squares coloured by classification, so they stand apart from the round amenity markers
+function letterIcon(key: string, colour: string) {
+  return L.divIcon({
+    className: 'bto-icon',
+    html: `<span style="background:${colour}">${key}</span>`,
     iconSize: [26, 26],
     iconAnchor: [13, 13],
     popupAnchor: [0, -12],
@@ -153,6 +174,17 @@ async function projectMap(el: HTMLElement) {
     markers.set(a.n, { marker: m, layer: g });
   }
 
+  const btoMarkers = new Map<string, L.Marker>();
+  const bto = L.layerGroup();
+  for (const c of cfg.competitors) {
+    const m = L.marker([c.lat, c.lng], { icon: letterIcon(c.key, c.colour), title: c.name, zIndexOffset: 500 }).bindPopup(c.popup).addTo(bto);
+    btoMarkers.set(c.key, m);
+  }
+  if (cfg.competitors.length) {
+    bto.addTo(map);
+    overlays['<span class="lg bto"></span>Nearby BTO projects'] = bto;
+  }
+
   L.marker([cfg.lat, cfg.lng], { icon: siteIcon(), zIndexOffset: 1000, keyboard: false }).bindPopup(`<b>${esc(cfg.name)}</b><br>HDB's site coordinate`).addTo(map);
   const ctl = L.control.layers(bases, overlays, { collapsed: true, position: 'topright' }).addTo(map);
 
@@ -186,6 +218,16 @@ async function projectMap(el: HTMLElement) {
       el.scrollIntoView({ behavior: 'smooth', block: 'center' });
       map.setView(hit.marker.getLatLng(), Math.max(map.getZoom(), 16));
       hit.marker.openPopup();
+    }),
+  );
+  document.querySelectorAll<HTMLElement>('[data-bto]').forEach((row) =>
+    row.addEventListener('click', () => {
+      const m = btoMarkers.get(row.dataset.bto!);
+      if (!m) return;
+      if (!map.hasLayer(bto)) bto.addTo(map);
+      el.scrollIntoView({ behavior: 'smooth', block: 'center' });
+      map.setView(m.getLatLng(), Math.max(map.getZoom(), 16));
+      m.openPopup();
     }),
   );
 }

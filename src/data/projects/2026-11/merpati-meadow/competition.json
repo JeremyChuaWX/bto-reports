@@ -1,0 +1,55 @@
+{
+ "updated": "2026-11-07",
+ "method": "BTO projects within about 1 km (straight line, nearest block), found by grouping HDB blocks by their OneMap building name. Completed projects use HDB unit counts; under-construction projects use BTOHQ (unverified). Earliest resale is completion plus the minimum occupation period (5 years; 10 for Plus and Prime) and is an estimate.",
+ "projects": [
+  {
+   "name": "Merpati Alcove",
+   "classification": "Plus",
+   "launch": "Oct 2024",
+   "units": 433,
+   "flat_types": "Community Care Apartments (CCA) and 4-room",
+   "status": "Under construction",
+   "completion": "Jan 2029 (est.)",
+   "resale_from": "~2039",
+   "open_market": false,
+   "lat": 1.326774,
+   "lng": 103.882284,
+   "straight_m": 86,
+   "note": "10-year MOP; clawback on resale",
+   "source": "OneMap and HDB building data, BTOHQ",
+   "tag": "Unverified"
+  },
+  {
+   "name": "MacPherson Weave",
+   "classification": "Pre-2024",
+   "launch": "May 2021",
+   "units": 1382,
+   "flat_types": "2-room Flexi, 3-room, and 4-room",
+   "status": "Completed",
+   "completion": "2025",
+   "resale_from": "~2030",
+   "open_market": true,
+   "lat": 1.327476,
+   "lng": 103.889069,
+   "straight_m": 836,
+   "source": "OneMap and HDB building data, BTOHQ",
+   "tag": "Official"
+  },
+  {
+   "name": "MacPherson Blossom",
+   "classification": "Pre-2024",
+   "launch": null,
+   "units": 630,
+   "flat_types": null,
+   "status": "Completed",
+   "completion": "2024",
+   "resale_from": "~2029",
+   "open_market": true,
+   "lat": 1.32522,
+   "lng": 103.889387,
+   "straight_m": 951,
+   "source": "OneMap and HDB building data",
+   "tag": "Official"
+  }
+ ]
+}

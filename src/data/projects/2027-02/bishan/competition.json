@@ -1,0 +1,22 @@
+{
+ "updated": "2026-11-07",
+ "method": "BTO projects within about 1 km (straight line, nearest block), found by grouping HDB blocks by their OneMap building name. Completed projects use HDB unit counts; under-construction projects use BTOHQ (unverified). Earliest resale is completion plus the minimum occupation period (5 years; 10 for Plus and Prime) and is an estimate.",
+ "projects": [
+  {
+   "name": "Sin Ming Residences",
+   "classification": "Pre-2024",
+   "launch": "Dec 2023",
+   "units": 732,
+   "flat_types": "3-room and 4-room",
+   "status": "Under construction",
+   "completion": "Jun 2027 (est.)",
+   "resale_from": "~2032",
+   "open_market": true,
+   "lat": 1.355523,
+   "lng": 103.838771,
+   "straight_m": 152,
+   "source": "OneMap and HDB building data, BTOHQ",
+   "tag": "Unverified"
+  }
+ ]
+}

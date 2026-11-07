@@ -1,0 +1,40 @@
+{
+ "updated": "2026-11-07",
+ "method": "BTO projects within about 1 km (straight line, nearest block), found by grouping HDB blocks by their OneMap building name. Completed projects use HDB unit counts; under-construction projects use BTOHQ (unverified). Earliest resale is completion plus the minimum occupation period (5 years; 10 for Plus and Prime) and is an estimate.",
+ "projects": [
+  {
+   "name": "Mount Pleasant Crest",
+   "classification": "Prime",
+   "launch": "Oct 2025",
+   "units": 1348,
+   "flat_types": "2-room Flexi, 3-room, and 4-room",
+   "status": "Under construction",
+   "completion": "Jun 2031 (est.)",
+   "resale_from": "~2041",
+   "open_market": false,
+   "lat": 1.33006,
+   "lng": 103.8377,
+   "straight_m": 276,
+   "note": "10-year MOP; clawback on resale",
+   "source": "BTOHQ",
+   "tag": "Unverified"
+  },
+  {
+   "name": "Toa Payoh Hillside",
+   "classification": "Prime",
+   "launch": "Nov 2026",
+   "units": 1432,
+   "flat_types": "Community Care Apartment, 2-room Flexi, 4-room",
+   "status": "Upcoming launch",
+   "completion": "1Q 2031 (est.)",
+   "resale_from": "~2041",
+   "open_market": false,
+   "lat": 1.3374762,
+   "lng": 103.8414967,
+   "straight_m": 1133,
+   "note": "HDB launch; same resale catchment",
+   "source": "HDB launch data (this site)",
+   "tag": "Official"
+  }
+ ]
+}

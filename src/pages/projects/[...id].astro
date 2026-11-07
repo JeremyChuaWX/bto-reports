@@ -3,7 +3,7 @@ import Layout from '../../layouts/Layout.astro';
 import Figure from '../../components/Figure.astro';
 import MapStyles from '../../components/MapStyles.astro';
 import { getProjects, url, type Project } from '../../lib/data';
-import { cat, CLS_COLOUR, metres, money, tagify, walk } from '../../lib/format';
+import { cat, CLS_COLOUR, metres, money, tagColour, tagify, walk } from '../../lib/format';
 
 export async function getStaticPaths() {
   const projects = await getProjects();
@@ -55,6 +55,21 @@ const amenities = p.amenities.map((a, i) => {
   const [colour, label] = cat(a.category);
   return { n: i + 1, a, colour, label, straight: metres(a.straight_m), walk: walk(a) };
 });
+// Nearby BTO projects, nearest first, lettered A, B, C... on the map and in the table
+const PRE_COLOUR = '#5d6d7e';
+const esc = (v: unknown) => String(v ?? '').replace(/[&<>"']/g, (c) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' })[c]!);
+const competitors = [...(p.competition?.projects ?? [])]
+  .sort((a, b) => a.straight_m - b.straight_m)
+  .map((c, i) => ({ key: String.fromCharCode(65 + i), c, colour: CLS_COLOUR[c.classification] ?? PRE_COLOUR }));
+const rules = (c: (typeof competitors)[number]['c']) => (c.open_market === null ? 'Resale rules not yet announced' : c.open_market ? 'Open market' : 'Restricted buyers');
+const within = (m: number) => competitors.filter(({ c }) => c.straight_m <= m);
+const unitsSum = (list: typeof competitors) => list.reduce((n, { c }) => n + (c.units ?? 0), 0);
+const near1k = within(1000);
+const compSummary = near1k.length
+  ? `${near1k.length} BTO project${near1k.length > 1 ? 's' : ''} within 1 km, about ${unitsSum(near1k).toLocaleString('en-US')} flats: ` +
+    `${unitsSum(near1k.filter(({ c }) => c.open_market === true)).toLocaleString('en-US')} sell on the open market and ` +
+    `${unitsSum(near1k.filter(({ c }) => c.open_market === false)).toLocaleString('en-US')} only to BTO-eligible buyers (Plus or Prime).`
+  : 'No other BTO project within 1 km.';
 const legend = [...new Map(amenities.map(({ colour, label }) => [label, colour])).entries()].map(([label, colour]) => [colour, label]);
 const mapConfig = JSON.stringify({
   name: p.name,
@@ -63,6 +78,15 @@ const mapConfig = JSON.stringify({
   geo: url(`geo/${p.id}.json`),
   amenities: amenities.map(({ n, a, colour, label, straight, walk }) => ({
     n, colour, label, straight, walk, name: a.name, cat: a.category, lat: a.lat, lng: a.lng, note: a.note ?? '', source: a.source ?? '',
+  })),
+  competitors: competitors.map(({ key, c, colour }) => ({
+    key, colour, name: c.name, lat: c.lat, lng: c.lng,
+    popup:
+      `<b>${key}. ${esc(c.name)}</b><br><span class="pc">${esc(c.classification)}${c.launch ? ` · launched ${esc(c.launch)}` : ''} · ${rules(c)}</span>` +
+      `<br>${metres(c.straight_m)} away · ${c.units ? `${c.units.toLocaleString('en-US')} units` : 'units n/a'}` +
+      `<br>${esc(c.status)}${c.completion ? `, completion ${esc(c.completion)}` : ''}` +
+      (c.resale_from ? `<br>Earliest resale: ${esc(c.resale_from)}` : '') +
+      (c.note ? `<br>${esc(c.note)}` : ''),
   })),
 });
 
@@ -237,6 +261,7 @@ const links = (src?: string) =>
       {legend.map(([colour, label]) => <span><span class="lg" style={`background:${colour}`}></span>{label}</span>)}
       <span><span class="lg line"></span>Rail line (incl. planned)</span>
       <span><span class="lg uc"></span>HDB blocks under construction</span>
+      {competitors.length > 0 && <span><span class="lg bto"></span>Nearby BTO project (lettered)</span>}
       <span><span class="lg ring"></span>500 m / 1 km / 2 km</span>
     </p>
     <p class="sub">
@@ -274,6 +299,39 @@ const links = (src?: string) =>
       Places and coordinates come from government datasets on data.gov.sg (NEA, LTA, MOE, MOH, ECDA, NParks, PA, NLB, SportSG, URA). Where a dataset gives only an address, the place is located with OneMap search; polyclinics and hospitals come from OneMap search. Straight-line distances are measured from HDB's site coordinate; for MRT stations, to the nearest exit. Walking distances are OpenStreetMap route estimates made by the research agents, shown only where they match the same place. Planned developments and malls come from the research agents, because there is no government dataset for them.
     </p>
   </section>
+
+  {
+    p.competition && (
+      <section class="card" id="competition">
+        <h2>Competition when you sell</h2>
+        <p>{compSummary}</p>
+        <p class="sub">
+          Other BTO projects nearby whose flats you will be selling against. Compare the earliest resale year with this project's: projects that reach resale in the same few years compete most directly. Letters match the square markers on the map above; click a row to find it. Plus and Prime flats can only be resold to buyers who meet BTO-style eligibility, so they compete with each other for a smaller pool of buyers, while open-market flats nearby are open to anyone.
+        </p>
+        <div class="tablewrap">
+          <table class="amen">
+            <tr><th></th><th>Project</th><th>Distance</th><th>Type</th><th>Launched</th><th>Units</th><th>Status</th><th>Earliest resale</th><th>Note</th></tr>
+            {
+              competitors.map(({ key, c, colour }) => (
+                <tr data-bto={key} title="Show on map">
+                  <td><span class="key" style={`background:${colour}`}>{key}</span></td>
+                  <td><b>{c.name}</b>{c.flat_types && <div class="sub">{c.flat_types}</div>}</td>
+                  <td style="white-space:nowrap">{metres(c.straight_m)}</td>
+                  <td style="white-space:nowrap">{c.classification}<div class="sub">{rules(c)}</div></td>
+                  <td style="white-space:nowrap">{c.launch ?? '–'}</td>
+                  <td>{c.units?.toLocaleString('en-US') ?? '–'}</td>
+                  <td>{c.status}{c.completion && <div class="sub">Completion {c.completion}</div>}</td>
+                  <td style="white-space:nowrap">{c.resale_from ?? '–'}</td>
+                  <td>{c.note}<div class="sub">{c.source} <span class="tag" style={`background:${tagColour(c.tag)}`}>{c.tag}</span></div></td>
+                </tr>
+              ))
+            }
+          </table>
+        </div>
+        <p class="sub">{p.competition.method} Updated {p.competition.updated}.</p>
+      </section>
+    )
+  }
 
   {
     headings.length > 0 && (
@@ -392,7 +450,8 @@ const links = (src?: string) =>
   .toc ul { margin: 4px 0; padding-left: 18px; columns: 2; font-size: 14px; }
   .toc li.d3 { margin-left: 16px; }
   @media (max-width: 700px) { .toc ul { columns: 1; } }
-  .amen tr[data-amenity] { cursor: pointer; }
-  .amen tr[data-amenity]:hover td { background: #eef5ff; }
+  .amen tr[data-amenity], .amen tr[data-bto] { cursor: pointer; }
+  .amen tr[data-amenity]:hover td, .amen tr[data-bto]:hover td { background: #eef5ff; }
+  .key { display: inline-flex; align-items: center; justify-content: center; width: 22px; height: 22px; border-radius: 4px; color: #fff; font-weight: 700; font-size: 12px; }
   .pager { display: flex; justify-content: space-between; margin: 0 0 20px; font-weight: 600; }
 </style>
