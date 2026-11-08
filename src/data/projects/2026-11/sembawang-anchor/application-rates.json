@@ -1,5 +1,5 @@
 {
- "as_at": "2026-11-08T04:00:00.000Z",
+ "as_at": "2026-11-08T09:00:00.000Z",
  "is_final": false,
  "launch_start": "2026-11-04",
  "launch_end": "2026-11-11",
@@ -11,8 +11,8 @@
    "shared_with": [],
    "units": 333,
    "project_units": 333,
-   "applicants": 526,
-   "overall": 1.58,
+   "applicants": 545,
+   "overall": 1.64,
    "rates": {
     "elderly": 1.5,
     "first_time_fam": 0.0,
@@ -25,12 +25,12 @@
    "shared_with": [],
    "units": 96,
    "project_units": 96,
-   "applicants": 131,
-   "overall": 1.36,
+   "applicants": 136,
+   "overall": 1.42,
    "rates": {
     "elderly": null,
     "first_time_fam": 0.8,
-    "second_time_fam": 3.8,
+    "second_time_fam": 4.1,
     "first_time_singles": null
    }
   },
@@ -39,12 +39,12 @@
    "shared_with": [],
    "units": 464,
    "project_units": 464,
-   "applicants": 333,
-   "overall": 0.72,
+   "applicants": 342,
+   "overall": 0.74,
    "rates": {
     "elderly": null,
     "first_time_fam": 0.5,
-    "second_time_fam": 2.5,
+    "second_time_fam": 2.6,
     "first_time_singles": null
    }
   },
@@ -53,7 +53,7 @@
    "shared_with": [],
    "units": 417,
    "project_units": 417,
-   "applicants": 132,
+   "applicants": 135,
    "overall": 0.32,
    "rates": {
     "elderly": null,
