@@ -1,0 +1,121 @@
+{
+ "source": "HDB site plan for the project, on the HDB Flat Portal",
+ "tag": "Official",
+ "stack_note": "Stack numbers are the last digits of the unit number (e.g. #12-157 is stack 157 on the 12th storey), read from HDB's site plan. Facing notes are my reading of the plan [Estimate].",
+ "blocks": [
+  {
+   "block": "908A",
+   "storeys": "26/30",
+   "top": 30,
+   "counts": {
+    "2-room Flexi (Type 2)": 116,
+    "4-room": 216
+   },
+   "total": 332,
+   "stacks": {
+    "4-room": [
+     "301",
+     "303",
+     "309",
+     "311",
+     "313",
+     "315",
+     "321",
+     "323"
+    ],
+    "2-room Flexi (Type 2)": [
+     "305",
+     "307",
+     "317",
+     "319"
+    ]
+   },
+   "notes": "Stepped block (26 and 30 storeys). 321 and 323 face south over Bayshore Walk towards East Coast Parkway; 313 and 315 face east to the park and drainage reserve."
+  },
+  {
+   "block": "909A",
+   "storeys": "30",
+   "top": 30,
+   "counts": {
+    "4-room": 116
+   },
+   "total": 116,
+   "stacks": {
+    "4-room": [
+     "325",
+     "327",
+     "329",
+     "331"
+    ]
+   },
+   "notes": "Next to the car park. 329 and 331 face south towards East Coast Parkway."
+  },
+  {
+   "block": "910A",
+   "storeys": "7/30",
+   "top": 30,
+   "counts": {
+    "Rental": 30,
+    "2-room Flexi (Type 1)": 58,
+    "2-room Flexi (Type 2)": 57,
+    "4-room": 82
+   },
+   "total": 227,
+   "stacks": {
+    "4-room": [
+     "333",
+     "335",
+     "347",
+     "349",
+     "351",
+     "353"
+    ],
+    "2-room Flexi (Type 2)": [
+     "337"
+    ],
+    "2-room Flexi (Type 1)": [
+     "339",
+     "341"
+    ],
+    "Rental, then Type 2": [
+     "343",
+     "345"
+    ]
+   },
+   "notes": "Stepped block, partly 7 storeys. Stacks 343 and 345 are rental flats from the 2nd to 16th storey and 2-room Flexi (Type 2) from the 17th to 30th. 333, 335, 351 and 353 face north over Bayshore Drive and the bus corridor."
+  },
+  {
+   "block": "910B",
+   "storeys": "7/30",
+   "top": 30,
+   "counts": {
+    "2-room Flexi (Type 1)": 29,
+    "2-room Flexi (Type 2)": 87,
+    "4-room": 94
+   },
+   "total": 210,
+   "stacks": {
+    "4-room": [
+     "355",
+     "357",
+     "359",
+     "361",
+     "363",
+     "365",
+     "367",
+     "369"
+    ],
+    "2-room Flexi (Type 2)": [
+     "371",
+     "373",
+     "375"
+    ],
+    "2-room Flexi (Type 1)": [
+     "377"
+    ]
+   },
+   "notes": "Stepped block, partly 7 storeys. Shops and a minimart are under 359 to 365. 355 to 365 face north over Bayshore Drive; 367 and 369 face east to the park."
+  }
+ ],
+ "notes": []
+}

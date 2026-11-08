@@ -1,0 +1,134 @@
+{
+ "source": "HDB site plan for the project, on the HDB Flat Portal",
+ "tag": "Official",
+ "stack_note": "Stack numbers are the last digits of the unit number (e.g. #12-157 is stack 157 on the 12th storey), read from HDB's site plan. Facing notes are my reading of the plan [Estimate].",
+ "blocks": [
+  {
+   "block": "408A",
+   "storeys": "40",
+   "top": 40,
+   "counts": {
+    "2-room Flexi (Type 1)": 78,
+    "2-room Flexi (Type 2)": 116,
+    "4-room": 194
+   },
+   "total": 388,
+   "stacks": {
+    "4-room": [
+     "103",
+     "105",
+     "107",
+     "109",
+     "111"
+    ],
+    "2-room Flexi (Type 2)": [
+     "101",
+     "117",
+     "119"
+    ],
+    "2-room Flexi (Type 1)": [
+     "113",
+     "115"
+    ]
+   },
+   "notes": "North-east corner on Toa Payoh Rise. 109 and 111 face the road and Lighthouse School to the north; 113 and 115 face the existing HDB blocks to the east; 103 and 105 face the multi-storey car park."
+  },
+  {
+   "block": "409A",
+   "storeys": "31",
+   "top": 31,
+   "counts": {
+    "Rental": 232
+   },
+   "total": 232,
+   "stacks": null,
+   "notes": "Rental block: 174 1-room and 58 2-room rental flats, not for sale."
+  },
+  {
+   "block": "410A",
+   "storeys": "43",
+   "top": 43,
+   "counts": {
+    "2-room Flexi (Type 1)": 39,
+    "2-room Flexi (Type 2)": 160,
+    "4-room": 195
+   },
+   "total": 394,
+   "stacks": {
+    "4-room": [
+     "137",
+     "139",
+     "143",
+     "153",
+     "155"
+    ],
+    "2-room Flexi (Type 2)": [
+     "145",
+     "147",
+     "149",
+     "151"
+    ],
+    "2-room Flexi (Type 1)": [
+     "141"
+    ]
+   },
+   "notes": "153 and 155 face north over the central garden; 137 and 139 face north-east; 143 sits at the east end. The 2-room Flexi stacks face south over the site reserved for future high-rise housing."
+  },
+  {
+   "block": "410B",
+   "storeys": "43",
+   "top": 43,
+   "counts": {
+    "2-room Flexi (Type 1)": 39,
+    "2-room Flexi (Type 2)": 160,
+    "4-room": 195
+   },
+   "total": 394,
+   "stacks": {
+    "4-room": [
+     "157",
+     "159",
+     "169",
+     "173",
+     "175"
+    ],
+    "2-room Flexi (Type 2)": [
+     "161",
+     "163",
+     "165",
+     "167"
+    ],
+    "2-room Flexi (Type 1)": [
+     "171"
+    ]
+   },
+   "notes": "157 and 159 face north over the central garden; 173 and 175 face north-west; 169 sits at the west end. The 2-room Flexi stacks face south over the reserve site."
+  },
+  {
+   "block": "410C",
+   "storeys": "34",
+   "top": 34,
+   "counts": {
+    "Community Care Apartment": 256
+   },
+   "total": 256,
+   "stacks": {
+    "Community Care Apartment": [
+     "177",
+     "179",
+     "181",
+     "183",
+     "185",
+     "187",
+     "189",
+     "191"
+    ]
+   },
+   "notes": "Community Care Apartments for seniors, at the west end next to the park."
+  }
+ ],
+ "notes": [
+  "Sky terraces on the 20th and 34th storeys of two blocks. These floors have fewer flats.",
+  "The site plan doesn't say which 4-room stacks have a balcony. HDB shows this when you book."
+ ]
+}

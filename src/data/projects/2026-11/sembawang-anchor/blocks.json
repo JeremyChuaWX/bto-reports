@@ -1,0 +1,206 @@
+{
+ "source": "HDB site plan for the project, on the HDB Flat Portal",
+ "tag": "Official",
+ "stack_note": "Stack numbers are the last digits of the unit number (e.g. #12-157 is stack 157 on the 12th storey), read from HDB's site plan. Facing notes are my reading of the plan [Estimate].",
+ "blocks": [
+  {
+   "block": "429A",
+   "storeys": "22",
+   "top": 22,
+   "counts": {
+    "2-room Flexi (Type 2)": 21,
+    "4-room": 63,
+    "5-room": 84
+   },
+   "total": 168,
+   "stacks": {
+    "5-room": [
+     "201",
+     "203",
+     "213",
+     "215"
+    ],
+    "4-room": [
+     "207",
+     "209",
+     "211"
+    ],
+    "2-room Flexi (Type 2)": [
+     "205"
+    ]
+   },
+   "notes": "East end. 207 to 211 face east towards Rainbow Centre and the nursing-home site."
+  },
+  {
+   "block": "429B",
+   "storeys": "22",
+   "top": 22,
+   "counts": {
+    "2-room Flexi (Type 1)": 42,
+    "2-room Flexi (Type 2)": 63,
+    "4-room": 104,
+    "5-room": 42
+   },
+   "total": 251,
+   "stacks": {
+    "5-room": [
+     "221",
+     "223"
+    ],
+    "4-room": [
+     "225",
+     "227",
+     "231",
+     "235",
+     "237"
+    ],
+    "2-room Flexi (Type 2)": [
+     "229",
+     "233",
+     "239"
+    ],
+    "2-room Flexi (Type 1)": [
+     "217",
+     "219"
+    ]
+   },
+   "notes": "South-east edge. 225 and 227 face south over the existing HDB estate."
+  },
+  {
+   "block": "430A",
+   "storeys": "22",
+   "top": 22,
+   "counts": {
+    "2-room Flexi (Type 2)": 21,
+    "4-room": 63,
+    "5-room": 84
+   },
+   "total": 168,
+   "stacks": {
+    "5-room": [
+     "241",
+     "243",
+     "253",
+     "255"
+    ],
+    "4-room": [
+     "245",
+     "247",
+     "249"
+    ],
+    "2-room Flexi (Type 2)": [
+     "251"
+    ]
+   },
+   "notes": "Faces the multi-storey car park to the north; 241 and 243 face south."
+  },
+  {
+   "block": "432A",
+   "storeys": "26",
+   "top": 26,
+   "counts": {
+    "Rental": 50,
+    "2-room Flexi (Type 1)": 50,
+    "3-room": 50,
+    "4-room": 50,
+    "5-room": 25
+   },
+   "total": 225,
+   "stacks": {
+    "5-room": [
+     "265"
+    ],
+    "4-room": [
+     "261",
+     "273"
+    ],
+    "3-room": [
+     "263",
+     "267"
+    ],
+    "2-room Flexi (Type 1)": [
+     "257",
+     "259"
+    ],
+    "Rental": [
+     "269",
+     "271"
+    ]
+   },
+   "notes": "North-west corner by Admiralty Lane and Sembawang Drive."
+  },
+  {
+   "block": "432B",
+   "storeys": "26",
+   "top": 26,
+   "counts": {
+    "2-room Flexi (Type 2)": 73,
+    "3-room": 25,
+    "4-room": 100,
+    "5-room": 98
+   },
+   "total": 296,
+   "stacks": {
+    "5-room": [
+     "283",
+     "285",
+     "295",
+     "297"
+    ],
+    "4-room": [
+     "275",
+     "279",
+     "281",
+     "293"
+    ],
+    "3-room": [
+     "277"
+    ],
+    "2-room Flexi (Type 2)": [
+     "287",
+     "289",
+     "291"
+    ]
+   },
+   "notes": "Next to the preschool. 295 and 297 face north-west."
+  },
+  {
+   "block": "432C",
+   "storeys": "22",
+   "top": 22,
+   "counts": {
+    "2-room Flexi (Type 2)": 63,
+    "3-room": 21,
+    "4-room": 84,
+    "5-room": 84
+   },
+   "total": 252,
+   "stacks": {
+    "5-room": [
+     "307",
+     "309",
+     "319",
+     "321"
+    ],
+    "4-room": [
+     "299",
+     "303",
+     "305",
+     "317"
+    ],
+    "3-room": [
+     "301"
+    ],
+    "2-room Flexi (Type 2)": [
+     "311",
+     "313",
+     "315"
+    ]
+   },
+   "notes": "South-west edge. 311 to 317 face south over the existing HDB estate."
+  }
+ ],
+ "notes": [
+  "A nursing home of up to about 19 storeys is planned east of the site."
+ ]
+}

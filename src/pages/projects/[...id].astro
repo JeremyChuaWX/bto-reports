@@ -4,6 +4,7 @@ import Figure from '../../components/Figure.astro';
 import MapStyles from '../../components/MapStyles.astro';
 import { getProjects, sgTime, url, type PastLaunch, type Project } from '../../lib/data';
 import pastRates from '../../data/past-rates.json';
+import { banding, FLOOR_SHARE } from '../../lib/banding';
 import { cat, CLS_COLOUR, metres, money, tagColour, tagify, walk } from '../../lib/format';
 
 export async function getStaticPaths() {
@@ -93,6 +94,25 @@ const ft4 = ar?.rows.find((r) => r.flat_type === '4-Room')?.rates.first_time_fam
 const ft = p.fittings;
 const pkgPrice = (k: { price: number | null; price_text: string | null }) => (k.price != null ? money(k.price) : k.price_text ?? '–');
 const pkgName = (n: string) => n.replace(/^Default \(with bedroom walls\) - OCS opt-in\s*[-–]\s*/, '').replace(/^Package \d+ - /, '');
+// Blocks and stacks from HDB's site plan, and estimated price banding by storey
+const bk = p.blocks;
+const TYPE_COLS: [string, string][] = [
+  ['Community Care Apartment', 'CCA'], ['2-room Flexi (Type 1)', '2-room Flexi Type 1'], ['2-room Flexi (Type 2)', '2-room Flexi Type 2'],
+  ['3-room', '3-room'], ['4-room', '4-room'], ['5-room', '5-room'], ['3Gen', '3Gen'], ['Rental', 'Rental'],
+];
+const bkCols = bk ? TYPE_COLS.filter(([k]) => bk.blocks.some((b) => b.counts[k])) : [];
+const shortType = (k: string) => TYPE_COLS.find(([x]) => x === k)?.[1] ?? k;
+const perFloor = (b: NonNullable<typeof bk>['blocks'][number]) =>
+  Object.entries(b.counts).map(([k, n]) => `${Math.round(n / (b.top - 1))} × ${shortType(k)}`).join(', ');
+const bkTops = bk ? bk.blocks.map((b) => b.top) : [];
+const bkRental = bk ? bk.blocks.reduce((n, b) => n + (b.counts['Rental'] ?? 0), 0) : 0;
+const bkSummary = bk
+  ? `${bk.blocks.length} blocks, ${Math.min(...bkTops) === Math.max(...bkTops) ? `all ${bkTops[0]}` : `${Math.min(...bkTops)} to ${Math.max(...bkTops)}`} storeys, ` +
+    `with ${bk.blocks.reduce((n, b) => n + b.total, 0).toLocaleString('en-US')} flats` + (bkRental ? `, of which ${bkRental} are rental flats not for sale.` : '.')
+  : '';
+const bands = bk && o.units?.length ? banding(o.units, bk) : [];
+const hundreds = (v: number) => money(Math.round(v / 100) * 100);
+const thousands = (v: number) => money(Math.round(v / 1000) * 1000);
 const legend = [...new Map(amenities.map(({ colour, label }) => [label, colour])).entries()].map(([label, colour]) => [colour, label]);
 const mapConfig = JSON.stringify({
   name: p.name,
@@ -292,6 +312,77 @@ const links = (src?: string) =>
       {perspectives.map((k, i) => <Figure src={img[k]} caption={`Artist's impression ${i + 1} (HDB)`} />)}
     </div>
   </section>
+
+  {
+    bk && (
+      <section class="card" id="blocks">
+        <h2>Blocks, stacks and price banding</h2>
+        <p>{bkSummary} <span class="tag" style={`background:${tagColour(bk.tag)}`}>{bk.tag}</span></p>
+        <div class="tablewrap">
+          <table class="blk">
+            <tr><th>Block</th><th>Storeys</th>{bkCols.map(([, l]) => <th>{l}</th>)}<th>Total</th><th>{bk.blocks.some((b) => b.stacks) ? 'Stacks by flat type' : 'Flats per floor'}</th></tr>
+            {bk.blocks.map((b) => (
+              <>
+                <tr class={b.notes ? 'has-note' : ''}>
+                  <td><b>{b.block}</b></td>
+                  <td>{b.storeys}</td>
+                  {bkCols.map(([k]) => <td>{b.counts[k] ?? '–'}</td>)}
+                  <td>{b.total}</td>
+                  <td>
+                    {b.stacks
+                      ? Object.entries(b.stacks).map(([k, list]) => <div><b>{shortType(k)}:</b> {list.join(', ')}</div>)
+                      : <span>{perFloor(b)}</span>}
+                  </td>
+                </tr>
+                {b.notes && <tr class="note"><td></td><td colspan={bkCols.length + 3} class="sub">{b.notes}</td></tr>}
+              </>
+            ))}
+          </table>
+        </div>
+        {bk.notes.length > 0 && <ul>{bk.notes.map((n) => <li>{n}</li>)}</ul>}
+        <p class="sub">
+          {bk.stack_note}{bk.blocks.some((b) => b.storeys.includes('/')) && ` "${bk.blocks.find((b) => b.storeys.includes('/'))!.storeys}" means the block steps down from ${bk.blocks.find((b) => b.storeys.includes('/'))!.storeys.split('/').reverse().join(' to ')} storeys.`} Source: {bk.source}; the plan itself is in "The plot" above.
+        </p>
+        {
+          bands.length > 0 && (
+            <>
+              <h3>How the price rises with floor and stack <span class="tag" style={`background:${tagColour('Estimate')}`}>Estimate</span></h3>
+              <p>
+                HDB publishes only a price range for each flat type. The bottom of the range is a low-floor flat in the least attractive stack. The top is a
+                top-floor flat in the best stack. You see each unit's exact price when you book. The table spreads the range over the storeys. I've assumed{' '}
+                {Math.round(FLOOR_SHARE * 100)}% of the gap comes from height and the rest from the stack: facing, view, noise and corner units. That split is
+                my assumption, not HDB's. <a href="https://mothership.sg/2021/03/high-hdb-floors-sg-experience" target="_blank" rel="noopener">Media reports</a> put
+                the BTO floor premium at about $3,000 to $7,000 per storey <span class="tag" style={`background:${tagColour('Unverified')}`}>Unverified</span>.
+              </p>
+              <div class="tablewrap">
+                <table class="band">
+                  <tr><th>Storeys</th><th>Estimated price</th><th>Blocks with this flat type at these storeys</th></tr>
+                  {bands.map((g) => (
+                    <>
+                      <tr class="grp">
+                        <td colspan="3">
+                          <b>{g.flat_type}</b>: {money(g.low)} – {money(g.high)} official, flats up to storey {g.top}. About <b>{hundreds(g.perStorey)}</b> more per
+                          storey (between {hundreds(g.perStoreyMin)} and {hundreds(g.perStoreyMax)}). On the same floor, the best stack may cost up to {thousands(g.stackSpread)} more than the cheapest.
+                        </td>
+                      </tr>
+                      {g.bands.map((x) => (
+                        <tr><td class="nw">{x.from}–{x.to}</td><td class="nw">{money(x.low)} – {money(x.high)}</td><td>{x.blocks.map((k) => { const top = bk.blocks.find((b) => b.block === k)!.top; return top < x.to ? `${k} (to ${top})` : k; }).join(', ')}</td></tr>
+                      ))}
+                    </>
+                  ))}
+                </table>
+              </div>
+              <p class="sub">
+                Each row runs from the cheapest stack at the lowest storey in the band to the best stack at the highest. Rows overlap because a good stack lower
+                down can cost as much as a poor stack higher up. {bk.blocks.some((b) => b.storeys.includes('/')) && 'In blocks that step down, some stacks stop at the lower height. '}For 2-room
+                Flexi, only the 99-year lease prices are shown. Check the exact unit prices at booking.
+              </p>
+            </>
+          )
+        }
+      </section>
+    )
+  }
 
   <section class="card" id="floor-plans" data-tabs>
     <h2>Floor plans</h2>
@@ -663,6 +754,10 @@ const links = (src?: string) =>
   .fit ul { margin: 0; padding-left: 16px; }
   .pkg { margin-bottom: 6px; }
   .pkg.white { border-left: 3px solid #b9770e; padding-left: 6px; }
+  .blk tr.has-note td { border-bottom: 0; }
+  .blk tr.note td { padding-top: 0; }
+  .blk td:last-child { min-width: 220px; }
+  .band tr.grp td { background: #f4f6f8; }
   .feats { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 0 24px; }
   .feats ul { margin-top: 0; padding-left: 18px; }
   .toc ul { margin: 4px 0; padding-left: 18px; columns: 2; font-size: 14px; }

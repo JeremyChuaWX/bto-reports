@@ -1,0 +1,191 @@
+{
+ "source": "HDB site plan for the project, on the HDB Flat Portal",
+ "tag": "Official",
+ "stack_note": "Stack numbers are the last digits of the unit number (e.g. #12-157 is stack 157 on the 12th storey), read from HDB's site plan. Facing notes are my reading of the plan [Estimate].",
+ "blocks": [
+  {
+   "block": "140A",
+   "storeys": "15",
+   "top": 15,
+   "counts": {
+    "Rental": 22,
+    "2-room Flexi (Type 1)": 14,
+    "2-room Flexi (Type 2)": 6,
+    "3-room": 28,
+    "4-room": 42
+   },
+   "total": 112,
+   "stacks": {
+    "4-room": [
+     "205",
+     "207",
+     "213"
+    ],
+    "3-room": [
+     "201",
+     "203"
+    ],
+    "2-room Flexi (Type 1)": [
+     "215"
+    ],
+    "Rental, then Type 2": [
+     "209",
+     "211"
+    ]
+   },
+   "notes": "209 and 211 are rental flats up to the 12th storey and 2-room Flexi (Type 2) on the 13th to 15th. 207, 209 and 211 face north-east over Tengah Garden Avenue."
+  },
+  {
+   "block": "140B",
+   "storeys": "15",
+   "top": 15,
+   "counts": {
+    "Rental": 8,
+    "2-room Flexi (Type 2)": 20,
+    "4-room": 28,
+    "5-room": 112,
+    "3Gen": 14
+   },
+   "total": 182,
+   "stacks": {
+    "5-room": [
+     "217",
+     "219",
+     "221",
+     "223",
+     "225",
+     "227",
+     "229",
+     "235"
+    ],
+    "4-room": [
+     "231",
+     "233"
+    ],
+    "3Gen": [
+     "237"
+    ],
+    "Rental, then Type 2": [
+     "239",
+     "241"
+    ]
+   },
+   "notes": "239 and 241 are rental flats up to the 5th storey and 2-room Flexi (Type 2) from the 6th. 217 and 219 face south-west towards the car park and the PIE beyond the waterbody reserve."
+  },
+  {
+   "block": "141A",
+   "storeys": "15",
+   "top": 15,
+   "counts": {
+    "Rental": 22,
+    "2-room Flexi (Type 1)": 14,
+    "2-room Flexi (Type 2)": 6,
+    "3-room": 28,
+    "4-room": 42
+   },
+   "total": 112,
+   "stacks": {
+    "4-room": [
+     "247",
+     "249",
+     "255"
+    ],
+    "3-room": [
+     "243",
+     "245"
+    ],
+    "2-room Flexi (Type 1)": [
+     "257"
+    ],
+    "Rental, then Type 2": [
+     "251",
+     "253"
+    ]
+   },
+   "notes": "251 and 253 are rental flats up to the 12th storey and 2-room Flexi (Type 2) on the 13th to 15th. 247 to 253 face north-east over Tengah Garden Avenue."
+  },
+  {
+   "block": "141B",
+   "storeys": "15",
+   "top": 15,
+   "counts": {
+    "Rental": 40,
+    "2-room Flexi (Type 1)": 14,
+    "2-room Flexi (Type 2)": 86,
+    "3-room": 28,
+    "4-room": 28,
+    "5-room": 28
+   },
+   "total": 224,
+   "stacks": {
+    "5-room": [
+     "267",
+     "269"
+    ],
+    "4-room": [
+     "283",
+     "285"
+    ],
+    "3-room": [
+     "271",
+     "273"
+    ],
+    "2-room Flexi (Type 1)": [
+     "265"
+    ],
+    "Type 2 (some rental to the 11th storey)": [
+     "259",
+     "261",
+     "263",
+     "275",
+     "277",
+     "279",
+     "281",
+     "287",
+     "289"
+    ]
+   },
+   "notes": "Four of the red stacks are rental flats up to the 11th storey, with 2-room Flexi (Type 2) on the 12th to 15th. 259 to 263 and 287 to 289 face north-west over Plantation Walk."
+  },
+  {
+   "block": "141C",
+   "storeys": "15",
+   "top": 15,
+   "counts": {
+    "Rental": 10,
+    "2-room Flexi (Type 2)": 18,
+    "4-room": 28,
+    "5-room": 112,
+    "3Gen": 14
+   },
+   "total": 182,
+   "stacks": {
+    "5-room": [
+     "291",
+     "293",
+     "295",
+     "297",
+     "299",
+     "301",
+     "303",
+     "309"
+    ],
+    "4-room": [
+     "305",
+     "307"
+    ],
+    "3Gen": [
+     "311"
+    ],
+    "Rental, then Type 2": [
+     "313",
+     "315"
+    ]
+   },
+   "notes": "313 and 315 are rental flats up to the 6th storey and 2-room Flexi (Type 2) from the 7th. 303 and 305 face the car park and the waterbody reserve and PIE to the south-west."
+  }
+ ],
+ "notes": [
+  "All blocks are 15 storeys, so the floor premium is small. Facing (park, school or PIE) matters more here."
+ ]
+}

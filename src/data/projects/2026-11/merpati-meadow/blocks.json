@@ -1,0 +1,88 @@
+{
+ "source": "HDB site plan for the project, on the HDB Flat Portal",
+ "tag": "Official",
+ "stack_note": "Stack numbers are the last digits of the unit number (e.g. #12-157 is stack 157 on the 12th storey), read from HDB's site plan. Facing notes are my reading of the plan [Estimate].",
+ "blocks": [
+  {
+   "block": "137A",
+   "storeys": "18",
+   "top": 18,
+   "counts": {
+    "2-room Flexi (Type 2)": 51,
+    "4-room": 68
+   },
+   "total": 119,
+   "stacks": {
+    "4-room": [
+     "100",
+     "102",
+     "110",
+     "112"
+    ],
+    "2-room Flexi (Type 2)": [
+     "104",
+     "106",
+     "108"
+    ]
+   },
+   "notes": "102 to 108 face south over Merpati Road; 100 faces east to Jalan Anggerek."
+  },
+  {
+   "block": "137B",
+   "storeys": "18",
+   "top": 18,
+   "counts": {
+    "2-room Flexi (Type 2)": 34,
+    "4-room": 102
+   },
+   "total": 136,
+   "stacks": {
+    "4-room": [
+     "114",
+     "116",
+     "118",
+     "120",
+     "122",
+     "124"
+    ],
+    "2-room Flexi (Type 2)": [
+     "126",
+     "128"
+    ]
+   },
+   "notes": "116 to 120 face west towards Aljunied Park; 114, 126 and 128 face Merpati Road to the south."
+  },
+  {
+   "block": "138A",
+   "storeys": "18",
+   "top": 18,
+   "counts": {
+    "2-room Flexi (Type 1)": 33,
+    "2-room Flexi (Type 2)": 49,
+    "4-room": 101
+   },
+   "total": 183,
+   "stacks": {
+    "4-room": [
+     "130",
+     "132",
+     "144",
+     "146",
+     "148",
+     "150"
+    ],
+    "2-room Flexi (Type 2)": [
+     "134",
+     "138",
+     "142"
+    ],
+    "2-room Flexi (Type 1)": [
+     "136",
+     "140"
+    ]
+   },
+   "notes": "144 and 146 face north-west over the drainage reserve and Happy Avenue private housing; 130 and 132 face east to Jalan Anggerek."
+  }
+ ],
+ "notes": []
+}

@@ -153,6 +153,24 @@ export interface Fittings {
   types: { flat_type: string; standard: string[]; packages: Package[]; info: { title: string; text: string }[] }[];
 }
 
+export interface Block {
+  block: string;
+  storeys: string; // e.g. "43", or "7/30" for a block that steps down
+  top: number;
+  counts: Record<string, number>;
+  total: number;
+  stacks: Record<string, string[]> | null;
+  notes: string;
+}
+
+export interface Blocks {
+  source: string;
+  tag: string;
+  stack_note: string;
+  blocks: Block[];
+  notes: string[];
+}
+
 export interface PastLaunch {
   launch: string;
   qtr: string;
@@ -199,6 +217,7 @@ export interface Project {
   competition: Competition | null;
   appRates: AppRates | null;
   fittings: Fittings | null;
+  blocks: Blocks | null;
   images: Record<string, ImageMetadata>;
   totalUnits: number | null;
   fourRoom: Unit | undefined;
@@ -231,6 +250,7 @@ function load(entry: CollectionEntry<'reports'>): Project {
     competition: (json[base + 'competition.json'] as Competition) ?? null,
     appRates: (json[base + 'application-rates.json'] as AppRates) ?? null,
     fittings: (json[base + 'fittings.json'] as Fittings) ?? null,
+    blocks: (json[base + 'blocks.json'] as Blocks) ?? null,
     images: imgs,
     totalUnits: total,
     fourRoom: units.find((u) => u.flat_type.startsWith('4-room')),

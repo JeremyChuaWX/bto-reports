@@ -1,0 +1,178 @@
+{
+ "source": "HDB site plan for the project, on the HDB Flat Portal",
+ "tag": "Official",
+ "stack_note": "Stack numbers are the last digits of the unit number (e.g. #12-157 is stack 157 on the 12th storey), read from HDB's site plan. Facing notes are my reading of the plan [Estimate].",
+ "blocks": [
+  {
+   "block": "992A",
+   "storeys": "15",
+   "top": 15,
+   "counts": {
+    "Rental": 28,
+    "2-room Flexi (Type 1)": 14,
+    "3-room": 14,
+    "4-room": 28,
+    "5-room": 56
+   },
+   "total": 140,
+   "stacks": null,
+   "notes": ""
+  },
+  {
+   "block": "992B",
+   "storeys": "15",
+   "top": 15,
+   "counts": {
+    "Rental": 28,
+    "2-room Flexi (Type 1)": 14,
+    "3-room": 14,
+    "4-room": 28,
+    "5-room": 56
+   },
+   "total": 140,
+   "stacks": null,
+   "notes": "On the east edge, next to Yishun Avenue 2 and the elevated MRT line."
+  },
+  {
+   "block": "992C",
+   "storeys": "15",
+   "top": 15,
+   "counts": {
+    "2-room Flexi (Type 2)": 42,
+    "3-room": 14,
+    "4-room": 56,
+    "5-room": 56
+   },
+   "total": 168,
+   "stacks": null,
+   "notes": ""
+  },
+  {
+   "block": "995A",
+   "storeys": "15",
+   "top": 15,
+   "counts": {
+    "2-room Flexi (Type 1)": 14,
+    "2-room Flexi (Type 2)": 42,
+    "3-room": 14,
+    "4-room": 14,
+    "5-room": 56
+   },
+   "total": 140,
+   "stacks": null,
+   "notes": "On the east edge, next to Yishun Avenue 2 and the elevated MRT line."
+  },
+  {
+   "block": "995B",
+   "storeys": "15",
+   "top": 15,
+   "counts": {
+    "2-room Flexi (Type 2)": 42,
+    "3-room": 14,
+    "4-room": 56,
+    "5-room": 56
+   },
+   "total": 168,
+   "stacks": null,
+   "notes": ""
+  },
+  {
+   "block": "995C",
+   "storeys": "15",
+   "top": 15,
+   "counts": {
+    "2-room Flexi (Type 2)": 42,
+    "3-room": 14,
+    "4-room": 56,
+    "5-room": 56
+   },
+   "total": 168,
+   "stacks": null,
+   "notes": "Next to the multi-storey car park (Blk 994)."
+  },
+  {
+   "block": "996A",
+   "storeys": "15",
+   "top": 15,
+   "counts": {
+    "Rental": 14,
+    "2-room Flexi (Type 2)": 14,
+    "4-room": 42,
+    "5-room": 56
+   },
+   "total": 126,
+   "stacks": null,
+   "notes": "North edge, on Yishun Walk."
+  },
+  {
+   "block": "996B",
+   "storeys": "15",
+   "top": 15,
+   "counts": {
+    "Rental": 210
+   },
+   "total": 210,
+   "stacks": null,
+   "notes": "Rental block, not for sale."
+  },
+  {
+   "block": "996C",
+   "storeys": "15",
+   "top": 15,
+   "counts": {
+    "Rental": 28,
+    "2-room Flexi (Type 1)": 14,
+    "2-room Flexi (Type 2)": 14,
+    "4-room": 42,
+    "5-room": 70
+   },
+   "total": 168,
+   "stacks": null,
+   "notes": ""
+  },
+  {
+   "block": "997A",
+   "storeys": "15",
+   "top": 15,
+   "counts": {
+    "2-room Flexi (Type 1)": 14,
+    "2-room Flexi (Type 2)": 42,
+    "4-room": 42,
+    "5-room": 70
+   },
+   "total": 168,
+   "stacks": null,
+   "notes": ""
+  },
+  {
+   "block": "997B",
+   "storeys": "15",
+   "top": 15,
+   "counts": {
+    "2-room Flexi (Type 2)": 28,
+    "4-room": 42,
+    "5-room": 56
+   },
+   "total": 126,
+   "stacks": null,
+   "notes": "South-west edge, facing the site reserved for future high-rise housing."
+  },
+  {
+   "block": "997C",
+   "storeys": "15",
+   "top": 15,
+   "counts": {
+    "2-room Flexi (Type 1)": 14,
+    "2-room Flexi (Type 2)": 42,
+    "4-room": 56,
+    "5-room": 56
+   },
+   "total": 168,
+   "stacks": null,
+   "notes": "West edge, on Yishun Street 82."
+  }
+ ],
+ "notes": [
+  "The stack labels on this site plan are too small to read reliably, so stack numbers aren't listed. Flats per floor are worked out from HDB's counts, over 14 residential storeys (2nd to 15th)."
+ ]
+}
