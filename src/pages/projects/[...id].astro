@@ -5,6 +5,7 @@ import MapStyles from '../../components/MapStyles.astro';
 import { getProjects, sgTime, url, type PastLaunch, type Project } from '../../lib/data';
 import pastRates from '../../data/past-rates.json';
 import { banding, FLOOR_SHARE } from '../../lib/banding';
+import { view as fitView, KIND_LABEL } from '../../lib/fittings';
 import { cat, CLS_COLOUR, metres, money, tagColour, tagify, walk } from '../../lib/format';
 
 export async function getStaticPaths() {
@@ -92,8 +93,19 @@ const projNames = (r: PastLaunch['rows'][number]) => r.projects.map((x) => x.nam
 const projCls = (r: PastLaunch['rows'][number]) => [...new Set(r.projects.map((x) => x.cls).filter(Boolean))].join('/');
 const ft4 = ar?.rows.find((r) => r.flat_type === '4-Room')?.rates.first_time_fam ?? null;
 const ft = p.fittings;
-const pkgPrice = (k: { price: number | null; price_text: string | null }) => (k.price != null ? money(k.price) : k.price_text ?? '–');
-const pkgName = (n: string) => n.replace(/^Default \(with bedroom walls\) - OCS opt-in\s*[-–]\s*/, '').replace(/^Package \d+ - /, '');
+const fv = ft ? fitView(ft) : null;
+const fvTotal = fv ? fv.rows.some((r) => r.total != null) : false;
+const fitNotes = fv ? [...new Set(fv.rows.flatMap((r) => Object.values(r.cells).map((c) => c?.note).filter((n): n is string => !!n)))] : [];
+const fitStd = (t: string) => ft?.types.find((x) => x.flat_type === t)?.standard ?? [];
+const fitHasFloor = (t: string) => fitStd(t).some((x) => /flooring/i.test(x));
+// e.g. "Flooring, doors and sanitary fittings are already included."
+const fitIncluded = (t: string) => {
+  const has = [['flooring', /flooring/i], ['doors', /\bdoors?\b/i], ['sanitary fittings', /sanitary|wash ?basin/i]] as const;
+  const got = has.filter(([, re]) => fitStd(t).some((x) => re.test(x))).map(([w]) => w);
+  if (!got.length) return '';
+  const list = got.length === 1 ? got[0] : `${got.slice(0, -1).join(', ')} and ${got[got.length - 1]}`;
+  return `${list[0].toUpperCase()}${list.slice(1)} ${got.length === 1 ? 'is' : 'are'} already included.`;
+};
 // Blocks and stacks from HDB's site plan, and estimated price banding by storey
 const bk = p.blocks;
 const TYPE_COLS: [string, string][] = [
@@ -439,37 +451,86 @@ const links = (src?: string) =>
   </section>
 
   {
-    ft && (
+    ft && fv && (
       <section class="card" id="fittings">
         <h2>Finishes and optional packages</h2>
         <p>
-          What each flat comes with, and what HDB will fit for an extra charge under its Optional Component Scheme (OCS). Each package is optional. If you take one, its price is added to the flat price.
-          Fitting these yourself through a contractor can cost more or less, but HDB's work is covered by its defects liability period.
+          HDB fits some finishes as standard. Others it will fit for a fee under its Optional Component Scheme (OCS). Each package is optional, and its price is added to the flat price.
+          A contractor can do the same work later, for more or less, but HDB's work is covered by its defects liability period.
         </p>
+
+        <h3>Package prices</h3>
         <div class="tablewrap">
-          <table class="fit">
-            <tr><th>Flat type</th><th>Included as standard</th><th>Optional packages</th></tr>
-            {ft.types.map((t) => (
+          <table class="fit prices">
+            <tr>
+              <th>Flat type</th>
+              {fv.kinds.map((k) => <th>{KIND_LABEL[k]}</th>)}
+              {fvTotal && <th>Flooring + doors</th>}
+            </tr>
+            {fv.rows.map((r) => (
               <tr>
-                <td class="nw"><b>{t.flat_type}</b></td>
-                <td><ul>{t.standard.map((x) => <li>{x}</li>)}</ul></td>
-                <td>
-                  {t.packages.length === 0 && <span class="sub">None offered{t.standard.some((x) => /flooring/i.test(x)) ? '. Flooring, doors and sanitary fittings are already included.' : '.'}</span>}
-                  {t.packages.map((k) => (
-                    <div class="pkg">
-                      <b>{pkgName(k.name)}</b>: <span class="nw">{pkgPrice(k)}</span>
-                      {k.items.length > 0 && <div class="sub">{k.items.join('; ')}</div>}
-                      {k.notes.map((n) => <div class="sub">{n}</div>)}
-                    </div>
-                  ))}
-                  {t.info.map((i) => (
-                    <div class="pkg white"><b>{i.title}</b><div class="sub">{i.text}</div></div>
-                  ))}
-                </td>
+                <td><b>{r.flat_type}</b></td>
+                {Object.keys(r.cells).length === 0 ? (
+                  <td colspan={fv.kinds.length + (fvTotal ? 1 : 0)} class="sub wide">None offered. {fitIncluded(r.flat_type)}</td>
+                ) : (
+                  <Fragment>
+                    {fv.kinds.map((k) => {
+                      const c = r.cells[k];
+                      if (!c) return k === 'floor' && fitHasFloor(r.flat_type)
+                        ? <td class="sub" data-label={KIND_LABEL[k]}>Included</td>
+                        : <td class="sub empty" data-label={KIND_LABEL[k]}>–</td>;
+                      const n = c.note ? fitNotes.indexOf(c.note) + 1 : 0;
+                      return <td class="num" data-label={KIND_LABEL[k]}><span>{c.price}{n > 0 && <sup>{n}</sup>}</span></td>;
+                    })}
+                    {fvTotal && <td class={r.total ? 'num' : 'num empty'} data-label="Flooring + doors">{r.total ?? '–'}</td>}
+                  </Fragment>
+                )}
               </tr>
             ))}
           </table>
         </div>
+        {fitNotes.map((n, i) => <p class="sub small"><sup>{i + 1}</sup> {n}</p>)}
+
+        {fv.white.length > 0 && (
+          <div class="white">
+            <h3>White flat option</h3>
+            <p>
+              A white flat has no bedroom walls: the living room and bedrooms are one open space for you to divide as you like. It costs less, but HDB won't lay flooring
+              in the living room or bedrooms, or fit bedroom doors, and there are fewer power points.
+            </p>
+            <div class="tablewrap">
+              <table class="fit">
+                <tr><th>Flat type</th><th>Off the flat price</th><th>Bathroom doors and sanitary fittings (optional)</th></tr>
+                {fv.white.map((w) => (
+                  <tr><td><b>{w.flat_type}</b></td><td class="num">{w.reduction != null ? money(w.reduction) : '–'}</td><td class="num">{w.bathroom ?? '–'}</td></tr>
+                ))}
+              </table>
+            </div>
+          </div>
+        )}
+
+        <h3>What the packages include</h3>
+        <div class="fitgrid">
+          {fv.contents.map((g) => (
+            <div class="fitbox">
+              <div class="fitfor">{g.flat_types.join(', ')}</div>
+              <b>{g.value.title}</b>
+              <ul>{g.value.items.map((x) => <li>{x}</li>)}</ul>
+              {g.value.notes.map((n) => <p class="sub small">{n}</p>)}
+            </div>
+          ))}
+        </div>
+
+        <h3>Included as standard</h3>
+        <div class="fitgrid">
+          {fv.standard.map((g) => (
+            <div class="fitbox">
+              <div class="fitfor">{g.flat_types.join(', ')}</div>
+              <ul>{g.value.map((x) => <li>{x}</li>)}</ul>
+            </div>
+          ))}
+        </div>
+
         {Object.keys(ft.features).length > 0 && (
           <div class="feats">
             {Object.entries(ft.features).map(([h, list]) => (
@@ -750,10 +811,23 @@ const links = (src?: string) =>
   .rates td.r-mid { color: #b9770e; font-weight: 600; }
   .rates td.r-high { color: #922b21; font-weight: 600; }
   .rates tr.me td { background: #fff7e0; }
-  .fit td { vertical-align: top; }
-  .fit ul { margin: 0; padding-left: 16px; }
-  .pkg { margin-bottom: 6px; }
-  .pkg.white { border-left: 3px solid #b9770e; padding-left: 6px; }
+  .fit td.num { white-space: nowrap; font-variant-numeric: tabular-nums; }
+  .small { font-size: 13px; margin: 4px 0; }
+  @media (max-width: 600px) {
+    .prices, .prices tbody { display: block; }
+    .prices tr:first-child { display: none; }
+    .prices tr { display: block; border: 1px solid var(--bd); border-radius: 8px; margin-bottom: 8px; padding: 6px 10px; }
+    .prices td { display: block; border: 0; padding: 2px 0; background: none !important; }
+    .prices td[data-label] { display: flex; justify-content: space-between; gap: 12px; }
+    .prices td[data-label]::before { content: attr(data-label); color: var(--mut); }
+    .prices td.empty { display: none !important; }
+  }
+  .white { border-left: 4px solid #b9770e; background: #fffaf0; border-radius: 4px; padding: 2px 14px 4px; margin: 16px 0; }
+  .white h3 { margin-top: 10px; }
+  .fitgrid { display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: 12px; }
+  .fitbox { border: 1px solid var(--bd); border-radius: 8px; padding: 10px 12px; font-size: 14px; }
+  .fitbox ul { margin: 6px 0 0; padding-left: 18px; }
+  .fitfor { font-size: 12px; font-weight: 700; color: var(--mut); text-transform: uppercase; letter-spacing: 0.03em; margin-bottom: 4px; }
   .blk tr.has-note td { border-bottom: 0; }
   .blk tr.note td { padding-top: 0; }
   .blk td:last-child { min-width: 220px; }
