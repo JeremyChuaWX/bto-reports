@@ -1,5 +1,5 @@
 {
- "as_at": "2026-11-09T09:00:00.000Z",
+ "as_at": "2026-11-10T09:00:00.000Z",
  "is_final": false,
  "launch_start": "2026-11-04",
  "launch_end": "2026-11-11",
@@ -11,13 +11,13 @@
    "shared_with": [],
    "units": 392,
    "project_units": 392,
-   "applicants": 1833,
-   "overall": 4.68,
+   "applicants": 2042,
+   "overall": 5.21,
    "rates": {
-    "elderly": 4.4,
+    "elderly": 4.9,
     "first_time_fam": 0.5,
-    "second_time_fam": 1.2,
-    "first_time_singles": 7.1
+    "second_time_fam": 1.4,
+    "first_time_singles": 7.9
    }
   },
   {
@@ -25,12 +25,12 @@
    "shared_with": [],
    "units": 84,
    "project_units": 84,
-   "applicants": 477,
-   "overall": 5.68,
+   "applicants": 523,
+   "overall": 6.23,
    "rates": {
     "elderly": null,
-    "first_time_fam": 2.0,
-    "second_time_fam": 21.3,
+    "first_time_fam": 2.2,
+    "second_time_fam": 23.3,
     "first_time_singles": null
    }
   },
@@ -39,12 +39,12 @@
    "shared_with": [],
    "units": 462,
    "project_units": 462,
-   "applicants": 1563,
-   "overall": 3.38,
+   "applicants": 1746,
+   "overall": 3.78,
    "rates": {
     "elderly": null,
-    "first_time_fam": 2.2,
-    "second_time_fam": 14.3,
+    "first_time_fam": 2.4,
+    "second_time_fam": 16.3,
     "first_time_singles": null
    }
   },
@@ -53,12 +53,12 @@
    "shared_with": [],
    "units": 644,
    "project_units": 644,
-   "applicants": 2247,
-   "overall": 3.49,
+   "applicants": 2554,
+   "overall": 3.97,
    "rates": {
     "elderly": null,
-    "first_time_fam": 2.1,
-    "second_time_fam": 15.8,
+    "first_time_fam": 2.5,
+    "second_time_fam": 17.5,
     "first_time_singles": null
    }
   }
