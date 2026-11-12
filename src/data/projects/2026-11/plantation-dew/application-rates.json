@@ -1,6 +1,6 @@
 {
- "as_at": "2026-11-11T09:00:00.000Z",
- "is_final": false,
+ "as_at": "2026-11-11T15:59:00.000Z",
+ "is_final": true,
  "launch_start": "2026-11-04",
  "launch_end": "2026-11-11",
  "source": "https://services-homes.hdb.gov.sg/sales/application-rate/bto/202611",
@@ -11,13 +11,13 @@
    "shared_with": [],
    "units": 178,
    "project_units": 178,
-   "applicants": 1619,
-   "overall": 9.1,
+   "applicants": 1695,
+   "overall": 9.52,
    "rates": {
-    "elderly": 6.6,
-    "first_time_fam": 1.4,
-    "second_time_fam": 2.5,
-    "first_time_singles": 18.2
+    "elderly": 6.8,
+    "first_time_fam": 1.5,
+    "second_time_fam": 2.6,
+    "first_time_singles": 19.2
    }
   },
   {
@@ -25,12 +25,12 @@
    "shared_with": [],
    "units": 84,
    "project_units": 84,
-   "applicants": 451,
-   "overall": 5.37,
+   "applicants": 469,
+   "overall": 5.58,
    "rates": {
     "elderly": null,
     "first_time_fam": 2.6,
-    "second_time_fam": 17.3,
+    "second_time_fam": 18.2,
     "first_time_singles": null
    }
   },
@@ -39,12 +39,12 @@
    "shared_with": [],
    "units": 168,
    "project_units": 168,
-   "applicants": 1191,
-   "overall": 7.09,
+   "applicants": 1232,
+   "overall": 7.33,
    "rates": {
     "elderly": null,
-    "first_time_fam": 5.3,
-    "second_time_fam": 23.8,
+    "first_time_fam": 5.5,
+    "second_time_fam": 24.4,
     "first_time_singles": null
    }
   },
@@ -53,12 +53,12 @@
    "shared_with": [],
    "units": 280,
    "project_units": 280,
-   "applicants": 1559,
-   "overall": 5.57,
+   "applicants": 1628,
+   "overall": 5.81,
    "rates": {
     "elderly": null,
-    "first_time_fam": 3.8,
-    "second_time_fam": 21.4,
+    "first_time_fam": 4.0,
+    "second_time_fam": 22.5,
     "first_time_singles": null
    }
   }
